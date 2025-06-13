@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 9dc09305c4e54f60b9bb217a9867d631
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - enemySettingsBase: {instanceID: 0}
+  - playerGameParametersBase: {instanceID: 0}
+  - prefabsBase: {instanceID: 0}
+  - objectBase: {instanceID: 0}
+  - fxObjectBase: {instanceID: 0}
+  - blocksLineBase: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

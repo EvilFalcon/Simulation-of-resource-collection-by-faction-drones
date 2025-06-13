@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dc09305c4e54f60b9bb217a9867d631, type: 3}
+  m_Name: GameSettingsInstaller
+  m_EditorClassIdentifier: 
+  enemySettingsBase: {fileID: 11400000, guid: 80ce71ad6bfa3474981521a65fe4b6ec, type: 2}
+  playerGameParametersBase: {fileID: 11400000, guid: 282009360b46d466783bfb15114424ce, type: 2}
+  prefabsBase: {fileID: 11400000, guid: edc274d0f36de4d969733574248f4b14, type: 2}
+  objectBase: {fileID: 11400000, guid: 3633a91c368d140b4bdd2c2438909b51, type: 2}
+  fxObjectBase: {fileID: 11400000, guid: 5d4c704d0c3a944dc8d391d915744bf0, type: 2}
+  _figureBase: {fileID: 11400000, guid: b8dca7c5ddfb7294695f11c89f9f559a, type: 2}
+  _blocksLineParameters: {fileID: 11400000, guid: c8bac820297ddfc4ead7cf69fb7808b7, type: 2}
+  _figureGenerationsParameters: {fileID: 11400000, guid: fe7ec486eaf79b143a9090e288c3ca75, type: 2}
+  _movableFigureParameters: {fileID: 11400000, guid: 51fe9d13cba1fb8489b3e5deafabd052, type: 2}
+  _gameFieldParameters: {fileID: 11400000, guid: 7f81c9fb64d6192438b6503d33e07e8c, type: 2}
+  _scoreParameters: {fileID: 11400000, guid: 3292c03d4595c4945a1d9b7a2e31ac28, type: 2}
+  _inputParameters: {fileID: 11400000, guid: 20918a83b1792da4fbf7870c1a7197e9, type: 2}

@@ -1,0 +1,17 @@
+{
+    "name": "spreadsheet.Editor",
+    "references": [
+        "spreadsheet",
+        "UniRx"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

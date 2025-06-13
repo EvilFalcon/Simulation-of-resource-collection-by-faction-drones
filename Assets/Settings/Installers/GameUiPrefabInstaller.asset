@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a61a139c4a04b4794f297b137e75504, type: 3}
+  m_Name: GameUiPrefabInstaller
+  m_EditorClassIdentifier: 
+  _canvas: {fileID: 223224693220343330, guid: 319a2f54ade3772468c5e0fe99627021, type: 3}
+  _inputView: {fileID: 8846076623424461798, guid: 08f04a66940e76c4a8c7ae3154e94aba, type: 3}
+  _scoreView: {fileID: 500130740515764871, guid: 01c8cbabc83d32140b4bfa817626b380, type: 3}
+  _loseGameView: {fileID: 6498226774641175836, guid: 07dfacce47405e142b39b773c7aa7f14, type: 3}

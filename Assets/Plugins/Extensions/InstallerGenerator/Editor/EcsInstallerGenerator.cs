@@ -1,0 +1,166 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Text;
+using InstallerGenerator.Attributes;
+using InstallerGenerator.Enums;
+using InstallerGenerator.Models;
+using ModestTree;
+using UnityEngine;
+
+namespace InstallerGenerator
+{
+	public class EcsInstallerGenerator
+	{
+		private static readonly HashSet<EcsInstallerTemplate> EcsInstallers = new HashSet<EcsInstallerTemplate>();
+
+		public static EcsInstallerTemplate[] Generate()
+		{
+			var executionTypes = Enum.GetValues(typeof(ExecutionType)) as ExecutionType[];
+			foreach (var executionType in executionTypes)
+			{
+				EcsInstallers.Add(new EcsInstallerTemplate(executionType));
+			}
+
+			var assemblies = AppDomain.CurrentDomain.GetAssemblies();
+			for (var i = 0; i < assemblies.Length; i++)
+			{
+				var types = assemblies[i].GetTypes();
+
+				for (var j = 0; j < types.Length; j++)
+				{
+					var type = types[j];
+					if (!type.IsDefined(typeof(InstallAttribute), false) ||
+					    type.IsDefined(typeof(IgnoreAttribute), false))
+						continue;
+
+					var attribute = type.GetCustomAttribute(typeof(InstallAttribute), false) as InstallAttribute;
+					var isDebug = type.HasAttribute(typeof(DebugSystemAttribute));
+
+					foreach (var installerTemplate in EcsInstallers)
+					{
+						if (!attribute.Type.HasFlag(installerTemplate.Type))
+							continue;
+						AddToTemplate(installerTemplate, type, attribute, isDebug);
+					}
+				}
+			}
+
+			foreach (var template in EcsInstallers)
+			{
+				var generatedInstallerCode =
+					GenerateInstaller(template.Name, template.Container, template.Namespaces);
+				template.GeneratedInstallerCode = generatedInstallerCode;
+				Debug.Log($"[EcsInstallerGenerator] Generated {template.Type}: {template.Counter}");
+			}
+
+			var installerTemplates = EcsInstallers.ToArray();
+			EcsInstallers.Clear();
+			return installerTemplates;
+		}
+
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		private static string GenerateInstaller(
+			string name,
+			Dictionary<ExecutionPriority, List<TypeElement>> container,
+			List<string> nameSpaces
+		)
+		{
+			var nameSpacesSorted = nameSpaces.Distinct();
+			var stringBuilder = new StringBuilder();
+			foreach (var s in nameSpacesSorted)
+				stringBuilder.Append("using " + s + ";\n");
+			var ns = stringBuilder.ToString();
+
+			stringBuilder.Clear();
+			var methodBuilder = new StringBuilder();
+			var bodyBuilder = new StringBuilder();
+			foreach (var kpv in container)
+			{
+				var methodName = kpv.Key.ToString();
+				var body = GetBinds(kpv.Value, stringBuilder);
+				if (body.Length > 1)
+				{
+					methodBuilder.Append(GetMethod(methodName));
+					bodyBuilder.Append(GetMethodBody(methodName, body));
+				}
+			}
+
+			return GetInstaller(name, ns, methodBuilder.ToString(), bodyBuilder.ToString());
+		}
+
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		private static void AddToTemplate(EcsInstallerTemplate template, Type type, InstallAttribute attribute,
+			bool isDebug)
+		{
+			template.Counter++;
+			template.Container[attribute.Priority].Add(new TypeElement(type, attribute, isDebug));
+			template.Namespaces.Add(type.Namespace);
+		}
+
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		private static string GetBinds(List<TypeElement> types, StringBuilder builder)
+		{
+			types.Sort((a, b) => a.Order.CompareTo(b.Order));
+			builder.Clear();
+			var previous = 100000;
+			var name = "";
+			for (var i = 0; i < types.Count; i++)
+			{
+				var t = types[i];
+				if (Math.Abs(previous - t.Order) > 10)
+					builder.Append(t.Order == 100000 ? $"\n			// No order\n" : $"\n			// {t.Name} {t.Order:0000}\n");
+				builder.Append(GetBind(t));
+				previous = t.Order;
+			}
+
+			return builder.ToString();
+		}
+
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		private static string GetBind(TypeElement type)
+			=> type.IsDebug 
+				?$@"			if(isDebug)
+				SystemInstallHelper.Install<{type.Type.Name}>(container);{(type.Order == 100000 ? "\n" : $"\t// {type.Order:0000} {type.Name}\n")}"
+				: $"			SystemInstallHelper.Install<{type.Type.Name}>(container);{(type.Order == 100000 ? "" : $"\t// {type.Order:0000} {type.Name}")}\n";
+
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		private static string GetMethod(string name)
+			=> $"			{name}(container, isDebug);\n";
+
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		private static string GetMethodBody(string name, string body)
+			=> $@"		private static void {name}(DiContainer container, bool isDebug) {{{$"\n {body}		"} }}
+
+";
+
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		private static string GetInstaller(
+			string name,
+			string ns,
+			string methods,
+			string body
+		)
+			=> $@"{ns}
+using Zenject; 
+using Ecs.Utils; 
+
+//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by Entitas.InstallerGenerator.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+namespace Ecs.Installers {{
+	public static class {name} {{
+		public static void Install(DiContainer container, bool isDebug = true){{
+{methods}		}}
+
+{body}	}}
+}}";
+	}
+}

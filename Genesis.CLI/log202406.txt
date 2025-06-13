@@ -1,0 +1,280 @@
+2024-06-17 11:49:00.506 +03:00 [VRB] Solution found at F:\UnityProjects\flash-ball\flash-ball.sln, attempting to load.
+2024-06-17 11:49:04.707 +03:00 [VRB] Roslyn solution found, beginning parsing.
+2024-06-17 11:49:04.711 +03:00 [VRB] Inspecting project MoreMountains.Feedbacks.Cinemachine.
+2024-06-17 11:49:04.711 +03:00 [VRB] Inspecting project MoreMountains.Feedbacks.URP.
+2024-06-17 11:49:04.711 +03:00 [VRB] Inspecting project AstarPathfindingProject.
+2024-06-17 11:49:04.711 +03:00 [VRB] Inspecting project MoreMountains.Feedbacks.Authorizations.
+2024-06-17 11:49:04.711 +03:00 [VRB] Inspecting project MoreMountains.Feedbacks.NiceVibrations.
+2024-06-17 11:49:04.711 +03:00 [VRB] Inspecting project ParticleImage.
+2024-06-17 11:49:04.711 +03:00 [VRB] Inspecting project MoreMountains.Feedbacks.
+2024-06-17 11:49:04.711 +03:00 [VRB] Inspecting project Assembly-CSharp-firstpass.
+2024-06-17 11:49:04.711 +03:00 [VRB] Inspecting project Lofelt.NiceVibrations.
+2024-06-17 11:49:04.711 +03:00 [VRB] Inspecting project Fluid.BehaviorTree.
+2024-06-17 11:49:04.711 +03:00 [VRB] Inspecting project MoreMountains.Tools.
+2024-06-17 11:49:04.711 +03:00 [VRB] Inspecting project MoreMountains.Feedbacks.MMTools.
+2024-06-17 11:49:04.711 +03:00 [VRB] Inspecting project SimpleUnityOtel.
+2024-06-17 11:49:04.711 +03:00 [VRB] Inspecting project MoreMountains.Feedbacks.HDRP.
+2024-06-17 11:49:04.711 +03:00 [VRB] Inspecting project Assembly-CSharp.
+2024-06-17 11:49:04.711 +03:00 [VRB] Inspecting project MoreMountains.Feedbacks.TextMeshPro.
+2024-06-17 11:49:05.380 +03:00 [VRB] Inspecting project MoreMountains.Feedbacks.PostProcessing.
+2024-06-17 11:49:05.386 +03:00 [VRB] Inspecting project spreadsheet.
+2024-06-17 11:49:05.386 +03:00 [VRB] Inspecting project MK.Toon.
+2024-06-17 11:49:05.401 +03:00 [VRB] Inspecting project MK.Toon.URP.
+2024-06-17 11:49:05.498 +03:00 [VRB] Inspecting project drawers.
+2024-06-17 11:49:05.502 +03:00 [VRB] Inspecting project Telemetry.
+2024-06-17 11:49:05.503 +03:00 [VRB] Inspecting project NavMeshComponents.
+2024-06-17 11:49:05.514 +03:00 [VRB] Inspecting project MK.Toon.Editor.
+2024-06-17 11:49:05.520 +03:00 [VRB] Inspecting project MoreMountains.Tools.Editor.
+2024-06-17 11:49:05.525 +03:00 [VRB] Inspecting project Assembly-CSharp-Editor-firstpass.
+2024-06-17 11:49:05.732 +03:00 [VRB] Inspecting project Assembly-CSharp-Editor.
+2024-06-17 11:49:05.733 +03:00 [VRB] Inspecting project AstarPathfindingProjectEditor.
+2024-06-17 11:49:05.735 +03:00 [VRB] Inspecting project spreadsheet.Editor.
+2024-06-17 11:49:05.751 +03:00 [VRB] Inspecting project MoreMountains.Feedbacks.Editor.
+2024-06-17 11:49:05.755 +03:00 [VRB] Inspecting project Fluid.BehaviorTree.Editor.
+2024-06-17 11:49:05.760 +03:00 [VRB] Inspecting project drawers.Editor.
+2024-06-17 11:49:05.786 +03:00 [VRB] Inspecting project PackageToolsEditor.
+2024-06-17 11:49:05.787 +03:00 [VRB] Inspecting project ParticleImage.Editor.
+2024-06-17 11:49:05.788 +03:00 [VRB] Inspecting project MK.Toon.URP.Editor.
+2024-06-17 11:49:05.792 +03:00 [VRB] Inspecting project NavMeshComponentsEditor.
+2024-06-17 11:49:05.799 +03:00 [VRB] Inspecting project Lofelt.NiceVibrations.Editor.
+2024-06-17 11:49:05.800 +03:00 [VRB] Inspecting project MK.MeshUtility.
+2024-06-17 11:49:05.807 +03:00 [VRB] Inspecting project MK.RampCreator.
+2024-06-17 11:49:05.807 +03:00 [VRB] Inspecting project Sirenix.OdinInspector.Modules.UnityMathematics.
+2024-06-17 11:49:05.807 +03:00 [VRB] Inspecting project MK.MKTextureChannelPacker.
+2024-06-17 11:49:07.325 +03:00 [VRB] Found a total of 6965.
+2024-06-17 11:49:07.326 +03:00 [VRB] Solution loaded, 6965 TypeSymbols Discovered
+2024-06-17 11:49:07.330 +03:00 [VRB] Attempting to load Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\EntitasRedux.Core.dll].
+2024-06-17 11:49:07.330 +03:00 [VRB] Loading Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\EntitasRedux.Core.dll]
+2024-06-17 11:49:07.399 +03:00 [VRB] Attempting to load Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\EntitasRedux.Core.Libs.dll].
+2024-06-17 11:49:07.399 +03:00 [VRB] Loading Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\EntitasRedux.Core.Libs.dll]
+2024-06-17 11:49:07.435 +03:00 [VRB] Attempting to load Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\EntitasRedux.Core.Plugins.dll].
+2024-06-17 11:49:07.435 +03:00 [VRB] Loading Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\EntitasRedux.Core.Plugins.dll]
+2024-06-17 11:49:07.557 +03:00 [VRB] Attempting to load Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\EntitasRedux.Unity.Blueprint.Plugins.dll].
+2024-06-17 11:49:07.557 +03:00 [VRB] Loading Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\EntitasRedux.Unity.Blueprint.Plugins.dll]
+2024-06-17 11:49:07.611 +03:00 [VRB] Attempting to load Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\EntitasRedux.Unity.VisualDebugging.Plugins.dll].
+2024-06-17 11:49:07.612 +03:00 [VRB] Loading Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\EntitasRedux.Unity.VisualDebugging.Plugins.dll]
+2024-06-17 11:49:07.656 +03:00 [VRB] Attempting to load Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\Genesis.Core.dll].
+2024-06-17 11:49:07.656 +03:00 [VRB] Loading Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\Genesis.Core.dll]
+2024-06-17 11:49:07.715 +03:00 [VRB] Attempting to load Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\Genesis.Core.Plugin.dll].
+2024-06-17 11:49:07.715 +03:00 [VRB] Loading Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\Genesis.Core.Plugin.dll]
+2024-06-17 11:49:07.757 +03:00 [VRB] Attempting to load Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\Genesis.Plugin.dll].
+2024-06-17 11:49:07.757 +03:00 [VRB] Loading Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\Genesis.Plugin.dll]
+2024-06-17 11:49:07.844 +03:00 [VRB] Attempting to load Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\Genesis.Shared.dll].
+2024-06-17 11:49:07.844 +03:00 [VRB] Loading Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\Genesis.Shared.dll]
+2024-06-17 11:49:07.912 +03:00 [VRB] Attempting to load Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\Genesis.Unity.Factory.dll].
+2024-06-17 11:49:07.912 +03:00 [VRB] Loading Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\Genesis.Unity.Factory.dll]
+2024-06-17 11:49:07.949 +03:00 [VRB] Attempting to load Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\Genesis.Unity.Factory.Plugin.dll].
+2024-06-17 11:49:07.949 +03:00 [VRB] Loading Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\Genesis.Unity.Factory.Plugin.dll]
+2024-06-17 11:49:08.008 +03:00 [VRB] Loaded 11 plugins assemblies.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: CleanupDestroyEntitySystemGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: CleanupRemoveComponentSystemGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: ContextCleanupFeatureGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: ContextCleanupSystemsGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: ComponentContextApiGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: ComponentEntityApiGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: ComponentEntityApiInterfaceGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: ComponentGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: ComponentLookupGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: ComponentMatcherApiGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: ComponentDataProvider.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: ContextAttributeGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: ContextGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: ContextMatcherGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: ContextsGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: ContextDataProvider.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: EntityGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: EntityIndexGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: EntityIndexDataProvider.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: EventDelegateGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: EventEntityApiGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: EventListenerComponentGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: EventSystemGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: EventSystemsGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: BlueprintClassGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: ContextObserverGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: FeatureClassGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: AddFileHeaderPostProcessor.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: CleanTargetDirectoryPostProcessor.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: MergeFilesPostProcessor.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: NewLinePostProcessor.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: WriteToDiskPostProcessor.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: ScriptableFactoryCodeGenerator.
+2024-06-17 11:49:08.619 +03:00 [VRB] Plugin loaded: ScriptableFactoryDataProvider.
+2024-06-17 11:49:08.619 +03:00 [VRB] Using Base64 Configs...
+2024-06-17 11:49:08.726 +03:00 [VRB] Loaded 1 GenesisConfigs. Starting code generation.
+2024-06-17 11:49:08.727 +03:00 [VRB] Setting absolute output path to F:/UnityProjects/flash-ball/Assets/Ecs/Generated.
+2024-06-17 11:49:08.931 +03:00 [VRB] Generating code from GenesisSettings.
+2024-06-17 11:49:09.003 +03:00 [VRB] Creating model Component 2,94%%
+2024-06-17 11:49:10.073 +03:00 [VRB] Creating model Context 5,88%%
+2024-06-17 11:49:10.073 +03:00 [VRB] Creating model Entity Index 8,82%%
+2024-06-17 11:49:10.104 +03:00 [VRB] Creating model Scriptable Factory Data 11,76%%
+2024-06-17 11:49:10.108 +03:00 [VRB] Creating files Cleanup Destroy Entity System 14,71%%
+2024-06-17 11:49:10.157 +03:00 [VRB] Creating files Cleanup Remove Component System 17,65%%
+2024-06-17 11:49:10.157 +03:00 [VRB] Creating files Component (Context API) 20,59%%
+2024-06-17 11:49:10.159 +03:00 [VRB] Creating files Component (Entity API) 23,53%%
+2024-06-17 11:49:10.192 +03:00 [VRB] Creating files Component (Entity API Interface) 26,47%%
+2024-06-17 11:49:10.197 +03:00 [VRB] Creating files Component 29,41%%
+2024-06-17 11:49:10.197 +03:00 [VRB] Creating files Component (Lookup) 32,35%%
+2024-06-17 11:49:10.202 +03:00 [VRB] Creating files Component (Matcher API) 35,29%%
+2024-06-17 11:49:10.208 +03:00 [VRB] Creating files Context (Attribute) 38,24%%
+2024-06-17 11:49:10.209 +03:00 [VRB] Creating files Context Cleanup Feature Generator 41,18%%
+2024-06-17 11:49:10.210 +03:00 [VRB] Creating files Context Cleanup Systems Generator 44,12%%
+2024-06-17 11:49:10.211 +03:00 [VRB] Creating files Context 47,06%%
+2024-06-17 11:49:10.211 +03:00 [VRB] Creating files Context (Matcher API) 50,00%%
+2024-06-17 11:49:10.211 +03:00 [VRB] Creating files Contexts 52,94%%
+2024-06-17 11:49:10.212 +03:00 [VRB] Creating files Entity 55,88%%
+2024-06-17 11:49:10.212 +03:00 [VRB] Creating files Entity Index 58,82%%
+2024-06-17 11:49:10.213 +03:00 [VRB] Creating files Event (Listener Delegate) 61,76%%
+2024-06-17 11:49:10.216 +03:00 [VRB] Creating files Event (Entity API) 64,71%%
+2024-06-17 11:49:10.223 +03:00 [VRB] Creating files Event (Listener Component) 67,65%%
+2024-06-17 11:49:10.227 +03:00 [VRB] Creating files Event (System) 70,59%%
+2024-06-17 11:49:10.306 +03:00 [VRB] Creating files Event (Systems) 73,53%%
+2024-06-17 11:49:10.316 +03:00 [VRB] Creating files Blueprint Class Generator 76,47%%
+2024-06-17 11:49:10.317 +03:00 [VRB] Creating files Context Observer 79,41%%
+2024-06-17 11:49:10.317 +03:00 [VRB] Creating files Feature Class 82,35%%
+2024-06-17 11:49:10.317 +03:00 [VRB] Creating files Scriptable Factory Lookup 85,29%%
+2024-06-17 11:49:10.318 +03:00 [VRB] Post Processing Add File Header 88,24%%
+2024-06-17 11:49:10.322 +03:00 [VRB] Post Processing Clean Target Directory 91,18%%
+2024-06-17 11:49:10.482 +03:00 [VRB] Post Processing Convert Line Endings 94,12%%
+2024-06-17 11:49:10.488 +03:00 [VRB] Post Processing Merge files 97,06%%
+2024-06-17 11:49:10.490 +03:00 [VRB] Post Processing Write Code Gen Files to Disk 100,00%%
+2024-06-17 13:30:26.666 +03:00 [VRB] Solution found at F:\UnityProjects\flash-ball\flash-ball.sln, attempting to load.
+2024-06-17 13:30:30.188 +03:00 [VRB] Roslyn solution found, beginning parsing.
+2024-06-17 13:30:30.193 +03:00 [VRB] Inspecting project MoreMountains.Feedbacks.HDRP.
+2024-06-17 13:30:30.193 +03:00 [VRB] Inspecting project MoreMountains.Feedbacks.Authorizations.
+2024-06-17 13:30:30.193 +03:00 [VRB] Inspecting project Assembly-CSharp.
+2024-06-17 13:30:30.193 +03:00 [VRB] Inspecting project Lofelt.NiceVibrations.
+2024-06-17 13:30:30.193 +03:00 [VRB] Inspecting project MoreMountains.Feedbacks.
+2024-06-17 13:30:30.193 +03:00 [VRB] Inspecting project MoreMountains.Tools.
+2024-06-17 13:30:30.193 +03:00 [VRB] Inspecting project Fluid.BehaviorTree.
+2024-06-17 13:30:30.193 +03:00 [VRB] Inspecting project SimpleUnityOtel.
+2024-06-17 13:30:30.193 +03:00 [VRB] Inspecting project MoreMountains.Feedbacks.Cinemachine.
+2024-06-17 13:30:30.193 +03:00 [VRB] Inspecting project MoreMountains.Feedbacks.URP.
+2024-06-17 13:30:30.193 +03:00 [VRB] Inspecting project AstarPathfindingProject.
+2024-06-17 13:30:30.193 +03:00 [VRB] Inspecting project MoreMountains.Feedbacks.MMTools.
+2024-06-17 13:30:30.193 +03:00 [VRB] Inspecting project Assembly-CSharp-firstpass.
+2024-06-17 13:30:30.193 +03:00 [VRB] Inspecting project MoreMountains.Feedbacks.NiceVibrations.
+2024-06-17 13:30:30.193 +03:00 [VRB] Inspecting project MoreMountains.Feedbacks.TextMeshPro.
+2024-06-17 13:30:30.193 +03:00 [VRB] Inspecting project ParticleImage.
+2024-06-17 13:30:30.833 +03:00 [VRB] Inspecting project MoreMountains.Feedbacks.PostProcessing.
+2024-06-17 13:30:30.837 +03:00 [VRB] Inspecting project spreadsheet.
+2024-06-17 13:30:30.837 +03:00 [VRB] Inspecting project MK.Toon.
+2024-06-17 13:30:30.900 +03:00 [VRB] Inspecting project MK.Toon.URP.
+2024-06-17 13:30:30.906 +03:00 [VRB] Inspecting project drawers.
+2024-06-17 13:30:30.920 +03:00 [VRB] Inspecting project Telemetry.
+2024-06-17 13:30:30.921 +03:00 [VRB] Inspecting project NavMeshComponents.
+2024-06-17 13:30:30.933 +03:00 [VRB] Inspecting project MK.Toon.Editor.
+2024-06-17 13:30:30.944 +03:00 [VRB] Inspecting project MoreMountains.Tools.Editor.
+2024-06-17 13:30:31.180 +03:00 [VRB] Inspecting project Assembly-CSharp-Editor-firstpass.
+2024-06-17 13:30:31.203 +03:00 [VRB] Inspecting project Assembly-CSharp-Editor.
+2024-06-17 13:30:31.215 +03:00 [VRB] Inspecting project AstarPathfindingProjectEditor.
+2024-06-17 13:30:31.227 +03:00 [VRB] Inspecting project spreadsheet.Editor.
+2024-06-17 13:30:31.279 +03:00 [VRB] Inspecting project MoreMountains.Feedbacks.Editor.
+2024-06-17 13:30:31.289 +03:00 [VRB] Inspecting project Fluid.BehaviorTree.Editor.
+2024-06-17 13:30:31.308 +03:00 [VRB] Inspecting project drawers.Editor.
+2024-06-17 13:30:31.316 +03:00 [VRB] Inspecting project PackageToolsEditor.
+2024-06-17 13:30:31.316 +03:00 [VRB] Inspecting project ParticleImage.Editor.
+2024-06-17 13:30:31.316 +03:00 [VRB] Inspecting project MK.Toon.URP.Editor.
+2024-06-17 13:30:31.316 +03:00 [VRB] Inspecting project NavMeshComponentsEditor.
+2024-06-17 13:30:31.333 +03:00 [VRB] Inspecting project Lofelt.NiceVibrations.Editor.
+2024-06-17 13:30:31.333 +03:00 [VRB] Inspecting project MK.MeshUtility.
+2024-06-17 13:30:31.334 +03:00 [VRB] Inspecting project MK.RampCreator.
+2024-06-17 13:30:31.338 +03:00 [VRB] Inspecting project Sirenix.OdinInspector.Modules.UnityMathematics.
+2024-06-17 13:30:31.348 +03:00 [VRB] Inspecting project MK.MKTextureChannelPacker.
+2024-06-17 13:30:32.798 +03:00 [VRB] Found a total of 6971.
+2024-06-17 13:30:32.800 +03:00 [VRB] Solution loaded, 6971 TypeSymbols Discovered
+2024-06-17 13:30:32.803 +03:00 [VRB] Attempting to load Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\EntitasRedux.Core.dll].
+2024-06-17 13:30:32.804 +03:00 [VRB] Loading Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\EntitasRedux.Core.dll]
+2024-06-17 13:30:32.812 +03:00 [VRB] Attempting to load Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\EntitasRedux.Core.Libs.dll].
+2024-06-17 13:30:32.812 +03:00 [VRB] Loading Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\EntitasRedux.Core.Libs.dll]
+2024-06-17 13:30:32.825 +03:00 [VRB] Attempting to load Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\EntitasRedux.Core.Plugins.dll].
+2024-06-17 13:30:32.825 +03:00 [VRB] Loading Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\EntitasRedux.Core.Plugins.dll]
+2024-06-17 13:30:32.838 +03:00 [VRB] Attempting to load Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\EntitasRedux.Unity.Blueprint.Plugins.dll].
+2024-06-17 13:30:32.838 +03:00 [VRB] Loading Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\EntitasRedux.Unity.Blueprint.Plugins.dll]
+2024-06-17 13:30:32.843 +03:00 [VRB] Attempting to load Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\EntitasRedux.Unity.VisualDebugging.Plugins.dll].
+2024-06-17 13:30:32.843 +03:00 [VRB] Loading Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\EntitasRedux.Unity.VisualDebugging.Plugins.dll]
+2024-06-17 13:30:32.851 +03:00 [VRB] Attempting to load Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\Genesis.Core.dll].
+2024-06-17 13:30:32.851 +03:00 [VRB] Loading Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\Genesis.Core.dll]
+2024-06-17 13:30:32.857 +03:00 [VRB] Attempting to load Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\Genesis.Core.Plugin.dll].
+2024-06-17 13:30:32.857 +03:00 [VRB] Loading Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\Genesis.Core.Plugin.dll]
+2024-06-17 13:30:32.862 +03:00 [VRB] Attempting to load Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\Genesis.Plugin.dll].
+2024-06-17 13:30:32.862 +03:00 [VRB] Loading Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\Genesis.Plugin.dll]
+2024-06-17 13:30:32.871 +03:00 [VRB] Attempting to load Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\Genesis.Shared.dll].
+2024-06-17 13:30:32.871 +03:00 [VRB] Loading Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\Genesis.Shared.dll]
+2024-06-17 13:30:32.876 +03:00 [VRB] Attempting to load Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\Genesis.Unity.Factory.dll].
+2024-06-17 13:30:32.876 +03:00 [VRB] Loading Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\Genesis.Unity.Factory.dll]
+2024-06-17 13:30:32.893 +03:00 [VRB] Attempting to load Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\Genesis.Unity.Factory.Plugin.dll].
+2024-06-17 13:30:32.893 +03:00 [VRB] Loading Assembly [F:\UnityProjects\flash-ball\Genesis.CLI\Plugins\Genesis.Unity.Factory.Plugin.dll]
+2024-06-17 13:30:32.901 +03:00 [VRB] Loaded 11 plugins assemblies.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: CleanupDestroyEntitySystemGenerator.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: CleanupRemoveComponentSystemGenerator.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: ContextCleanupFeatureGenerator.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: ContextCleanupSystemsGenerator.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: ComponentContextApiGenerator.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: ComponentEntityApiGenerator.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: ComponentEntityApiInterfaceGenerator.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: ComponentGenerator.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: ComponentLookupGenerator.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: ComponentMatcherApiGenerator.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: ComponentDataProvider.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: ContextAttributeGenerator.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: ContextGenerator.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: ContextMatcherGenerator.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: ContextsGenerator.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: ContextDataProvider.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: EntityGenerator.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: EntityIndexGenerator.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: EntityIndexDataProvider.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: EventDelegateGenerator.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: EventEntityApiGenerator.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: EventListenerComponentGenerator.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: EventSystemGenerator.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: EventSystemsGenerator.
+2024-06-17 13:30:33.144 +03:00 [VRB] Plugin loaded: BlueprintClassGenerator.
+2024-06-17 13:30:33.145 +03:00 [VRB] Plugin loaded: ContextObserverGenerator.
+2024-06-17 13:30:33.145 +03:00 [VRB] Plugin loaded: FeatureClassGenerator.
+2024-06-17 13:30:33.145 +03:00 [VRB] Plugin loaded: AddFileHeaderPostProcessor.
+2024-06-17 13:30:33.145 +03:00 [VRB] Plugin loaded: CleanTargetDirectoryPostProcessor.
+2024-06-17 13:30:33.145 +03:00 [VRB] Plugin loaded: MergeFilesPostProcessor.
+2024-06-17 13:30:33.145 +03:00 [VRB] Plugin loaded: NewLinePostProcessor.
+2024-06-17 13:30:33.145 +03:00 [VRB] Plugin loaded: WriteToDiskPostProcessor.
+2024-06-17 13:30:33.145 +03:00 [VRB] Plugin loaded: ScriptableFactoryCodeGenerator.
+2024-06-17 13:30:33.145 +03:00 [VRB] Plugin loaded: ScriptableFactoryDataProvider.
+2024-06-17 13:30:33.145 +03:00 [VRB] Using Base64 Configs...
+2024-06-17 13:30:33.204 +03:00 [VRB] Loaded 1 GenesisConfigs. Starting code generation.
+2024-06-17 13:30:33.205 +03:00 [VRB] Setting absolute output path to F:/UnityProjects/flash-ball/Assets/Ecs/Generated.
+2024-06-17 13:30:33.241 +03:00 [VRB] Generating code from GenesisSettings.
+2024-06-17 13:30:33.339 +03:00 [VRB] Creating model Component 2,94%%
+2024-06-17 13:30:34.379 +03:00 [VRB] Creating model Context 5,88%%
+2024-06-17 13:30:34.380 +03:00 [VRB] Creating model Entity Index 8,82%%
+2024-06-17 13:30:34.417 +03:00 [VRB] Creating model Scriptable Factory Data 11,76%%
+2024-06-17 13:30:34.497 +03:00 [VRB] Creating files Cleanup Destroy Entity System 14,71%%
+2024-06-17 13:30:34.515 +03:00 [VRB] Creating files Cleanup Remove Component System 17,65%%
+2024-06-17 13:30:34.515 +03:00 [VRB] Creating files Component (Context API) 20,59%%
+2024-06-17 13:30:34.517 +03:00 [VRB] Creating files Component (Entity API) 23,53%%
+2024-06-17 13:30:34.549 +03:00 [VRB] Creating files Component (Entity API Interface) 26,47%%
+2024-06-17 13:30:34.553 +03:00 [VRB] Creating files Component 29,41%%
+2024-06-17 13:30:34.553 +03:00 [VRB] Creating files Component (Lookup) 32,35%%
+2024-06-17 13:30:34.558 +03:00 [VRB] Creating files Component (Matcher API) 35,29%%
+2024-06-17 13:30:34.564 +03:00 [VRB] Creating files Context (Attribute) 38,24%%
+2024-06-17 13:30:34.564 +03:00 [VRB] Creating files Context Cleanup Feature Generator 41,18%%
+2024-06-17 13:30:34.566 +03:00 [VRB] Creating files Context Cleanup Systems Generator 44,12%%
+2024-06-17 13:30:34.567 +03:00 [VRB] Creating files Context 47,06%%
+2024-06-17 13:30:34.567 +03:00 [VRB] Creating files Context (Matcher API) 50,00%%
+2024-06-17 13:30:34.567 +03:00 [VRB] Creating files Contexts 52,94%%
+2024-06-17 13:30:34.568 +03:00 [VRB] Creating files Entity 55,88%%
+2024-06-17 13:30:34.568 +03:00 [VRB] Creating files Entity Index 58,82%%
+2024-06-17 13:30:34.569 +03:00 [VRB] Creating files Event (Listener Delegate) 61,76%%
+2024-06-17 13:30:34.571 +03:00 [VRB] Creating files Event (Entity API) 64,71%%
+2024-06-17 13:30:34.579 +03:00 [VRB] Creating files Event (Listener Component) 67,65%%
+2024-06-17 13:30:34.583 +03:00 [VRB] Creating files Event (System) 70,59%%
+2024-06-17 13:30:34.589 +03:00 [VRB] Creating files Event (Systems) 73,53%%
+2024-06-17 13:30:34.598 +03:00 [VRB] Creating files Blueprint Class Generator 76,47%%
+2024-06-17 13:30:34.599 +03:00 [VRB] Creating files Context Observer 79,41%%
+2024-06-17 13:30:34.599 +03:00 [VRB] Creating files Feature Class 82,35%%
+2024-06-17 13:30:34.599 +03:00 [VRB] Creating files Scriptable Factory Lookup 85,29%%
+2024-06-17 13:30:34.600 +03:00 [VRB] Post Processing Add File Header 88,24%%
+2024-06-17 13:30:34.614 +03:00 [VRB] Post Processing Clean Target Directory 91,18%%
+2024-06-17 13:30:34.744 +03:00 [VRB] Post Processing Convert Line Endings 94,12%%
+2024-06-17 13:30:34.750 +03:00 [VRB] Post Processing Merge files 97,06%%
+2024-06-17 13:30:34.752 +03:00 [VRB] Post Processing Write Code Gen Files to Disk 100,00%%
