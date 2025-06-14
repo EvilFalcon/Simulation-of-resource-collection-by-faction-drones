@@ -8,9 +8,5 @@ namespace Ecs.Game.Components.TerrainComponents
     public class TerrainComponent : IComponent
     {
         public Terrain Value;
-
-        void a()
-        {
-        }
     }
 }

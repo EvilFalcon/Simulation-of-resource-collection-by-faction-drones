@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using Ecs.Common.Components;
 using JCMG.EntitasRedux;
 
 public partial class GameEntity
@@ -30,7 +31,7 @@ public partial class GameEntity
 		{
 			CopyAttackTo(Attack);
 		}
-		else if (component is Ecs.Game.Components.LinkComponent Link)
+		else if (component is LinkComponent Link)
 		{
 			CopyLinkTo(Link);
 		}
@@ -42,10 +43,6 @@ public partial class GameEntity
 		{
 			CopyVelocityTo(Velocity);
 		}
-		else if (component is Ecs.Game.Components.MovementTargetComponent MovementTarget)
-		{
-			CopyMovementTargetTo(MovementTarget);
-		}
 		else if (component is Ecs.Game.Components.GameStateComponent GameState)
 		{
 			CopyGameStateTo(GameState);
@@ -54,7 +51,7 @@ public partial class GameEntity
 		{
 			IsDead = true;
 		}
-		else if (component is Ecs.Game.Components.CorePrefabComponent CorePrefab)
+		else if (component is CorePrefabComponent CorePrefab)
 		{
 			CopyCorePrefabTo(CorePrefab);
 		}
@@ -62,7 +59,7 @@ public partial class GameEntity
 		{
 			CopyLookPointTo(LookPoint);
 		}
-		else if (component is Ecs.Game.Components.ResourcePrefabComponent ResourcePrefab)
+		else if (component is ResourcePrefabComponent ResourcePrefab)
 		{
 			CopyResourcePrefabTo(ResourcePrefab);
 		}
@@ -70,11 +67,11 @@ public partial class GameEntity
 		{
 			CopySpeedTo(Speed);
 		}
-		else if (component is Ecs.Game.Components.InstantiateComponent Instantiate)
+		else if (component is InstantiateComponent Instantiate)
 		{
 			IsInstantiate = true;
 		}
-		else if (component is Ecs.Game.Components.UnitPrefabComponent UnitPrefab)
+		else if (component is UnitPrefabComponent UnitPrefab)
 		{
 			CopyUnitPrefabTo(UnitPrefab);
 		}

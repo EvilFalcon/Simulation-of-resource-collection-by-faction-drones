@@ -7,9 +7,12 @@
 //		the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+using Ecs.Common.Components;
+
 public partial class GameEntity
 {
-	static readonly Ecs.Game.Components.InstantiateComponent InstantiateComponent = new Ecs.Game.Components.InstantiateComponent();
+	static readonly InstantiateComponent InstantiateComponent = new InstantiateComponent();
 
 	public bool IsInstantiate
 	{

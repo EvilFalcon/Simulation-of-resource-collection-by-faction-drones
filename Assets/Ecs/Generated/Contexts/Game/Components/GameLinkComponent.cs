@@ -7,15 +7,18 @@
 //		the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+using Ecs.Common.Components;
+
 public partial class GameEntity
 {
-	public Ecs.Game.Components.LinkComponent Link { get { return (Ecs.Game.Components.LinkComponent)GetComponent(GameComponentsLookup.Link); } }
+	public LinkComponent Link { get { return (LinkComponent)GetComponent(GameComponentsLookup.Link); } }
 	public bool HasLink { get { return HasComponent(GameComponentsLookup.Link); } }
 
 	public void AddLink(Ecs.Views.Linkable.IObjectLinkable newView)
 	{
 		var index = GameComponentsLookup.Link;
-		var component = (Ecs.Game.Components.LinkComponent)CreateComponent(index, typeof(Ecs.Game.Components.LinkComponent));
+		var component = (LinkComponent)CreateComponent(index, typeof(LinkComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.View = newView;
 		#endif
@@ -25,17 +28,17 @@ public partial class GameEntity
 	public void ReplaceLink(Ecs.Views.Linkable.IObjectLinkable newView)
 	{
 		var index = GameComponentsLookup.Link;
-		var component = (Ecs.Game.Components.LinkComponent)CreateComponent(index, typeof(Ecs.Game.Components.LinkComponent));
+		var component = (LinkComponent)CreateComponent(index, typeof(LinkComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.View = newView;
 		#endif
 		ReplaceComponent(index, component);
 	}
 
-	public void CopyLinkTo(Ecs.Game.Components.LinkComponent copyComponent)
+	public void CopyLinkTo(LinkComponent copyComponent)
 	{
 		var index = GameComponentsLookup.Link;
-		var component = (Ecs.Game.Components.LinkComponent)CreateComponent(index, typeof(Ecs.Game.Components.LinkComponent));
+		var component = (LinkComponent)CreateComponent(index, typeof(LinkComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.View = copyComponent.View;
 		#endif

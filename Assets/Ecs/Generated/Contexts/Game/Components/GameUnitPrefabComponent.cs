@@ -7,15 +7,18 @@
 //		the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+using Ecs.Common.Components;
+
 public partial class GameEntity
 {
-	public Ecs.Game.Components.UnitPrefabComponent UnitPrefab { get { return (Ecs.Game.Components.UnitPrefabComponent)GetComponent(GameComponentsLookup.UnitPrefab); } }
+	public UnitPrefabComponent UnitPrefab { get { return (UnitPrefabComponent)GetComponent(GameComponentsLookup.UnitPrefab); } }
 	public bool HasUnitPrefab { get { return HasComponent(GameComponentsLookup.UnitPrefab); } }
 
 	public void AddUnitPrefab(Db.GameObjectsBase.Impl.EFractionType newValue)
 	{
 		var index = GameComponentsLookup.UnitPrefab;
-		var component = (Ecs.Game.Components.UnitPrefabComponent)CreateComponent(index, typeof(Ecs.Game.Components.UnitPrefabComponent));
+		var component = (UnitPrefabComponent)CreateComponent(index, typeof(UnitPrefabComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = newValue;
 		#endif
@@ -25,17 +28,17 @@ public partial class GameEntity
 	public void ReplaceUnitPrefab(Db.GameObjectsBase.Impl.EFractionType newValue)
 	{
 		var index = GameComponentsLookup.UnitPrefab;
-		var component = (Ecs.Game.Components.UnitPrefabComponent)CreateComponent(index, typeof(Ecs.Game.Components.UnitPrefabComponent));
+		var component = (UnitPrefabComponent)CreateComponent(index, typeof(UnitPrefabComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = newValue;
 		#endif
 		ReplaceComponent(index, component);
 	}
 
-	public void CopyUnitPrefabTo(Ecs.Game.Components.UnitPrefabComponent copyComponent)
+	public void CopyUnitPrefabTo(UnitPrefabComponent copyComponent)
 	{
 		var index = GameComponentsLookup.UnitPrefab;
-		var component = (Ecs.Game.Components.UnitPrefabComponent)CreateComponent(index, typeof(Ecs.Game.Components.UnitPrefabComponent));
+		var component = (UnitPrefabComponent)CreateComponent(index, typeof(UnitPrefabComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = copyComponent.Value;
 		#endif

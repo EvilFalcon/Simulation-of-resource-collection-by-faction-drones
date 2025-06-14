@@ -7,9 +7,12 @@
 //		the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+using Ecs.Common.Components;
+
 public partial interface ILinkEntity
 {
-	Ecs.Game.Components.LinkComponent Link { get; }
+	LinkComponent Link { get; }
 	bool HasLink { get; }
 
 	void AddLink(Ecs.Views.Linkable.IObjectLinkable newView);

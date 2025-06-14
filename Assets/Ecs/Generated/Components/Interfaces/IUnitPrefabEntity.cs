@@ -7,9 +7,12 @@
 //		the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+using Ecs.Common.Components;
+
 public partial interface IUnitPrefabEntity
 {
-	Ecs.Game.Components.UnitPrefabComponent UnitPrefab { get; }
+	UnitPrefabComponent UnitPrefab { get; }
 	bool HasUnitPrefab { get; }
 
 	void AddUnitPrefab(Db.GameObjectsBase.Impl.EFractionType newValue);
