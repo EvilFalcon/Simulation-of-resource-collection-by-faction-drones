@@ -9,13 +9,13 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity
 {
-	public Ecs.Game.Components.ScaleComponent Scale { get { return (Ecs.Game.Components.ScaleComponent)GetComponent(GameComponentsLookup.Scale); } }
+	public Ecs.Game.Components.GlobalComponents.ScaleComponent Scale { get { return (Ecs.Game.Components.GlobalComponents.ScaleComponent)GetComponent(GameComponentsLookup.Scale); } }
 	public bool HasScale { get { return HasComponent(GameComponentsLookup.Scale); } }
 
 	public void AddScale(UnityEngine.Vector3 newValue)
 	{
 		var index = GameComponentsLookup.Scale;
-		var component = (Ecs.Game.Components.ScaleComponent)CreateComponent(index, typeof(Ecs.Game.Components.ScaleComponent));
+		var component = (Ecs.Game.Components.GlobalComponents.ScaleComponent)CreateComponent(index, typeof(Ecs.Game.Components.GlobalComponents.ScaleComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = newValue;
 		#endif
@@ -25,17 +25,17 @@ public partial class GameEntity
 	public void ReplaceScale(UnityEngine.Vector3 newValue)
 	{
 		var index = GameComponentsLookup.Scale;
-		var component = (Ecs.Game.Components.ScaleComponent)CreateComponent(index, typeof(Ecs.Game.Components.ScaleComponent));
+		var component = (Ecs.Game.Components.GlobalComponents.ScaleComponent)CreateComponent(index, typeof(Ecs.Game.Components.GlobalComponents.ScaleComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = newValue;
 		#endif
 		ReplaceComponent(index, component);
 	}
 
-	public void CopyScaleTo(Ecs.Game.Components.ScaleComponent copyComponent)
+	public void CopyScaleTo(Ecs.Game.Components.GlobalComponents.ScaleComponent copyComponent)
 	{
 		var index = GameComponentsLookup.Scale;
-		var component = (Ecs.Game.Components.ScaleComponent)CreateComponent(index, typeof(Ecs.Game.Components.ScaleComponent));
+		var component = (Ecs.Game.Components.GlobalComponents.ScaleComponent)CreateComponent(index, typeof(Ecs.Game.Components.GlobalComponents.ScaleComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = copyComponent.Value;
 		#endif

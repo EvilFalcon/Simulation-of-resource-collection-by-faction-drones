@@ -12,6 +12,7 @@ namespace Game.Utils
 		private static readonly Mask GroundAndFloorMask = new Mask(Layers.Ground, Layers.Floor);
 		private static readonly Mask DefaultAndFloorMask = new Mask(Layers.Default, Layers.Floor);
 		private static readonly Mask UnitMask = new Mask(Layers.Unit);
+		private static readonly Mask ResourceMask = new Mask(Layers.Unit, Layers.Resources,Layers.Building);
 		private static readonly Mask AttackableMask =
 			new Mask(Layers.Player, Layers.Default, Layers.Ground, Layers.Floor, Layers.Interactable);
 
@@ -23,6 +24,7 @@ namespace Game.Utils
 
 		public static int Player => PlayerMask.Value;
 		public static int Unit => UnitMask.Value;
+		public static int Resource => ResourceMask.Value;
 		public static int Interactable => InteractableMask.Value;
 		public static int Ground => GroundMask.Value;
 		public static int Floor => FloorMask.Value;

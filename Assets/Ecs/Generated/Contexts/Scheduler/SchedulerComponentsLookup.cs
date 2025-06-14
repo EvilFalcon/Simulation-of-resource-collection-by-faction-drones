@@ -51,7 +51,7 @@ public static class SchedulerComponentsLookup
 	public static readonly System.Type[] ComponentTypes =
 	{
 		typeof(Ecs.Common.Components.DestroyedComponent),
-		typeof(Ecs.Game.Components.UidComponent),
+		typeof(Ecs.Game.Components.GlobalComponents.UidComponent),
 		typeof(Ecs.Scheduler.Components.AccumulatorComponent),
 		typeof(Ecs.Scheduler.Components.ElapsedSecComponent),
 		typeof(Ecs.Scheduler.Components.FramesComponent),
@@ -69,7 +69,7 @@ public static class SchedulerComponentsLookup
 	public static readonly Dictionary<Type, int> ComponentTypeToIndex = new Dictionary<Type, int>
 	{
 		{ typeof(Ecs.Common.Components.DestroyedComponent), 0 },
-		{ typeof(Ecs.Game.Components.UidComponent), 1 },
+		{ typeof(Ecs.Game.Components.GlobalComponents.UidComponent), 1 },
 		{ typeof(Ecs.Scheduler.Components.AccumulatorComponent), 2 },
 		{ typeof(Ecs.Scheduler.Components.ElapsedSecComponent), 3 },
 		{ typeof(Ecs.Scheduler.Components.FramesComponent), 4 },

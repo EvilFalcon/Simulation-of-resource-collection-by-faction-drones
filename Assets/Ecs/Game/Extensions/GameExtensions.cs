@@ -9,12 +9,12 @@ namespace Ecs.Game.Extensions
     {
         public static GameEntity CreateUnit(
             this GameContext context,
-            EUnitType unitType
+            EFractionType fractionType
         )
         {
             var entity = context.CreateEntity();
             entity.AddUid(UidGenerator.Next());
-            InitUnit(entity, unitType);
+            InitUnit(entity, fractionType);
             return entity;
         }
 
@@ -22,11 +22,16 @@ namespace Ecs.Game.Extensions
         {
             var entity = context.CreateEntity();
             entity.AddUid(UidGenerator.Next());
-            entity.AddCorePrefab(EObjectType.WorldMap);
-            entity.IsInstantiate = true;
             return entity;
         }
-        
+
+        public static GameEntity CreateResource(this GameContext context)
+        {
+            var entity = context.CreateEntity();
+            entity.AddUid(UidGenerator.Next());
+            entity.IsResource = true;
+            return entity;
+        }
         
         public static GameEntity CreatePlayer(
             this GameContext context
@@ -37,15 +42,15 @@ namespace Ecs.Game.Extensions
             return entity;
         }
 
-        private static void InitUnit(GameEntity gamePlayer, EUnitType unitType)
+        private static void InitUnit(GameEntity entity, EFractionType fractionType)
         {
-            gamePlayer.AddUnitPrefab(unitType);
-            gamePlayer.AddVelocity(Vector3.zero);
-            gamePlayer.AddPosition(Vector3.zero);
-            gamePlayer.AddRotation(Quaternion.identity);
-            gamePlayer.AddLookDirection(Vector3.forward);
-            gamePlayer.AddSpeed(0);
-            gamePlayer.IsInstantiate = true;
+            entity.AddUnitPrefab(fractionType);
+            entity.AddVelocity(Vector3.zero);
+            entity.AddPosition(Vector3.zero);
+            entity.AddRotation(Quaternion.identity);
+            entity.AddLookDirection(Vector3.forward);
+            entity.AddSpeed(0);
+            entity.IsInstantiate = true;
         }
 
         public static GameEntity CreateCamera(this GameContext context)

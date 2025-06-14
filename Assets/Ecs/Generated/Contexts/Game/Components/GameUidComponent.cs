@@ -9,13 +9,13 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity
 {
-	public Ecs.Game.Components.UidComponent Uid { get { return (Ecs.Game.Components.UidComponent)GetComponent(GameComponentsLookup.Uid); } }
+	public Ecs.Game.Components.GlobalComponents.UidComponent Uid { get { return (Ecs.Game.Components.GlobalComponents.UidComponent)GetComponent(GameComponentsLookup.Uid); } }
 	public bool HasUid { get { return HasComponent(GameComponentsLookup.Uid); } }
 
 	public void AddUid(Ecs.Managers.Uid newValue)
 	{
 		var index = GameComponentsLookup.Uid;
-		var component = (Ecs.Game.Components.UidComponent)CreateComponent(index, typeof(Ecs.Game.Components.UidComponent));
+		var component = (Ecs.Game.Components.GlobalComponents.UidComponent)CreateComponent(index, typeof(Ecs.Game.Components.GlobalComponents.UidComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = newValue;
 		#endif
@@ -25,17 +25,17 @@ public partial class GameEntity
 	public void ReplaceUid(Ecs.Managers.Uid newValue)
 	{
 		var index = GameComponentsLookup.Uid;
-		var component = (Ecs.Game.Components.UidComponent)CreateComponent(index, typeof(Ecs.Game.Components.UidComponent));
+		var component = (Ecs.Game.Components.GlobalComponents.UidComponent)CreateComponent(index, typeof(Ecs.Game.Components.GlobalComponents.UidComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = newValue;
 		#endif
 		ReplaceComponent(index, component);
 	}
 
-	public void CopyUidTo(Ecs.Game.Components.UidComponent copyComponent)
+	public void CopyUidTo(Ecs.Game.Components.GlobalComponents.UidComponent copyComponent)
 	{
 		var index = GameComponentsLookup.Uid;
-		var component = (Ecs.Game.Components.UidComponent)CreateComponent(index, typeof(Ecs.Game.Components.UidComponent));
+		var component = (Ecs.Game.Components.GlobalComponents.UidComponent)CreateComponent(index, typeof(Ecs.Game.Components.GlobalComponents.UidComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = copyComponent.Value;
 		#endif

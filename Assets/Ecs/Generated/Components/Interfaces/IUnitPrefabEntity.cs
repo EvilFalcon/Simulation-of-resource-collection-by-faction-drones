@@ -12,7 +12,7 @@ public partial interface IUnitPrefabEntity
 	Ecs.Game.Components.UnitPrefabComponent UnitPrefab { get; }
 	bool HasUnitPrefab { get; }
 
-	void AddUnitPrefab(Db.GameObjectsBase.Impl.EUnitType newValue);
-	void ReplaceUnitPrefab(Db.GameObjectsBase.Impl.EUnitType newValue);
+	void AddUnitPrefab(Db.GameObjectsBase.Impl.EFractionType newValue);
+	void ReplaceUnitPrefab(Db.GameObjectsBase.Impl.EFractionType newValue);
 	void RemoveUnitPrefab();
 }

@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30d2ab58480a4e69a116adce8c18bcbc, type: 3}
+  m_Name: ResourcesParameters
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _resources
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Db.Generation.ResourcesParameters.ResourceConfig,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: Db.Generation.ResourcesParameters.ResourceConfig, Assembly-CSharp
+    - Name: SpawnWeight
+      Entry: 4
+      Data: 2.01
+    - Name: ResourceType
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Db.Generation.ResourcesParameters.ResourceConfig, Assembly-CSharp
+    - Name: SpawnWeight
+      Entry: 4
+      Data: 4.5
+    - Name: ResourceType
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  <TotalResourcesToSpawn>k__BackingField: 10
+  <MaxAttemptsPerResource>k__BackingField: 10
+  <MinDistanceBetween>k__BackingField: 2

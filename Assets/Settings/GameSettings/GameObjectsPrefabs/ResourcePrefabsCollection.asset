@@ -15,16 +15,19 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 3703099829131025167, guid: 8dccb3bd57379994e8701d1449dddc97, type: 3}
+    - {fileID: 7768314454300979367, guid: 68b1bc7b94fb41c4a97d8c2ca14e9d57, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: _prefabs
+    - Name: _resourcePrefabsCollection
       Entry: 7
       Data: 0|System.Collections.Generic.Dictionary`2[[Db.GameObjectsBase.Impl.EGameResourceType,
-        Assembly-CSharp],[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib
+        Assembly-CSharp],[System.Collections.Generic.List`1[[Ecs.Views.Linkable.Impl.ResourcesView.ResourceView,
+        Assembly-CSharp]], mscorlib]], mscorlib
     - Name: comparer
       Entry: 7
       Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Db.GameObjectsBase.Impl.EGameResourceType,
@@ -40,7 +43,108 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[Ecs.Views.Linkable.Impl.ResourcesView.ResourceView,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 10
       Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[Ecs.Views.Linkable.Impl.ResourcesView.ResourceView,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _prefabs
+      Entry: 7
+      Data: 4|System.Collections.Generic.Dictionary`2[[Db.GameObjectsBase.Impl.EGameResourceType,
+        Assembly-CSharp],[System.Collections.Generic.IReadOnlyList`1[[Ecs.Views.Linkable.Impl.ResourcesView.ResourceView,
+        Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 5|System.Collections.Generic.EnumEqualityComparer`1[[Db.GameObjectsBase.Impl.EGameResourceType,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 9
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 9
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 

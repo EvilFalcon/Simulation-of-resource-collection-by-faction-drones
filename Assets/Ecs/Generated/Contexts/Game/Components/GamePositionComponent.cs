@@ -9,13 +9,13 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity
 {
-	public Ecs.Game.Components.PositionComponent Position { get { return (Ecs.Game.Components.PositionComponent)GetComponent(GameComponentsLookup.Position); } }
+	public Ecs.Game.Components.GlobalComponents.PositionComponent Position { get { return (Ecs.Game.Components.GlobalComponents.PositionComponent)GetComponent(GameComponentsLookup.Position); } }
 	public bool HasPosition { get { return HasComponent(GameComponentsLookup.Position); } }
 
 	public void AddPosition(UnityEngine.Vector3 newValue)
 	{
 		var index = GameComponentsLookup.Position;
-		var component = (Ecs.Game.Components.PositionComponent)CreateComponent(index, typeof(Ecs.Game.Components.PositionComponent));
+		var component = (Ecs.Game.Components.GlobalComponents.PositionComponent)CreateComponent(index, typeof(Ecs.Game.Components.GlobalComponents.PositionComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = newValue;
 		#endif
@@ -25,17 +25,17 @@ public partial class GameEntity
 	public void ReplacePosition(UnityEngine.Vector3 newValue)
 	{
 		var index = GameComponentsLookup.Position;
-		var component = (Ecs.Game.Components.PositionComponent)CreateComponent(index, typeof(Ecs.Game.Components.PositionComponent));
+		var component = (Ecs.Game.Components.GlobalComponents.PositionComponent)CreateComponent(index, typeof(Ecs.Game.Components.GlobalComponents.PositionComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = newValue;
 		#endif
 		ReplaceComponent(index, component);
 	}
 
-	public void CopyPositionTo(Ecs.Game.Components.PositionComponent copyComponent)
+	public void CopyPositionTo(Ecs.Game.Components.GlobalComponents.PositionComponent copyComponent)
 	{
 		var index = GameComponentsLookup.Position;
-		var component = (Ecs.Game.Components.PositionComponent)CreateComponent(index, typeof(Ecs.Game.Components.PositionComponent));
+		var component = (Ecs.Game.Components.GlobalComponents.PositionComponent)CreateComponent(index, typeof(Ecs.Game.Components.GlobalComponents.PositionComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = copyComponent.Value;
 		#endif

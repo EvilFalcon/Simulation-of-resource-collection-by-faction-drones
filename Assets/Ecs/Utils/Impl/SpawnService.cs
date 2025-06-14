@@ -1,7 +1,7 @@
 using System;
 using Db.GameObjectsBase;
 using Ecs.Views.Linkable;
-using Game.Services.Pool;
+using Game.Services.Pools;
 using UnityEngine;
 using Zenject;
 

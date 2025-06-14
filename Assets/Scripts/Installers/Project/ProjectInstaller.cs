@@ -1,4 +1,5 @@
 ﻿using Core;
+using Core.Impl;
 using Game.Services.SceneLoading;
 using Game.Services.SceneLoading.Impls;
 using PdUtils.DateTimeService;
@@ -38,6 +39,7 @@ namespace Installers.Project
 
 			Container.BindInterfacesTo<UnityRandomProvider>().AsSingle();
 			Container.BindInterfacesTo<LoadingProcessor>().AsSingle();
+			Container.BindInterfacesTo<GameSceneProvider>().AsSingle();
 
 			Container.BindSubstituteInterfacesTo<ISceneLoader, SceneLoader>().AsSingle();
 

@@ -22,10 +22,6 @@ public partial class GameEntity
 		{
 			IsDestroyed = true;
 		}
-		else if (component is Ecs.Common.Components.ResourceTypeComponent ResourceType)
-		{
-			CopyResourceTypeTo(ResourceType);
-		}
 		else if (component is Ecs.Scheduler.Components.LocalTimeScaleComponent LocalTimeScale)
 		{
 			CopyLocalTimeScaleTo(LocalTimeScale);
@@ -34,9 +30,9 @@ public partial class GameEntity
 		{
 			CopyAttackTo(Attack);
 		}
-		else if (component is Ecs.Game.Components.RotationComponent Rotation)
+		else if (component is Ecs.Game.Components.LinkComponent Link)
 		{
-			CopyRotationTo(Rotation);
+			CopyLinkTo(Link);
 		}
 		else if (component is Ecs.Game.Components.LookDirectionComponent LookDirection)
 		{
@@ -46,6 +42,10 @@ public partial class GameEntity
 		{
 			CopyVelocityTo(Velocity);
 		}
+		else if (component is Ecs.Game.Components.MovementTargetComponent MovementTarget)
+		{
+			CopyMovementTargetTo(MovementTarget);
+		}
 		else if (component is Ecs.Game.Components.GameStateComponent GameState)
 		{
 			CopyGameStateTo(GameState);
@@ -54,73 +54,93 @@ public partial class GameEntity
 		{
 			IsDead = true;
 		}
-		else if (component is Ecs.Game.Components.InstantiateComponent Instantiate)
-		{
-			IsInstantiate = true;
-		}
 		else if (component is Ecs.Game.Components.CorePrefabComponent CorePrefab)
 		{
 			CopyCorePrefabTo(CorePrefab);
-		}
-		else if (component is Ecs.Game.Components.PlayerComponent Player)
-		{
-			IsPlayer = true;
-		}
-		else if (component is Ecs.Game.Components.UidComponent Uid)
-		{
-			CopyUidTo(Uid);
-		}
-		else if (component is Ecs.Game.Components.TransformComponent Transform)
-		{
-			CopyTransformTo(Transform);
-		}
-		else if (component is Ecs.Game.Components.ActiveComponent Active)
-		{
-			IsActive = true;
 		}
 		else if (component is Ecs.Game.Components.LookPointComponent LookPoint)
 		{
 			CopyLookPointTo(LookPoint);
 		}
-		else if (component is Ecs.Game.Components.CameraComponent Camera)
+		else if (component is Ecs.Game.Components.ResourcePrefabComponent ResourcePrefab)
 		{
-			IsCamera = true;
-		}
-		else if (component is Ecs.Game.Components.PositionComponent Position)
-		{
-			CopyPositionTo(Position);
+			CopyResourcePrefabTo(ResourcePrefab);
 		}
 		else if (component is Ecs.Game.Components.SpeedComponent Speed)
 		{
 			CopySpeedTo(Speed);
 		}
-		else if (component is Ecs.Game.Components.LinkComponent Link)
+		else if (component is Ecs.Game.Components.InstantiateComponent Instantiate)
 		{
-			CopyLinkTo(Link);
-		}
-		else if (component is Ecs.Game.Components.LocalPositionComponent LocalPosition)
-		{
-			CopyLocalPositionTo(LocalPosition);
-		}
-		else if (component is Ecs.Game.Components.CountComponent Count)
-		{
-			CopyCountTo(Count);
-		}
-		else if (component is Ecs.Game.Components.ScaleComponent Scale)
-		{
-			CopyScaleTo(Scale);
+			IsInstantiate = true;
 		}
 		else if (component is Ecs.Game.Components.UnitPrefabComponent UnitPrefab)
 		{
 			CopyUnitPrefabTo(UnitPrefab);
 		}
-		else if (component is Ecs.Game.Components.ResourcePrefabComponent ResourcePrefab)
+		else if (component is Ecs.Game.Components.PlayerComponents.PlayerComponent Player)
 		{
-			CopyResourcePrefabTo(ResourcePrefab);
+			IsPlayer = true;
 		}
-		else if (component is TerrainComponent Terrain)
+		else if (component is Ecs.Game.Components.SpawnersComponents.SpawnHistoryComponent SpawnHistory)
+		{
+			CopySpawnHistoryTo(SpawnHistory);
+		}
+		else if (component is Ecs.Game.Components.SpawnersComponents.ResourceComponent ResourceSpawner)
+		{
+			IsResource = true;
+		}
+		else if (component is Ecs.Game.Components.CameraComponents.CameraComponent Camera)
+		{
+			IsCamera = true;
+		}
+		else if (component is Ecs.Game.Components.TerrainComponents.TerrainBoundsComponent TerrainBounds)
+		{
+			CopyTerrainBoundsTo(TerrainBounds);
+		}
+		else if (component is Ecs.Game.Components.TerrainComponents.TerrainDataComponent TerrainData)
+		{
+			CopyTerrainDataTo(TerrainData);
+		}
+		else if (component is Ecs.Game.Components.TerrainComponents.TerrainComponent Terrain)
 		{
 			CopyTerrainTo(Terrain);
+		}
+		else if (component is Ecs.Game.Components.ResourceComponents.ResourceTypeComponent ResourceType)
+		{
+			CopyResourceTypeTo(ResourceType);
+		}
+		else if (component is Ecs.Game.Components.ResourceComponents.ResourceComponent Resource)
+		{
+			CopyResourceTo(Resource);
+		}
+		else if (component is Ecs.Game.Components.GlobalComponents.RotationComponent Rotation)
+		{
+			CopyRotationTo(Rotation);
+		}
+		else if (component is Ecs.Game.Components.GlobalComponents.ScaleComponent Scale)
+		{
+			CopyScaleTo(Scale);
+		}
+		else if (component is Ecs.Game.Components.GlobalComponents.PositionComponent Position)
+		{
+			CopyPositionTo(Position);
+		}
+		else if (component is Ecs.Game.Components.GlobalComponents.UidComponent Uid)
+		{
+			CopyUidTo(Uid);
+		}
+		else if (component is Ecs.Game.Components.GlobalComponents.ActiveComponent Active)
+		{
+			IsActive = true;
+		}
+		else if (component is Ecs.Game.Components.GlobalComponents.TransformComponent Transform)
+		{
+			CopyTransformTo(Transform);
+		}
+		else if (component is Ecs.Game.Components.GlobalComponents.LocalPositionComponent LocalPosition)
+		{
+			CopyLocalPositionTo(LocalPosition);
 		}
 
 		#endif

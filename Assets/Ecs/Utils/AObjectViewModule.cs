@@ -10,7 +10,7 @@ namespace Ecs.Utils
         public void Subscribe(IEntity entity, ObjectView objectView, IUnsubscribeEvent unsubscribe)
         {
             var self = (GameEntity)entity;
-            Subscribe(entity,objectView,unsubscribe);
+            Subscribe(self, objectView, unsubscribe);
         }
 
         public abstract void Activate();

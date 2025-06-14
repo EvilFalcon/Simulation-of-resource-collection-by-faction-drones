@@ -12,20 +12,14 @@ namespace Game.Utils
 		public const string Interactable = "Interactable";
 		public const string IgnoreRaycast = "Ignore Raycast";
 		public const string Unit = "Unit";
+		public const string Resources = "Resources";
+		public const string Building = "Building";
 
 		private static readonly Layer _playerLayer = new Layer(Player);
-		private static readonly Layer _unitLayer = new Layer(Unit);
-		private static readonly Layer _interactableLayer = new Layer(Interactable);
-		private static readonly Layer _defaultLayer = new Layer(Default);
-		private static readonly Layer _floorLayer = new Layer(Floor);
 		private static readonly Layer _aiLayer = new Layer(Ai);
 		private static readonly Layer _ignoreRaycast = new Layer(IgnoreRaycast);
-
 		public static int PlayerLayer => _playerLayer.Id;
-		public static int UnitLayer => _unitLayer.Id;
-		public static int InteractableLayer => _interactableLayer.Id;
-		public static int DefaultLayer => _defaultLayer.Id;
-		public static int FloorLayer => _floorLayer.Id;
+
 		public static int AiLayer => _aiLayer.Id;
 		public static int IgnoreRaycastLayer => _ignoreRaycast.Id;
 

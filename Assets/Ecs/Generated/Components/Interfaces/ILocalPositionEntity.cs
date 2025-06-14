@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 public partial interface ILocalPositionEntity
 {
-	Ecs.Game.Components.LocalPositionComponent LocalPosition { get; }
+	Ecs.Game.Components.GlobalComponents.LocalPositionComponent LocalPosition { get; }
 	bool HasLocalPosition { get; }
 
 	void AddLocalPosition(UnityEngine.Vector3 newValue);

@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 public partial interface IRotationEntity
 {
-	Ecs.Game.Components.RotationComponent Rotation { get; }
+	Ecs.Game.Components.GlobalComponents.RotationComponent Rotation { get; }
 	bool HasRotation { get; }
 
 	void AddRotation(UnityEngine.Quaternion newValue);

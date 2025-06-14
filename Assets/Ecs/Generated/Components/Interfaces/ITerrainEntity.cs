@@ -9,10 +9,10 @@
 //------------------------------------------------------------------------------
 public partial interface ITerrainEntity
 {
-	TerrainComponent Terrain { get; }
+	Ecs.Game.Components.TerrainComponents.TerrainComponent Terrain { get; }
 	bool HasTerrain { get; }
 
-	void AddTerrain(Ecs.Game.Components.TerrainComponent newValue);
-	void ReplaceTerrain(Ecs.Game.Components.TerrainComponent newValue);
+	void AddTerrain(UnityEngine.Terrain newValue);
+	void ReplaceTerrain(UnityEngine.Terrain newValue);
 	void RemoveTerrain();
 }

@@ -9,13 +9,13 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity
 {
-	public Ecs.Game.Components.TransformComponent Transform { get { return (Ecs.Game.Components.TransformComponent)GetComponent(GameComponentsLookup.Transform); } }
+	public Ecs.Game.Components.GlobalComponents.TransformComponent Transform { get { return (Ecs.Game.Components.GlobalComponents.TransformComponent)GetComponent(GameComponentsLookup.Transform); } }
 	public bool HasTransform { get { return HasComponent(GameComponentsLookup.Transform); } }
 
 	public void AddTransform(UnityEngine.Transform newValue)
 	{
 		var index = GameComponentsLookup.Transform;
-		var component = (Ecs.Game.Components.TransformComponent)CreateComponent(index, typeof(Ecs.Game.Components.TransformComponent));
+		var component = (Ecs.Game.Components.GlobalComponents.TransformComponent)CreateComponent(index, typeof(Ecs.Game.Components.GlobalComponents.TransformComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = newValue;
 		#endif
@@ -25,17 +25,17 @@ public partial class GameEntity
 	public void ReplaceTransform(UnityEngine.Transform newValue)
 	{
 		var index = GameComponentsLookup.Transform;
-		var component = (Ecs.Game.Components.TransformComponent)CreateComponent(index, typeof(Ecs.Game.Components.TransformComponent));
+		var component = (Ecs.Game.Components.GlobalComponents.TransformComponent)CreateComponent(index, typeof(Ecs.Game.Components.GlobalComponents.TransformComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = newValue;
 		#endif
 		ReplaceComponent(index, component);
 	}
 
-	public void CopyTransformTo(Ecs.Game.Components.TransformComponent copyComponent)
+	public void CopyTransformTo(Ecs.Game.Components.GlobalComponents.TransformComponent copyComponent)
 	{
 		var index = GameComponentsLookup.Transform;
-		var component = (Ecs.Game.Components.TransformComponent)CreateComponent(index, typeof(Ecs.Game.Components.TransformComponent));
+		var component = (Ecs.Game.Components.GlobalComponents.TransformComponent)CreateComponent(index, typeof(Ecs.Game.Components.GlobalComponents.TransformComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = copyComponent.Value;
 		#endif

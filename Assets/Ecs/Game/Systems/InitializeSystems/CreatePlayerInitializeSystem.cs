@@ -3,6 +3,7 @@ using Ecs.Utils;
 using InstallerGenerator.Attributes;
 using InstallerGenerator.Enums;
 using JCMG.EntitasRedux;
+using UnityEngine;
 
 namespace Ecs.Game.Systems.InitializeSystems
 {
@@ -21,9 +22,17 @@ namespace Ecs.Game.Systems.InitializeSystems
         public void Initialize()
         {
             _game.CreatePlayer();
+            InitializeCamera();
+        }
 
+        private void InitializeCamera()
+        {
+            var camera = _game.CreateVirtualCamera();
             _game.CreateCamera();
-            _game.CreateVirtualCamera();
+
+            var newCameraRotation = Quaternion.Euler(90, 0, 0);
+            camera.ReplaceRotation(newCameraRotation);
+            camera.ReplacePosition(new Vector3(22.7f, 22.7f, 12.8f));
         }
     }
 }

@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 public partial interface IUidEntity
 {
-	Ecs.Game.Components.UidComponent Uid { get; }
+	Ecs.Game.Components.GlobalComponents.UidComponent Uid { get; }
 	bool HasUid { get; }
 
 	void AddUid(Ecs.Managers.Uid newValue);

@@ -25,18 +25,18 @@ namespace Ecs.Views.Linkable.Impl
 
         protected override void Subscribe(IEntity entity, IUnsubscribeEvent unsubscribe)
         {
-            var e = (GameEntity)entity;
-            e.AddLink(this);
-            e.AddTransform(transform);
+            var self = (GameEntity)entity;
+            self.AddLink(this);
+            self.AddTransform(transform);
 
-            if (e.HasLocalPosition)
-                OnLocalPosition(e, e.LocalPosition.Value);
+            if (self.HasLocalPosition)
+                OnLocalPosition(self, self.LocalPosition.Value);
 
-            if (e.HasPosition)
-                OnPosition(e, e.Position.Value);
+            if (self.HasPosition)
+                OnPosition(self, self.Position.Value);
 
-            if (e.HasRotation)
-                OnRotation(e, e.Rotation.Value);
+            if (self.HasRotation)
+                OnRotation(self, self.Rotation.Value);
 
             foreach (var module in Modules)
             {
@@ -50,10 +50,10 @@ namespace Ecs.Views.Linkable.Impl
                 module.Subscribe(entity, this, unsubscribe);
             }
 
-            e.SubscribePosition(OnPosition).AddTo(unsubscribe);
-            e.SubscribeLocalPosition(OnLocalPosition).AddTo(unsubscribe);
-            e.SubscribeRotation(OnRotation).AddTo(unsubscribe);
-            e.SubscribeVelocity(OnVelocity).AddTo(unsubscribe);
+            self.SubscribePosition(OnPosition).AddTo(unsubscribe);
+            self.SubscribeLocalPosition(OnLocalPosition).AddTo(unsubscribe);
+            self.SubscribeRotation(OnRotation).AddTo(unsubscribe);
+            self.SubscribeVelocity(OnVelocity).AddTo(unsubscribe);
         }
 
         public virtual void Activate()

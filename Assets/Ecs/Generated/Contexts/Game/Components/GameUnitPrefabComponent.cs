@@ -12,7 +12,7 @@ public partial class GameEntity
 	public Ecs.Game.Components.UnitPrefabComponent UnitPrefab { get { return (Ecs.Game.Components.UnitPrefabComponent)GetComponent(GameComponentsLookup.UnitPrefab); } }
 	public bool HasUnitPrefab { get { return HasComponent(GameComponentsLookup.UnitPrefab); } }
 
-	public void AddUnitPrefab(Db.GameObjectsBase.Impl.EUnitType newValue)
+	public void AddUnitPrefab(Db.GameObjectsBase.Impl.EFractionType newValue)
 	{
 		var index = GameComponentsLookup.UnitPrefab;
 		var component = (Ecs.Game.Components.UnitPrefabComponent)CreateComponent(index, typeof(Ecs.Game.Components.UnitPrefabComponent));
@@ -22,7 +22,7 @@ public partial class GameEntity
 		AddComponent(index, component);
 	}
 
-	public void ReplaceUnitPrefab(Db.GameObjectsBase.Impl.EUnitType newValue)
+	public void ReplaceUnitPrefab(Db.GameObjectsBase.Impl.EFractionType newValue)
 	{
 		var index = GameComponentsLookup.UnitPrefab;
 		var component = (Ecs.Game.Components.UnitPrefabComponent)CreateComponent(index, typeof(Ecs.Game.Components.UnitPrefabComponent));

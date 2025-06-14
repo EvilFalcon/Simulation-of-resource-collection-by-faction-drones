@@ -66,7 +66,7 @@ public partial class SchedulerEntity
 		{
 			CopyIntervalAccumulatorTo(IntervalAccumulator);
 		}
-		else if (component is Ecs.Game.Components.UidComponent Uid)
+		else if (component is Ecs.Game.Components.GlobalComponents.UidComponent Uid)
 		{
 			CopyUidTo(Uid);
 		}

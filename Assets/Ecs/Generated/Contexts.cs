@@ -106,11 +106,11 @@ public partial class Contexts
 		Game.AddEntityIndex(new JCMG.EntitasRedux.PrimaryEntityIndex<GameEntity, Ecs.Managers.Uid>(
 			GameComponentsLookup.Uid,
 			Game.GetGroup(GameMatcher.Uid),
-			(e, c) => ((Ecs.Game.Components.UidComponent)c).Value));
+			(e, c) => ((Ecs.Game.Components.GlobalComponents.UidComponent)c).Value));
 		Scheduler.AddEntityIndex(new JCMG.EntitasRedux.PrimaryEntityIndex<SchedulerEntity, Ecs.Managers.Uid>(
 			SchedulerComponentsLookup.Uid,
 			Scheduler.GetGroup(SchedulerMatcher.Uid),
-			(e, c) => ((Ecs.Game.Components.UidComponent)c).Value));
+			(e, c) => ((Ecs.Game.Components.GlobalComponents.UidComponent)c).Value));
 	}
 }
 

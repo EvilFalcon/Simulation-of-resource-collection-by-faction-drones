@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity
 {
-	static readonly Ecs.Game.Components.ActiveComponent ActiveComponent = new Ecs.Game.Components.ActiveComponent();
+	static readonly Ecs.Game.Components.GlobalComponents.ActiveComponent ActiveComponent = new Ecs.Game.Components.GlobalComponents.ActiveComponent();
 
 	public bool IsActive
 	{

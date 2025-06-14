@@ -4,14 +4,17 @@ using Game.Models.Camera.Impl;
 using Game.Models.Input;
 using Game.Services.GameStateService.Impl;
 using Game.Services.InputService.Impl;
-using Game.Services.Pool.Impls;
+using Game.Services.Pools.Impls;
+using Game.Services.Pools.Impls.Resouces;
 using Game.UI.Windows;
+using UnityEngine;
 using Zenject;
 
 namespace Installers.Game
 {
     public class GameInstaller : MonoInstaller
     {
+        [SerializeField] private GameInitializer _gameInitializer;
         public override void InstallBindings()
         {
             Bind();
@@ -27,10 +30,12 @@ namespace Installers.Game
 
             Container.BindInterfacesAndSelfTo<PlayerCameraHolder>().AsSingle();
         }
-
+        
         private void BindServices()
         {
             Container.BindInterfacesAndSelfTo<GameGroupUtils>().AsSingle();
+            Container.BindInterfacesAndSelfTo<ResourcesPool>().AsSingle();
+            Container.BindInterfacesAndSelfTo<GameInitializer>().FromInstance(_gameInitializer).AsSingle();
             Container.BindInterfacesAndSelfTo<InputService>().AsSingle();
             Container.BindInterfacesAndSelfTo<GameStateService>().AsSingle();
         }

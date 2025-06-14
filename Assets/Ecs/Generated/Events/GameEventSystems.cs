@@ -14,8 +14,6 @@ public sealed class GameEventSystems : Feature
 	public GameEventSystems(IContext<GameEntity> context)
 	{
 		Add(new AttackEventSystem(context)); // priority: 0
-		Add(new CountEventSystem(context)); // priority: 0
-		Add(new CountRemovedEventSystem(context)); // priority: 0
 		Add(new DeadEventSystem(context)); // priority: 0
 		Add(new DeadRemovedEventSystem(context)); // priority: 0
 		Add(new GameDestroyedEventSystem(context)); // priority: 0
@@ -24,7 +22,6 @@ public sealed class GameEventSystems : Feature
 		Add(new LocalTimeScaleEventSystem(context)); // priority: 0
 		Add(new LookDirectionEventSystem(context)); // priority: 0
 		Add(new PositionEventSystem(context)); // priority: 0
-		Add(new ResourceTypeEventSystem(context)); // priority: 0
 		Add(new RotationEventSystem(context)); // priority: 0
 		Add(new ScaleEventSystem(context)); // priority: 0
 		Add(new SpeedEventSystem(context)); // priority: 0

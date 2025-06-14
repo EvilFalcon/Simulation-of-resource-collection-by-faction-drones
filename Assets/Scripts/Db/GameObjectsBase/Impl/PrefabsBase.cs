@@ -10,21 +10,22 @@ namespace Db.GameObjectsBase.Impl
     [CreateAssetMenu(menuName = "Settings/PrefabsBase", fileName = "PrefabsBase")]
     public class PrefabsBase : SerializedScriptableObject, IPrefabsBase
     {
-        [KeyValue(nameof(EObjectType.ToString))] [OdinSerialize]
-        private Dictionary<EObjectType, Prefab> prefabs;
+        [KeyValue(nameof(EObjectType.ToString))] 
+        [OdinSerialize]
+        private Dictionary<EObjectType, Prefab> _prefabs;
 
         public GameObject Get(string prefabName)
         {
-            if (prefabs.TryGetValue((EObjectType)Enum.Parse(typeof(EObjectType), prefabName), out var prefab))
-                return prefab.gameObject;
+            if (_prefabs.TryGetValue((EObjectType)Enum.Parse(typeof(EObjectType), prefabName), out var prefab))
+                return prefab._gameObject;
             
             throw new Exception($"[PrefabsBase] Can't find prefab with name: {name}");
         }
 
         [Serializable]
         public class Prefab
-        {
-            public GameObject gameObject;
+        { 
+            public GameObject _gameObject;
         }
     }
 }

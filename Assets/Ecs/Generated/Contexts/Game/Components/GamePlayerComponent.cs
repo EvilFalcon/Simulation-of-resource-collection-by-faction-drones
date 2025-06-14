@@ -43,7 +43,7 @@ public partial class GameContext
 //------------------------------------------------------------------------------
 public partial class GameEntity
 {
-	static readonly Ecs.Game.Components.PlayerComponent PlayerComponent = new Ecs.Game.Components.PlayerComponent();
+	static readonly Ecs.Game.Components.PlayerComponents.PlayerComponent PlayerComponent = new Ecs.Game.Components.PlayerComponents.PlayerComponent();
 
 	public bool IsPlayer
 	{

@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 public partial interface ITransformEntity
 {
-	Ecs.Game.Components.TransformComponent Transform { get; }
+	Ecs.Game.Components.GlobalComponents.TransformComponent Transform { get; }
 	bool HasTransform { get; }
 
 	void AddTransform(UnityEngine.Transform newValue);

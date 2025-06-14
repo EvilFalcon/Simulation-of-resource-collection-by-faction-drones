@@ -1,5 +1,5 @@
 ﻿using System;
-//using Cinemachine;
+using Unity.Cinemachine;
 
 namespace Ecs.Utils.Camera
 {
@@ -7,6 +7,6 @@ namespace Ecs.Utils.Camera
     public struct CameraTypeData
     {
         public EVirtualCameraType VirtualCameraType;
-       // public CinemachineVirtualCamera VirtualCamera;
+        public CinemachineVirtualCamera VirtualCamera;
     }
 }

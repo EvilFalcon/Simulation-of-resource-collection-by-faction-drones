@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 public partial interface IResourceTypeEntity
 {
-	Ecs.Common.Components.ResourceTypeComponent ResourceType { get; }
+	Ecs.Game.Components.ResourceComponents.ResourceTypeComponent ResourceType { get; }
 	bool HasResourceType { get; }
 
 	void AddResourceType(Db.GameObjectsBase.Impl.EGameResourceType newValue);

@@ -43,7 +43,7 @@ public partial class GameContext
 //------------------------------------------------------------------------------
 public partial class GameEntity
 {
-	static readonly Ecs.Game.Components.CameraComponent CameraComponent = new Ecs.Game.Components.CameraComponent();
+	static readonly Ecs.Game.Components.CameraComponents.CameraComponent CameraComponent = new Ecs.Game.Components.CameraComponents.CameraComponent();
 
 	public bool IsCamera
 	{

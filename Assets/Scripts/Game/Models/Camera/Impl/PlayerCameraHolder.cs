@@ -20,6 +20,11 @@ namespace Game.Models.Camera.Impl
 
         public UnityEngine.Camera GetCamera() => _camera;
 
+        public CinemachineVirtualCamera GetVirtualCamera(EVirtualCameraType type)
+        {
+            return _cameras[type];
+        }
+
         public void SetVirtualCamera(EVirtualCameraType virtualCameraType)
         {
             if (_cameras is null)

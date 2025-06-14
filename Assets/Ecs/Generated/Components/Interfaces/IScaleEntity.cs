@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 public partial interface IScaleEntity
 {
-	Ecs.Game.Components.ScaleComponent Scale { get; }
+	Ecs.Game.Components.GlobalComponents.ScaleComponent Scale { get; }
 	bool HasScale { get; }
 
 	void AddScale(UnityEngine.Vector3 newValue);

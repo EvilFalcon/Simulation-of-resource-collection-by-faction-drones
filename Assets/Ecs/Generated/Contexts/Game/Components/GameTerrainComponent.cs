@@ -10,17 +10,17 @@
 public partial class GameContext {
 
 	public GameEntity TerrainEntity { get { return GetGroup(GameMatcher.Terrain).GetSingleEntity(); } }
-	public TerrainComponent Terrain { get { return TerrainEntity.Terrain; } }
+	public Ecs.Game.Components.TerrainComponents.TerrainComponent Terrain { get { return TerrainEntity.Terrain; } }
 	public bool HasTerrain { get { return TerrainEntity != null; } }
 
-	public GameEntity SetTerrain(Ecs.Game.Components.TerrainComponent newValue)
+	public GameEntity SetTerrain(UnityEngine.Terrain newValue)
 	{
 		if (HasTerrain)
 		{
 			throw new JCMG.EntitasRedux.EntitasReduxException(
 				"Could not set Terrain!\n" +
 				this +
-				" already has an entity with TerrainComponent!",
+				" already has an entity with Ecs.Game.Components.TerrainComponents.TerrainComponent!",
 				"You should check if the context already has a TerrainEntity before setting it or use context.ReplaceTerrain().");
 		}
 		var entity = CreateEntity();
@@ -30,7 +30,7 @@ public partial class GameContext {
 		return entity;
 	}
 
-	public void ReplaceTerrain(Ecs.Game.Components.TerrainComponent newValue)
+	public void ReplaceTerrain(UnityEngine.Terrain newValue)
 	{
 		#if !ENTITAS_REDUX_NO_IMPL
 		var entity = TerrainEntity;
@@ -62,35 +62,35 @@ public partial class GameContext {
 //------------------------------------------------------------------------------
 public partial class GameEntity
 {
-	public TerrainComponent Terrain { get { return (TerrainComponent)GetComponent(GameComponentsLookup.Terrain); } }
+	public Ecs.Game.Components.TerrainComponents.TerrainComponent Terrain { get { return (Ecs.Game.Components.TerrainComponents.TerrainComponent)GetComponent(GameComponentsLookup.Terrain); } }
 	public bool HasTerrain { get { return HasComponent(GameComponentsLookup.Terrain); } }
 
-	public void AddTerrain(Ecs.Game.Components.TerrainComponent newValue)
+	public void AddTerrain(UnityEngine.Terrain newValue)
 	{
 		var index = GameComponentsLookup.Terrain;
-		var component = (TerrainComponent)CreateComponent(index, typeof(TerrainComponent));
+		var component = (Ecs.Game.Components.TerrainComponents.TerrainComponent)CreateComponent(index, typeof(Ecs.Game.Components.TerrainComponents.TerrainComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
-		component.value = newValue;
+		component.Value = newValue;
 		#endif
 		AddComponent(index, component);
 	}
 
-	public void ReplaceTerrain(Ecs.Game.Components.TerrainComponent newValue)
+	public void ReplaceTerrain(UnityEngine.Terrain newValue)
 	{
 		var index = GameComponentsLookup.Terrain;
-		var component = (TerrainComponent)CreateComponent(index, typeof(TerrainComponent));
+		var component = (Ecs.Game.Components.TerrainComponents.TerrainComponent)CreateComponent(index, typeof(Ecs.Game.Components.TerrainComponents.TerrainComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
-		component.value = newValue;
+		component.Value = newValue;
 		#endif
 		ReplaceComponent(index, component);
 	}
 
-	public void CopyTerrainTo(TerrainComponent copyComponent)
+	public void CopyTerrainTo(Ecs.Game.Components.TerrainComponents.TerrainComponent copyComponent)
 	{
 		var index = GameComponentsLookup.Terrain;
-		var component = (TerrainComponent)CreateComponent(index, typeof(TerrainComponent));
+		var component = (Ecs.Game.Components.TerrainComponents.TerrainComponent)CreateComponent(index, typeof(Ecs.Game.Components.TerrainComponents.TerrainComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
-		component.value = copyComponent.value;
+		component.Value = copyComponent.Value;
 		#endif
 		ReplaceComponent(index, component);
 	}

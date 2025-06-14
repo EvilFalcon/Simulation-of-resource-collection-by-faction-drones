@@ -1,5 +1,6 @@
 using Db.GameObjectsBase;
 using Db.GameObjectsBase.Impl;
+using Db.Generation.ResourcesParameters;
 using UnityEngine;
 using Zenject;
 using ZenjectUtil.Test.Extensions;
@@ -11,9 +12,11 @@ namespace Installers.Game
     {
         [SerializeField]
         private PrefabsBase _prefabsBase;
+        [SerializeField]
+        private ResourcesParametersBase _resourcesParametersBase;
         
         [SerializeField]
-        private ResourceBase _resourceBase;
+        private ResourcePrefabsCollection _resourcePrefabsCollection;
         
         [SerializeField]
         private UnitBase _unitBase;
@@ -23,7 +26,8 @@ namespace Installers.Game
             // Container.Bind<IEnemySettingsBase>().FromSubstitute(enemySettingsBase).AsSingle();
             // Container.Bind<IPlayerGameParameters>().FromSubstitute(playerGameParametersBase).AsSingle();
             Container.Bind<IPrefabsBase>().FromSubstitute(_prefabsBase).AsSingle();
-            Container.Bind<IResourceBase>().FromSubstitute(_resourceBase).AsSingle();
+            Container.Bind<IResourcesParameters>().FromSubstitute(_resourcesParametersBase).AsSingle();
+            Container.Bind<IResourcePrefabsCollection>().FromSubstitute(_resourcePrefabsCollection).AsSingle();
             Container.Bind<IUnitBase>().FromSubstitute(_unitBase).AsSingle();
             // Container.Bind<IFxObjectBase>().FromSubstitute(fxObjectBase).AsSingle();
             // Container.Bind<IGameFieldParameters>().FromSubstitute(_gameFieldParameters).AsSingle();

@@ -1,10 +1,13 @@
 using Ecs.Signal.Systems;
 using Ecs.Scheduler.Systems;
+using Ecs.Core;
 using Ecs.Game.Systems;
+using Ecs.Game.Systems.Initialize;
 using Ecs.Game.Systems.InitializeSystems;
 using Ecs.Game.Systems.Camera;
-using Ecs.Core;
+using Ecs.Action.Systems.ResourcesGenerationSystem;
 using Ecs.Action.Systems.Input;
+
 using Zenject; 
 using Ecs.Utils; 
 
@@ -36,17 +39,25 @@ namespace Ecs.Installers {
 
 		private static void High(DiContainer container, bool isDebug) {
  
-			// Initialization 0020
+			// Initialization 0001
+			SystemInstallHelper.Install<InstantiateSystem>(container);	// 0001 Initialization
+			SystemInstallHelper.Install<GameInitializeSystem>(container);	// 0010 Initialization
+			SystemInstallHelper.Install<CreateGameWorldInitializeSystem>(container);	// 0020 Initialization
 			SystemInstallHelper.Install<CreatePlayerInitializeSystem>(container);	// 0020 Initialization
+
+			// Generation 0100
+			SystemInstallHelper.Install<AdvancedResourceSpawnerSystem>(container);	// 0100 Generation
 		 }
 
 		private static void Normal(DiContainer container, bool isDebug) {
  
-			// Initialization 0700
-			SystemInstallHelper.Install<InstantiateSystem>(container);	// 0700 Initialization
+			// Camera 0800
+			SystemInstallHelper.Install<CameraMovementUpdateSystem>(container);	// 0800 Camera
 
 			// Common 1000
 			SystemInstallHelper.Install<PointerDownSystem>(container);	// 1000 Common
+			SystemInstallHelper.Install<PointerMoveSystem>(container);	// 1000 Common
+			SystemInstallHelper.Install<PointerUpSystem>(container);	// 1000 Common
 
 			// Scheduler 1970
 			SystemInstallHelper.Install<ExecuteScheduledActionSystem>(container);	// 1970 Scheduler

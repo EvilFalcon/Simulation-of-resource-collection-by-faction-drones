@@ -9,13 +9,13 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity
 {
-	public Ecs.Game.Components.RotationComponent Rotation { get { return (Ecs.Game.Components.RotationComponent)GetComponent(GameComponentsLookup.Rotation); } }
+	public Ecs.Game.Components.GlobalComponents.RotationComponent Rotation { get { return (Ecs.Game.Components.GlobalComponents.RotationComponent)GetComponent(GameComponentsLookup.Rotation); } }
 	public bool HasRotation { get { return HasComponent(GameComponentsLookup.Rotation); } }
 
 	public void AddRotation(UnityEngine.Quaternion newValue)
 	{
 		var index = GameComponentsLookup.Rotation;
-		var component = (Ecs.Game.Components.RotationComponent)CreateComponent(index, typeof(Ecs.Game.Components.RotationComponent));
+		var component = (Ecs.Game.Components.GlobalComponents.RotationComponent)CreateComponent(index, typeof(Ecs.Game.Components.GlobalComponents.RotationComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = newValue;
 		#endif
@@ -25,17 +25,17 @@ public partial class GameEntity
 	public void ReplaceRotation(UnityEngine.Quaternion newValue)
 	{
 		var index = GameComponentsLookup.Rotation;
-		var component = (Ecs.Game.Components.RotationComponent)CreateComponent(index, typeof(Ecs.Game.Components.RotationComponent));
+		var component = (Ecs.Game.Components.GlobalComponents.RotationComponent)CreateComponent(index, typeof(Ecs.Game.Components.GlobalComponents.RotationComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = newValue;
 		#endif
 		ReplaceComponent(index, component);
 	}
 
-	public void CopyRotationTo(Ecs.Game.Components.RotationComponent copyComponent)
+	public void CopyRotationTo(Ecs.Game.Components.GlobalComponents.RotationComponent copyComponent)
 	{
 		var index = GameComponentsLookup.Rotation;
-		var component = (Ecs.Game.Components.RotationComponent)CreateComponent(index, typeof(Ecs.Game.Components.RotationComponent));
+		var component = (Ecs.Game.Components.GlobalComponents.RotationComponent)CreateComponent(index, typeof(Ecs.Game.Components.GlobalComponents.RotationComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = copyComponent.Value;
 		#endif

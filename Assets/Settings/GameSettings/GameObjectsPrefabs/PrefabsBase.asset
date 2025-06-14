@@ -18,12 +18,13 @@ MonoBehaviour:
     ReferencedUnityObjects:
     - {fileID: 1626204234460388, guid: 11560136d230a7945b0f02f58ed8b5c6, type: 3}
     - {fileID: 3520364086791701664, guid: c62727d81ad52c447887f1092577eacc, type: 3}
+    - {fileID: 2590444405054678617, guid: 493cd70131131444d9dca609ea339a60, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: prefabs
+    - Name: _prefabs
       Entry: 7
       Data: 0|System.Collections.Generic.Dictionary`2[[Db.EObjectType, Assembly-CSharp],[Db.GameObjectsBase.Impl.PrefabsBase+Prefab,
         Assembly-CSharp]], mscorlib
@@ -42,7 +43,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 7
       Data: 
@@ -52,7 +53,7 @@ MonoBehaviour:
     - Name: $v
       Entry: 7
       Data: 2|Db.GameObjectsBase.Impl.PrefabsBase+Prefab, Assembly-CSharp
-    - Name: gameObject
+    - Name: _gameObject
       Entry: 10
       Data: 0
     - Name: 
@@ -70,9 +71,27 @@ MonoBehaviour:
     - Name: $v
       Entry: 7
       Data: 3|Db.GameObjectsBase.Impl.PrefabsBase+Prefab, Assembly-CSharp
-    - Name: gameObject
+    - Name: _gameObject
       Entry: 10
       Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 3
+    - Name: $v
+      Entry: 7
+      Data: 4|Db.GameObjectsBase.Impl.PrefabsBase+Prefab, Assembly-CSharp
+    - Name: _gameObject
+      Entry: 10
+      Data: 2
     - Name: 
       Entry: 8
       Data: 

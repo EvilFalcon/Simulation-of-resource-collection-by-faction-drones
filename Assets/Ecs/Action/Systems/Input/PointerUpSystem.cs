@@ -4,7 +4,6 @@ using Ecs.Utils.Groups;
 using InstallerGenerator.Attributes;
 using InstallerGenerator.Enums;
 using JCMG.EntitasRedux.Commands;
-using UnityEngine;
 
 namespace Ecs.Action.Systems.Input
 {

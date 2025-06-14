@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-//using Cinemachine;
 using Ecs.Utils.Camera;
 using Game.Models.Camera;
 using JCMG.EntitasRedux;
 using JCMG.EntitasRedux.Core.Utils;
+using Unity.Cinemachine;
 using UnityEngine;
 using Utils.Drawers.Key;
 using Inject = Zenject.InjectAttribute;
@@ -28,20 +28,20 @@ namespace Ecs.Views.Linkable.Impl.Camera
 		{
 			base.Subscribe(entity, unsubscribe);
 			
-			//var camerasDictionary = GetCamerasDictionary();
-			//_cameraHolder.Init(camerasDictionary);
+			var camerasDictionary = GetCamerasDictionary();
+			_cameraHolder.Init(camerasDictionary);
 		}
 		
-		// private IReadOnlyDictionary<EVirtualCameraType, CinemachineVirtualCamera> GetCamerasDictionary()
-		// {
-		// 	var camerasDictionary = new Dictionary<EVirtualCameraType, CinemachineVirtualCamera>();
-		//
-		// 	foreach (var cameraTypeData in _virtualCameras)
-		// 	{
-		// 		camerasDictionary.Add(cameraTypeData.VirtualCameraType, cameraTypeData.VirtualCamera);
-		// 	}
-		//
-		// 	return camerasDictionary;
-		// }
+		private IReadOnlyDictionary<EVirtualCameraType, CinemachineVirtualCamera> GetCamerasDictionary()
+		{
+			var camerasDictionary = new Dictionary<EVirtualCameraType, CinemachineVirtualCamera>();
+		
+			foreach (var cameraTypeData in _virtualCameras)
+			{
+				camerasDictionary.Add(cameraTypeData.VirtualCameraType, cameraTypeData.VirtualCamera);
+			}
+		
+			return camerasDictionary;
+		}
 	}
 }

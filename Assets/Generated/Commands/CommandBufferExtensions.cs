@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------
 using Ecs.Commands.Generator;
 using Ecs.Signal.Commands;
+using Ecs.Action.Commands.Generation;
 using UnityEngine;
 using Ecs.Action.Commands.Input;
 using JCMG.EntitasRedux.Commands;
@@ -21,6 +22,11 @@ namespace Generated.Commands
         public static void SignalStart(this ICommandBuffer commandBuffer)
         {
             ref var command = ref commandBuffer.Create<SignalStartCommand>();
+        }
+
+        public static void GenerateRandomResource(this ICommandBuffer commandBuffer)
+        {
+            ref var command = ref commandBuffer.Create<GenerateRandomResourceCommand>();
         }
 
         public static void PointerDown(this ICommandBuffer commandBuffer, Vector3 position)

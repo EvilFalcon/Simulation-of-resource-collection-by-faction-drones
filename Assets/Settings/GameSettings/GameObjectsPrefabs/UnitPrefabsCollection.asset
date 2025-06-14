@@ -16,7 +16,8 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 5478922201997060960, guid: 7150172fb4c95f046842178a9a22a2bd, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -24,11 +25,11 @@ MonoBehaviour:
     SerializationNodes:
     - Name: _prefabs
       Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Db.GameObjectsBase.Impl.EUnitType,
+      Data: 0|System.Collections.Generic.Dictionary`2[[Db.GameObjectsBase.Impl.EFractionType,
         Assembly-CSharp],[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Db.GameObjectsBase.Impl.EUnitType,
+      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Db.GameObjectsBase.Impl.EFractionType,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
@@ -41,7 +42,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 
@@ -51,6 +52,18 @@ MonoBehaviour:
     - Name: $v
       Entry: 10
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 10
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
