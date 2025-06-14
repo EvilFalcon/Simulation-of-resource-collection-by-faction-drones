@@ -26,6 +26,7 @@ namespace Db.Generation.ResourcesParameters
     {
         [Range(0.1f, 10f)] public float SpawnWeight;
         public EGameResourceType ResourceType;
+        public int Amount;
     }
 
     public interface IResourcesParameters

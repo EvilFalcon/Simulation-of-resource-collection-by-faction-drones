@@ -7,7 +7,7 @@ namespace Ecs.Game.Components.ResourceComponents
 	public class ResourceTypeComponent : IComponent
 	{
 		public EGameResourceType Value;
-
+		public int Amount;
 		public override string ToString() => "ResourceType: " + Value;
 	}
 }

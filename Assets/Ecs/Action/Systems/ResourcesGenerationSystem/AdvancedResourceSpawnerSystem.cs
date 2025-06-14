@@ -69,7 +69,7 @@ namespace Ecs.Action.Systems.ResourcesGenerationSystem
 
                     var (resourceView, randomIndex) = _resourcesPool.Spawn(resource.Value.ResourceType);
                     var resourceEntity = _gameContext.CreateResource();
-                    resourceEntity.AddResourceType(resource.Value.ResourceType);
+                    resourceEntity.AddResourceType(resource.Value.ResourceType,resource.Value.Amount);
                     resourceEntity.AddPosition(spawnPosition);
                     resourceView.Link(resourceEntity);
                     break;

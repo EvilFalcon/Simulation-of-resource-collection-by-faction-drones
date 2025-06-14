@@ -9,10 +9,5 @@
 //------------------------------------------------------------------------------
 public partial interface IResourceEntity
 {
-	Ecs.Game.Components.ResourceComponents.ResourceComponent Resource { get; }
-	bool HasResource { get; }
-
-	void AddResource(int newAmount, Db.GameObjectsBase.Impl.EGameResourceType newResourceType);
-	void ReplaceResource(int newAmount, Db.GameObjectsBase.Impl.EGameResourceType newResourceType);
-	void RemoveResource();
+	bool IsResource { get; set; }
 }

@@ -7,12 +7,9 @@
 //		the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Ecs.Common.Components;
-
 public partial interface IResourcePrefabEntity
 {
-	ResourcePrefabComponent ResourcePrefab { get; }
+	Ecs.Common.Components.ResourcePrefabComponent ResourcePrefab { get; }
 	bool HasResourcePrefab { get; }
 
 	void AddResourcePrefab(Db.GameObjectsBase.Impl.EGameResourceType newValue);

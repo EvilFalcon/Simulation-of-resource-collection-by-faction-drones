@@ -18,11 +18,7 @@ public partial class SchedulerEntity
 	public void CopyComponentTo(IComponent component)
 	{
 		#if !ENTITAS_REDUX_NO_IMPL
-		if (component is Ecs.Common.Components.DestroyedComponent Destroyed)
-		{
-			IsDestroyed = true;
-		}
-		else if (component is Ecs.Scheduler.Components.IntervalSecComponent IntervalSec)
+		if (component is Ecs.Scheduler.Components.IntervalSecComponent IntervalSec)
 		{
 			CopyIntervalSecTo(IntervalSec);
 		}
@@ -65,6 +61,10 @@ public partial class SchedulerEntity
 		else if (component is Ecs.Scheduler.Components.IntervalAccumulatorComponent IntervalAccumulator)
 		{
 			CopyIntervalAccumulatorTo(IntervalAccumulator);
+		}
+		else if (component is Ecs.Common.Components.DestroyedComponent Destroyed)
+		{
+			IsDestroyed = true;
 		}
 		else if (component is Ecs.Game.Components.GlobalComponents.UidComponent Uid)
 		{

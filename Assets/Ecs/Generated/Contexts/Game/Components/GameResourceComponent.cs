@@ -9,45 +9,31 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity
 {
-	public Ecs.Game.Components.ResourceComponents.ResourceComponent Resource { get { return (Ecs.Game.Components.ResourceComponents.ResourceComponent)GetComponent(GameComponentsLookup.Resource); } }
-	public bool HasResource { get { return HasComponent(GameComponentsLookup.Resource); } }
+	static readonly Ecs.Game.Components.ResourceComponents.ResourceComponent ResourceComponent = new Ecs.Game.Components.ResourceComponents.ResourceComponent();
 
-	public void AddResource(int newAmount, Db.GameObjectsBase.Impl.EGameResourceType newResourceType)
+	public bool IsResource
 	{
-		var index = GameComponentsLookup.Resource;
-		var component = (Ecs.Game.Components.ResourceComponents.ResourceComponent)CreateComponent(index, typeof(Ecs.Game.Components.ResourceComponents.ResourceComponent));
-		#if !ENTITAS_REDUX_NO_IMPL
-		component.Amount = newAmount;
-		component.ResourceType = newResourceType;
-		#endif
-		AddComponent(index, component);
-	}
+		get { return HasComponent(GameComponentsLookup.Resource); }
+		set
+		{
+			if (value != IsResource)
+			{
+				var index = GameComponentsLookup.Resource;
+				if (value)
+				{
+					var componentPool = GetComponentPool(index);
+					var component = componentPool.Count > 0
+							? componentPool.Pop()
+							: ResourceComponent;
 
-	public void ReplaceResource(int newAmount, Db.GameObjectsBase.Impl.EGameResourceType newResourceType)
-	{
-		var index = GameComponentsLookup.Resource;
-		var component = (Ecs.Game.Components.ResourceComponents.ResourceComponent)CreateComponent(index, typeof(Ecs.Game.Components.ResourceComponents.ResourceComponent));
-		#if !ENTITAS_REDUX_NO_IMPL
-		component.Amount = newAmount;
-		component.ResourceType = newResourceType;
-		#endif
-		ReplaceComponent(index, component);
-	}
-
-	public void CopyResourceTo(Ecs.Game.Components.ResourceComponents.ResourceComponent copyComponent)
-	{
-		var index = GameComponentsLookup.Resource;
-		var component = (Ecs.Game.Components.ResourceComponents.ResourceComponent)CreateComponent(index, typeof(Ecs.Game.Components.ResourceComponents.ResourceComponent));
-		#if !ENTITAS_REDUX_NO_IMPL
-		component.Amount = copyComponent.Amount;
-		component.ResourceType = copyComponent.ResourceType;
-		#endif
-		ReplaceComponent(index, component);
-	}
-
-	public void RemoveResource()
-	{
-		RemoveComponent(GameComponentsLookup.Resource);
+					AddComponent(index, component);
+				}
+				else
+				{
+					RemoveComponent(index);
+				}
+			}
+		}
 	}
 }
 

@@ -5988,3 +5988,331 @@ EntitasRedux.Core.Plugins.DuplicateComponentNameException: Two or more component
    at EntitasRedux.Core.Plugins.ComponentDataProvider.GetData() in /home/leo/Projects/Unity/PD/pdentitasredux/Plugins/EntitasRedux.Core.Plugins/Components/DataProviders/ComponentDataProvider.cs:line 99
    at Genesis.CLI.CodeGeneratorRunner.Generate(String messagePrefix, IMemoryCache memoryCache, IPreProcessor[] preProcessors, IDataProvider[] dataProviders, ICodeGenerator[] codeGenerators, IPostProcessor[] postProcessors) in /home/runner/work/Genesis/Genesis/Genesis/ExternalApp/Genesis/CodeGeneration/CodeGeneratorRunner.cs:line 125
    at Genesis.CLI.Program.ExecuteCodeGeneration(GenerateOptions generateOptions) in /home/runner/work/Genesis/Genesis/Genesis/ExternalApp/Genesis/Program.cs:line 194
+2025-06-14 20:58:35.783 +03:00 [VRB] Solution found at D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Simulation-of-resource-collection-by-faction-drones.sln, attempting to load.
+2025-06-14 20:58:40.384 +03:00 [VRB] Roslyn solution found, beginning parsing.
+2025-06-14 20:58:40.390 +03:00 [VRB] Inspecting project spreadsheet.Editor.
+2025-06-14 20:58:40.390 +03:00 [VRB] Inspecting project Assembly-CSharp-Editor-firstpass.
+2025-06-14 20:58:40.390 +03:00 [VRB] Inspecting project Assembly-CSharp.
+2025-06-14 20:58:40.390 +03:00 [VRB] Inspecting project Fluid.BehaviorTree.
+2025-06-14 20:58:41.615 +03:00 [VRB] Inspecting project Fluid.BehaviorTree.Editor.
+2025-06-14 20:58:42.099 +03:00 [VRB] Inspecting project Assembly-CSharp-firstpass.
+2025-06-14 20:58:42.111 +03:00 [VRB] Inspecting project Assembly-CSharp-Editor.
+2025-06-14 20:58:42.250 +03:00 [VRB] Inspecting project spreadsheet.
+2025-06-14 20:58:42.251 +03:00 [VRB] Inspecting project drawers.
+2025-06-14 20:58:42.251 +03:00 [VRB] Inspecting project drawers.Editor.
+2025-06-14 20:58:42.251 +03:00 [VRB] Inspecting project Sirenix.OdinInspector.Modules.UnityMathematics.
+2025-06-14 20:58:42.454 +03:00 [VRB] Found a total of 724.
+2025-06-14 20:58:42.455 +03:00 [VRB] Solution loaded, 724 TypeSymbols Discovered
+2025-06-14 20:58:42.460 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Core.dll].
+2025-06-14 20:58:42.460 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Core.dll]
+2025-06-14 20:58:42.472 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Core.Libs.dll].
+2025-06-14 20:58:42.472 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Core.Libs.dll]
+2025-06-14 20:58:42.484 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Core.Plugins.dll].
+2025-06-14 20:58:42.484 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Core.Plugins.dll]
+2025-06-14 20:58:42.490 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Unity.Blueprint.Plugins.dll].
+2025-06-14 20:58:42.490 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Unity.Blueprint.Plugins.dll]
+2025-06-14 20:58:42.491 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Unity.VisualDebugging.Plugins.dll].
+2025-06-14 20:58:42.491 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Unity.VisualDebugging.Plugins.dll]
+2025-06-14 20:58:42.492 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Core.dll].
+2025-06-14 20:58:42.492 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Core.dll]
+2025-06-14 20:58:42.507 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Core.Plugin.dll].
+2025-06-14 20:58:42.507 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Core.Plugin.dll]
+2025-06-14 20:58:42.515 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Plugin.dll].
+2025-06-14 20:58:42.515 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Plugin.dll]
+2025-06-14 20:58:42.529 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Shared.dll].
+2025-06-14 20:58:42.529 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Shared.dll]
+2025-06-14 20:58:42.530 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Unity.Factory.dll].
+2025-06-14 20:58:42.530 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Unity.Factory.dll]
+2025-06-14 20:58:42.537 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Unity.Factory.Plugin.dll].
+2025-06-14 20:58:42.537 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Unity.Factory.Plugin.dll]
+2025-06-14 20:58:42.538 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Microsoft.CodeAnalysis.dll].
+2025-06-14 20:58:42.538 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Microsoft.CodeAnalysis.dll]
+2025-06-14 20:58:42.569 +03:00 [VRB] Loaded 12 plugins assemblies.
+2025-06-14 20:58:42.908 +03:00 [VRB] Loading Assembly Dependency [Microsoft.CodeAnalysis, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]
+2025-06-14 20:58:42.909 +03:00 [ERR] Failed to load Assembly [Microsoft.CodeAnalysis, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35], attempting to resolve Assembly at Base Paths.
+System.IO.FileNotFoundException: Could not load file or assembly 'D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Microsoft.CodeAnalysis, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'. Не удается найти указанный файл.
+File name: 'D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Microsoft.CodeAnalysis, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, String ilPath, String niPath, ObjectHandleOnStack retAssembly)
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath(String assemblyPath)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Genesis.CLI.AssemblyLoader.ResolveAndLoad(String name, Boolean isDependency) in /home/runner/work/Genesis/Genesis/Genesis/ExternalApp/Genesis/Assemblies/AssemblyLoader.cs:line 269
+
+
+2025-06-14 20:58:42.960 +03:00 [VRB] Computed Assembly Name is [Microsoft.CodeAnalysis]
+2025-06-14 20:58:42.960 +03:00 [VRB] Looking for Assembly at [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Microsoft.CodeAnalysis.dll].
+2025-06-14 20:58:42.961 +03:00 [VRB] Resolved Assembly [Microsoft.CodeAnalysis, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35] to [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Microsoft.CodeAnalysis.dll].
+2025-06-14 20:58:42.961 +03:00 [VRB] Attempting to resolve Assembly [Microsoft.CodeAnalysis, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35] at path [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Microsoft.CodeAnalysis.dll]
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: CleanupDestroyEntitySystemGenerator.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: CleanupRemoveComponentSystemGenerator.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: ContextCleanupFeatureGenerator.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: ContextCleanupSystemsGenerator.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: ComponentContextApiGenerator.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: ComponentEntityApiGenerator.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: ComponentEntityApiInterfaceGenerator.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: ComponentGenerator.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: ComponentLookupGenerator.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: ComponentMatcherApiGenerator.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: ComponentDataProvider.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: ContextAttributeGenerator.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: ContextGenerator.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: ContextMatcherGenerator.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: ContextsGenerator.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: ContextDataProvider.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: EntityGenerator.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: EntityIndexGenerator.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: EntityIndexDataProvider.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: EventDelegateGenerator.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: EventEntityApiGenerator.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: EventListenerComponentGenerator.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: EventSystemGenerator.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: EventSystemsGenerator.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: BlueprintClassGenerator.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: ContextObserverGenerator.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: FeatureClassGenerator.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: AddFileHeaderPostProcessor.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: CleanTargetDirectoryPostProcessor.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: MergeFilesPostProcessor.
+2025-06-14 20:58:42.973 +03:00 [VRB] Plugin loaded: NewLinePostProcessor.
+2025-06-14 20:58:42.974 +03:00 [VRB] Plugin loaded: WriteToDiskPostProcessor.
+2025-06-14 20:58:42.974 +03:00 [VRB] Plugin loaded: ScriptableFactoryCodeGenerator.
+2025-06-14 20:58:42.974 +03:00 [VRB] Plugin loaded: ScriptableFactoryDataProvider.
+2025-06-14 20:58:42.974 +03:00 [VRB] Using Base64 Configs...
+2025-06-14 20:58:43.104 +03:00 [VRB] Loaded 1 GenesisConfigs. Starting code generation.
+2025-06-14 20:58:43.106 +03:00 [VRB] Setting absolute output path to D:/Repositiryes/Simulation-of-resource-collection-by-faction-drones/Assets/Ecs/Generated.
+2025-06-14 20:58:43.136 +03:00 [VRB] Generating code from GenesisSettings.
+2025-06-14 20:58:43.225 +03:00 [VRB] Creating model Component 2,94%%
+2025-06-14 20:58:43.849 +03:00 [ERR] [EntitasRedux] [Resource] for Context [Game] has 2 separate Type instances with the same name. Please ensure all components belonging to a single context have unique names.
+2025-06-14 20:58:43.851 +03:00 [ERR] An unexpected error occured during code generation, stopping now...
+EntitasRedux.Core.Plugins.DuplicateComponentNameException: Two or more components belonging to the same Context have the same name.  Please ensure all components belonging to a single context have unique names.
+
+   at EntitasRedux.Core.Plugins.ComponentValidationTools.ValidateComponentData(ILogger logger, ComponentData[] componentData) in /home/leo/Projects/Unity/PD/pdentitasredux/Plugins/EntitasRedux.Core.Plugins/Components/ComponentValidationTools.cs:line 75
+   at EntitasRedux.Core.Plugins.ComponentDataProvider.GetData() in /home/leo/Projects/Unity/PD/pdentitasredux/Plugins/EntitasRedux.Core.Plugins/Components/DataProviders/ComponentDataProvider.cs:line 99
+   at Genesis.CLI.CodeGeneratorRunner.Generate(String messagePrefix, IMemoryCache memoryCache, IPreProcessor[] preProcessors, IDataProvider[] dataProviders, ICodeGenerator[] codeGenerators, IPostProcessor[] postProcessors) in /home/runner/work/Genesis/Genesis/Genesis/ExternalApp/Genesis/CodeGeneration/CodeGeneratorRunner.cs:line 125
+   at Genesis.CLI.Program.ExecuteCodeGeneration(GenerateOptions generateOptions) in /home/runner/work/Genesis/Genesis/Genesis/ExternalApp/Genesis/Program.cs:line 194
+2025-06-14 20:59:08.454 +03:00 [VRB] Solution found at D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Simulation-of-resource-collection-by-faction-drones.sln, attempting to load.
+2025-06-14 20:59:11.321 +03:00 [VRB] Roslyn solution found, beginning parsing.
+2025-06-14 20:59:11.326 +03:00 [VRB] Inspecting project spreadsheet.Editor.
+2025-06-14 20:59:11.326 +03:00 [VRB] Inspecting project Assembly-CSharp-Editor-firstpass.
+2025-06-14 20:59:11.326 +03:00 [VRB] Inspecting project Fluid.BehaviorTree.
+2025-06-14 20:59:11.326 +03:00 [VRB] Inspecting project Assembly-CSharp.
+2025-06-14 20:59:12.061 +03:00 [VRB] Inspecting project Fluid.BehaviorTree.Editor.
+2025-06-14 20:59:12.414 +03:00 [VRB] Inspecting project Assembly-CSharp-firstpass.
+2025-06-14 20:59:12.447 +03:00 [VRB] Inspecting project Assembly-CSharp-Editor.
+2025-06-14 20:59:12.585 +03:00 [VRB] Inspecting project spreadsheet.
+2025-06-14 20:59:12.586 +03:00 [VRB] Inspecting project drawers.
+2025-06-14 20:59:12.586 +03:00 [VRB] Inspecting project drawers.Editor.
+2025-06-14 20:59:12.586 +03:00 [VRB] Inspecting project Sirenix.OdinInspector.Modules.UnityMathematics.
+2025-06-14 20:59:12.803 +03:00 [VRB] Found a total of 724.
+2025-06-14 20:59:12.805 +03:00 [VRB] Solution loaded, 724 TypeSymbols Discovered
+2025-06-14 20:59:12.809 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Core.dll].
+2025-06-14 20:59:12.810 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Core.dll]
+2025-06-14 20:59:12.811 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Core.Libs.dll].
+2025-06-14 20:59:12.811 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Core.Libs.dll]
+2025-06-14 20:59:12.812 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Core.Plugins.dll].
+2025-06-14 20:59:12.812 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Core.Plugins.dll]
+2025-06-14 20:59:12.812 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Unity.Blueprint.Plugins.dll].
+2025-06-14 20:59:12.812 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Unity.Blueprint.Plugins.dll]
+2025-06-14 20:59:12.813 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Unity.VisualDebugging.Plugins.dll].
+2025-06-14 20:59:12.813 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Unity.VisualDebugging.Plugins.dll]
+2025-06-14 20:59:12.813 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Core.dll].
+2025-06-14 20:59:12.813 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Core.dll]
+2025-06-14 20:59:12.814 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Core.Plugin.dll].
+2025-06-14 20:59:12.814 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Core.Plugin.dll]
+2025-06-14 20:59:12.815 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Plugin.dll].
+2025-06-14 20:59:12.816 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Plugin.dll]
+2025-06-14 20:59:12.817 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Shared.dll].
+2025-06-14 20:59:12.817 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Shared.dll]
+2025-06-14 20:59:12.817 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Unity.Factory.dll].
+2025-06-14 20:59:12.818 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Unity.Factory.dll]
+2025-06-14 20:59:12.818 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Unity.Factory.Plugin.dll].
+2025-06-14 20:59:12.818 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Unity.Factory.Plugin.dll]
+2025-06-14 20:59:12.819 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Microsoft.CodeAnalysis.dll].
+2025-06-14 20:59:12.819 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Microsoft.CodeAnalysis.dll]
+2025-06-14 20:59:12.820 +03:00 [VRB] Loaded 12 plugins assemblies.
+2025-06-14 20:59:13.105 +03:00 [VRB] Loading Assembly Dependency [Microsoft.CodeAnalysis, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]
+2025-06-14 20:59:13.106 +03:00 [ERR] Failed to load Assembly [Microsoft.CodeAnalysis, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35], attempting to resolve Assembly at Base Paths.
+System.IO.FileNotFoundException: Could not load file or assembly 'D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Microsoft.CodeAnalysis, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'. Не удается найти указанный файл.
+File name: 'D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Microsoft.CodeAnalysis, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, String ilPath, String niPath, ObjectHandleOnStack retAssembly)
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath(String assemblyPath)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Genesis.CLI.AssemblyLoader.ResolveAndLoad(String name, Boolean isDependency) in /home/runner/work/Genesis/Genesis/Genesis/ExternalApp/Genesis/Assemblies/AssemblyLoader.cs:line 269
+
+
+2025-06-14 20:59:13.124 +03:00 [VRB] Computed Assembly Name is [Microsoft.CodeAnalysis]
+2025-06-14 20:59:13.124 +03:00 [VRB] Looking for Assembly at [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Microsoft.CodeAnalysis.dll].
+2025-06-14 20:59:13.125 +03:00 [VRB] Resolved Assembly [Microsoft.CodeAnalysis, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35] to [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Microsoft.CodeAnalysis.dll].
+2025-06-14 20:59:13.125 +03:00 [VRB] Attempting to resolve Assembly [Microsoft.CodeAnalysis, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35] at path [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Microsoft.CodeAnalysis.dll]
+2025-06-14 20:59:13.130 +03:00 [VRB] Plugin loaded: CleanupDestroyEntitySystemGenerator.
+2025-06-14 20:59:13.130 +03:00 [VRB] Plugin loaded: CleanupRemoveComponentSystemGenerator.
+2025-06-14 20:59:13.130 +03:00 [VRB] Plugin loaded: ContextCleanupFeatureGenerator.
+2025-06-14 20:59:13.130 +03:00 [VRB] Plugin loaded: ContextCleanupSystemsGenerator.
+2025-06-14 20:59:13.130 +03:00 [VRB] Plugin loaded: ComponentContextApiGenerator.
+2025-06-14 20:59:13.130 +03:00 [VRB] Plugin loaded: ComponentEntityApiGenerator.
+2025-06-14 20:59:13.130 +03:00 [VRB] Plugin loaded: ComponentEntityApiInterfaceGenerator.
+2025-06-14 20:59:13.130 +03:00 [VRB] Plugin loaded: ComponentGenerator.
+2025-06-14 20:59:13.130 +03:00 [VRB] Plugin loaded: ComponentLookupGenerator.
+2025-06-14 20:59:13.130 +03:00 [VRB] Plugin loaded: ComponentMatcherApiGenerator.
+2025-06-14 20:59:13.130 +03:00 [VRB] Plugin loaded: ComponentDataProvider.
+2025-06-14 20:59:13.130 +03:00 [VRB] Plugin loaded: ContextAttributeGenerator.
+2025-06-14 20:59:13.131 +03:00 [VRB] Plugin loaded: ContextGenerator.
+2025-06-14 20:59:13.131 +03:00 [VRB] Plugin loaded: ContextMatcherGenerator.
+2025-06-14 20:59:13.131 +03:00 [VRB] Plugin loaded: ContextsGenerator.
+2025-06-14 20:59:13.131 +03:00 [VRB] Plugin loaded: ContextDataProvider.
+2025-06-14 20:59:13.131 +03:00 [VRB] Plugin loaded: EntityGenerator.
+2025-06-14 20:59:13.131 +03:00 [VRB] Plugin loaded: EntityIndexGenerator.
+2025-06-14 20:59:13.131 +03:00 [VRB] Plugin loaded: EntityIndexDataProvider.
+2025-06-14 20:59:13.131 +03:00 [VRB] Plugin loaded: EventDelegateGenerator.
+2025-06-14 20:59:13.131 +03:00 [VRB] Plugin loaded: EventEntityApiGenerator.
+2025-06-14 20:59:13.131 +03:00 [VRB] Plugin loaded: EventListenerComponentGenerator.
+2025-06-14 20:59:13.131 +03:00 [VRB] Plugin loaded: EventSystemGenerator.
+2025-06-14 20:59:13.131 +03:00 [VRB] Plugin loaded: EventSystemsGenerator.
+2025-06-14 20:59:13.131 +03:00 [VRB] Plugin loaded: BlueprintClassGenerator.
+2025-06-14 20:59:13.131 +03:00 [VRB] Plugin loaded: ContextObserverGenerator.
+2025-06-14 20:59:13.131 +03:00 [VRB] Plugin loaded: FeatureClassGenerator.
+2025-06-14 20:59:13.131 +03:00 [VRB] Plugin loaded: AddFileHeaderPostProcessor.
+2025-06-14 20:59:13.131 +03:00 [VRB] Plugin loaded: CleanTargetDirectoryPostProcessor.
+2025-06-14 20:59:13.131 +03:00 [VRB] Plugin loaded: MergeFilesPostProcessor.
+2025-06-14 20:59:13.131 +03:00 [VRB] Plugin loaded: NewLinePostProcessor.
+2025-06-14 20:59:13.131 +03:00 [VRB] Plugin loaded: WriteToDiskPostProcessor.
+2025-06-14 20:59:13.131 +03:00 [VRB] Plugin loaded: ScriptableFactoryCodeGenerator.
+2025-06-14 20:59:13.131 +03:00 [VRB] Plugin loaded: ScriptableFactoryDataProvider.
+2025-06-14 20:59:13.131 +03:00 [VRB] Using Base64 Configs...
+2025-06-14 20:59:13.212 +03:00 [VRB] Loaded 1 GenesisConfigs. Starting code generation.
+2025-06-14 20:59:13.219 +03:00 [VRB] Setting absolute output path to D:/Repositiryes/Simulation-of-resource-collection-by-faction-drones/Assets/Ecs/Generated.
+2025-06-14 20:59:13.231 +03:00 [VRB] Generating code from GenesisSettings.
+2025-06-14 20:59:13.330 +03:00 [VRB] Creating model Component 2,94%%
+2025-06-14 20:59:13.942 +03:00 [ERR] [EntitasRedux] [Resource] for Context [Game] has 2 separate Type instances with the same name. Please ensure all components belonging to a single context have unique names.
+2025-06-14 20:59:13.943 +03:00 [ERR] An unexpected error occured during code generation, stopping now...
+EntitasRedux.Core.Plugins.DuplicateComponentNameException: Two or more components belonging to the same Context have the same name.  Please ensure all components belonging to a single context have unique names.
+
+   at EntitasRedux.Core.Plugins.ComponentValidationTools.ValidateComponentData(ILogger logger, ComponentData[] componentData) in /home/leo/Projects/Unity/PD/pdentitasredux/Plugins/EntitasRedux.Core.Plugins/Components/ComponentValidationTools.cs:line 75
+   at EntitasRedux.Core.Plugins.ComponentDataProvider.GetData() in /home/leo/Projects/Unity/PD/pdentitasredux/Plugins/EntitasRedux.Core.Plugins/Components/DataProviders/ComponentDataProvider.cs:line 99
+   at Genesis.CLI.CodeGeneratorRunner.Generate(String messagePrefix, IMemoryCache memoryCache, IPreProcessor[] preProcessors, IDataProvider[] dataProviders, ICodeGenerator[] codeGenerators, IPostProcessor[] postProcessors) in /home/runner/work/Genesis/Genesis/Genesis/ExternalApp/Genesis/CodeGeneration/CodeGeneratorRunner.cs:line 125
+   at Genesis.CLI.Program.ExecuteCodeGeneration(GenerateOptions generateOptions) in /home/runner/work/Genesis/Genesis/Genesis/ExternalApp/Genesis/Program.cs:line 194
+2025-06-14 21:06:10.373 +03:00 [VRB] Solution found at D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Simulation-of-resource-collection-by-faction-drones.sln, attempting to load.
+2025-06-14 21:06:15.122 +03:00 [VRB] Roslyn solution found, beginning parsing.
+2025-06-14 21:06:15.127 +03:00 [VRB] Inspecting project spreadsheet.Editor.
+2025-06-14 21:06:15.127 +03:00 [VRB] Inspecting project Assembly-CSharp.
+2025-06-14 21:06:15.127 +03:00 [VRB] Inspecting project Assembly-CSharp-Editor-firstpass.
+2025-06-14 21:06:15.127 +03:00 [VRB] Inspecting project Fluid.BehaviorTree.
+2025-06-14 21:06:16.157 +03:00 [VRB] Inspecting project Fluid.BehaviorTree.Editor.
+2025-06-14 21:06:16.690 +03:00 [VRB] Inspecting project Assembly-CSharp-firstpass.
+2025-06-14 21:06:16.690 +03:00 [VRB] Inspecting project Assembly-CSharp-Editor.
+2025-06-14 21:06:16.848 +03:00 [VRB] Inspecting project spreadsheet.
+2025-06-14 21:06:16.849 +03:00 [VRB] Inspecting project drawers.
+2025-06-14 21:06:16.849 +03:00 [VRB] Inspecting project drawers.Editor.
+2025-06-14 21:06:16.849 +03:00 [VRB] Inspecting project Sirenix.OdinInspector.Modules.UnityMathematics.
+2025-06-14 21:06:17.038 +03:00 [VRB] Found a total of 724.
+2025-06-14 21:06:17.039 +03:00 [VRB] Solution loaded, 724 TypeSymbols Discovered
+2025-06-14 21:06:17.045 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Core.dll].
+2025-06-14 21:06:17.045 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Core.dll]
+2025-06-14 21:06:17.053 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Core.Libs.dll].
+2025-06-14 21:06:17.053 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Core.Libs.dll]
+2025-06-14 21:06:17.054 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Core.Plugins.dll].
+2025-06-14 21:06:17.054 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Core.Plugins.dll]
+2025-06-14 21:06:17.063 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Unity.Blueprint.Plugins.dll].
+2025-06-14 21:06:17.063 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Unity.Blueprint.Plugins.dll]
+2025-06-14 21:06:17.064 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Unity.VisualDebugging.Plugins.dll].
+2025-06-14 21:06:17.064 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\EntitasRedux.Unity.VisualDebugging.Plugins.dll]
+2025-06-14 21:06:17.064 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Core.dll].
+2025-06-14 21:06:17.065 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Core.dll]
+2025-06-14 21:06:17.079 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Core.Plugin.dll].
+2025-06-14 21:06:17.079 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Core.Plugin.dll]
+2025-06-14 21:06:17.087 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Plugin.dll].
+2025-06-14 21:06:17.087 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Plugin.dll]
+2025-06-14 21:06:17.101 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Shared.dll].
+2025-06-14 21:06:17.102 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Shared.dll]
+2025-06-14 21:06:17.103 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Unity.Factory.dll].
+2025-06-14 21:06:17.103 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Unity.Factory.dll]
+2025-06-14 21:06:17.118 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Unity.Factory.Plugin.dll].
+2025-06-14 21:06:17.118 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Genesis.Unity.Factory.Plugin.dll]
+2025-06-14 21:06:17.120 +03:00 [VRB] Attempting to load Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Microsoft.CodeAnalysis.dll].
+2025-06-14 21:06:17.120 +03:00 [VRB] Loading Assembly [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Microsoft.CodeAnalysis.dll]
+2025-06-14 21:06:17.149 +03:00 [VRB] Loaded 12 plugins assemblies.
+2025-06-14 21:06:17.514 +03:00 [VRB] Loading Assembly Dependency [Microsoft.CodeAnalysis, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]
+2025-06-14 21:06:17.515 +03:00 [ERR] Failed to load Assembly [Microsoft.CodeAnalysis, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35], attempting to resolve Assembly at Base Paths.
+System.IO.FileNotFoundException: Could not load file or assembly 'D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Microsoft.CodeAnalysis, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'. Не удается найти указанный файл.
+File name: 'D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Microsoft.CodeAnalysis, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, String ilPath, String niPath, ObjectHandleOnStack retAssembly)
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath(String assemblyPath)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Genesis.CLI.AssemblyLoader.ResolveAndLoad(String name, Boolean isDependency) in /home/runner/work/Genesis/Genesis/Genesis/ExternalApp/Genesis/Assemblies/AssemblyLoader.cs:line 269
+
+
+2025-06-14 21:06:17.562 +03:00 [VRB] Computed Assembly Name is [Microsoft.CodeAnalysis]
+2025-06-14 21:06:17.562 +03:00 [VRB] Looking for Assembly at [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Microsoft.CodeAnalysis.dll].
+2025-06-14 21:06:17.562 +03:00 [VRB] Resolved Assembly [Microsoft.CodeAnalysis, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35] to [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Microsoft.CodeAnalysis.dll].
+2025-06-14 21:06:17.562 +03:00 [VRB] Attempting to resolve Assembly [Microsoft.CodeAnalysis, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35] at path [D:\Repositiryes\Simulation-of-resource-collection-by-faction-drones\Genesis.CLI\Plugins\Microsoft.CodeAnalysis.dll]
+2025-06-14 21:06:17.570 +03:00 [VRB] Plugin loaded: CleanupDestroyEntitySystemGenerator.
+2025-06-14 21:06:17.570 +03:00 [VRB] Plugin loaded: CleanupRemoveComponentSystemGenerator.
+2025-06-14 21:06:17.570 +03:00 [VRB] Plugin loaded: ContextCleanupFeatureGenerator.
+2025-06-14 21:06:17.570 +03:00 [VRB] Plugin loaded: ContextCleanupSystemsGenerator.
+2025-06-14 21:06:17.570 +03:00 [VRB] Plugin loaded: ComponentContextApiGenerator.
+2025-06-14 21:06:17.570 +03:00 [VRB] Plugin loaded: ComponentEntityApiGenerator.
+2025-06-14 21:06:17.570 +03:00 [VRB] Plugin loaded: ComponentEntityApiInterfaceGenerator.
+2025-06-14 21:06:17.570 +03:00 [VRB] Plugin loaded: ComponentGenerator.
+2025-06-14 21:06:17.570 +03:00 [VRB] Plugin loaded: ComponentLookupGenerator.
+2025-06-14 21:06:17.570 +03:00 [VRB] Plugin loaded: ComponentMatcherApiGenerator.
+2025-06-14 21:06:17.570 +03:00 [VRB] Plugin loaded: ComponentDataProvider.
+2025-06-14 21:06:17.570 +03:00 [VRB] Plugin loaded: ContextAttributeGenerator.
+2025-06-14 21:06:17.570 +03:00 [VRB] Plugin loaded: ContextGenerator.
+2025-06-14 21:06:17.570 +03:00 [VRB] Plugin loaded: ContextMatcherGenerator.
+2025-06-14 21:06:17.570 +03:00 [VRB] Plugin loaded: ContextsGenerator.
+2025-06-14 21:06:17.570 +03:00 [VRB] Plugin loaded: ContextDataProvider.
+2025-06-14 21:06:17.570 +03:00 [VRB] Plugin loaded: EntityGenerator.
+2025-06-14 21:06:17.570 +03:00 [VRB] Plugin loaded: EntityIndexGenerator.
+2025-06-14 21:06:17.571 +03:00 [VRB] Plugin loaded: EntityIndexDataProvider.
+2025-06-14 21:06:17.571 +03:00 [VRB] Plugin loaded: EventDelegateGenerator.
+2025-06-14 21:06:17.571 +03:00 [VRB] Plugin loaded: EventEntityApiGenerator.
+2025-06-14 21:06:17.571 +03:00 [VRB] Plugin loaded: EventListenerComponentGenerator.
+2025-06-14 21:06:17.571 +03:00 [VRB] Plugin loaded: EventSystemGenerator.
+2025-06-14 21:06:17.571 +03:00 [VRB] Plugin loaded: EventSystemsGenerator.
+2025-06-14 21:06:17.571 +03:00 [VRB] Plugin loaded: BlueprintClassGenerator.
+2025-06-14 21:06:17.571 +03:00 [VRB] Plugin loaded: ContextObserverGenerator.
+2025-06-14 21:06:17.571 +03:00 [VRB] Plugin loaded: FeatureClassGenerator.
+2025-06-14 21:06:17.571 +03:00 [VRB] Plugin loaded: AddFileHeaderPostProcessor.
+2025-06-14 21:06:17.571 +03:00 [VRB] Plugin loaded: CleanTargetDirectoryPostProcessor.
+2025-06-14 21:06:17.571 +03:00 [VRB] Plugin loaded: MergeFilesPostProcessor.
+2025-06-14 21:06:17.571 +03:00 [VRB] Plugin loaded: NewLinePostProcessor.
+2025-06-14 21:06:17.571 +03:00 [VRB] Plugin loaded: WriteToDiskPostProcessor.
+2025-06-14 21:06:17.571 +03:00 [VRB] Plugin loaded: ScriptableFactoryCodeGenerator.
+2025-06-14 21:06:17.571 +03:00 [VRB] Plugin loaded: ScriptableFactoryDataProvider.
+2025-06-14 21:06:17.571 +03:00 [VRB] Using Base64 Configs...
+2025-06-14 21:06:17.681 +03:00 [VRB] Loaded 1 GenesisConfigs. Starting code generation.
+2025-06-14 21:06:17.683 +03:00 [VRB] Setting absolute output path to D:/Repositiryes/Simulation-of-resource-collection-by-faction-drones/Assets/Ecs/Generated.
+2025-06-14 21:06:17.705 +03:00 [VRB] Generating code from GenesisSettings.
+2025-06-14 21:06:17.794 +03:00 [VRB] Creating model Component 2,94%%
+2025-06-14 21:06:18.311 +03:00 [VRB] Creating model Context 5,88%%
+2025-06-14 21:06:18.311 +03:00 [VRB] Creating model Entity Index 8,82%%
+2025-06-14 21:06:18.325 +03:00 [VRB] Creating model Scriptable Factory Data 11,76%%
+2025-06-14 21:06:18.327 +03:00 [VRB] Creating files Cleanup Destroy Entity System 14,71%%
+2025-06-14 21:06:18.329 +03:00 [VRB] Creating files Cleanup Remove Component System 17,65%%
+2025-06-14 21:06:18.329 +03:00 [VRB] Creating files Component (Context API) 20,59%%
+2025-06-14 21:06:18.359 +03:00 [VRB] Creating files Component (Entity API) 23,53%%
+2025-06-14 21:06:18.404 +03:00 [VRB] Creating files Component (Entity API Interface) 26,47%%
+2025-06-14 21:06:18.406 +03:00 [VRB] Creating files Component 29,41%%
+2025-06-14 21:06:18.407 +03:00 [VRB] Creating files Component (Lookup) 32,35%%
+2025-06-14 21:06:18.411 +03:00 [VRB] Creating files Component (Matcher API) 35,29%%
+2025-06-14 21:06:18.413 +03:00 [VRB] Creating files Context (Attribute) 38,24%%
+2025-06-14 21:06:18.413 +03:00 [VRB] Creating files Context Cleanup Feature Generator 41,18%%
+2025-06-14 21:06:18.415 +03:00 [VRB] Creating files Context Cleanup Systems Generator 44,12%%
+2025-06-14 21:06:18.416 +03:00 [VRB] Creating files Context 47,06%%
+2025-06-14 21:06:18.416 +03:00 [VRB] Creating files Context (Matcher API) 50,00%%
+2025-06-14 21:06:18.417 +03:00 [VRB] Creating files Contexts 52,94%%
+2025-06-14 21:06:18.418 +03:00 [VRB] Creating files Entity 55,88%%
+2025-06-14 21:06:18.418 +03:00 [VRB] Creating files Entity Index 58,82%%
+2025-06-14 21:06:18.421 +03:00 [VRB] Creating files Event (Listener Delegate) 61,76%%
+2025-06-14 21:06:18.422 +03:00 [VRB] Creating files Event (Entity API) 64,71%%
+2025-06-14 21:06:18.425 +03:00 [VRB] Creating files Event (Listener Component) 67,65%%
+2025-06-14 21:06:18.426 +03:00 [VRB] Creating files Event (System) 70,59%%
+2025-06-14 21:06:18.453 +03:00 [VRB] Creating files Event (Systems) 73,53%%
+2025-06-14 21:06:18.464 +03:00 [VRB] Creating files Blueprint Class Generator 76,47%%
+2025-06-14 21:06:18.471 +03:00 [VRB] Creating files Context Observer 79,41%%
+2025-06-14 21:06:18.472 +03:00 [VRB] Creating files Feature Class 82,35%%
+2025-06-14 21:06:18.472 +03:00 [VRB] Creating files Scriptable Factory Lookup 85,29%%
+2025-06-14 21:06:18.474 +03:00 [VRB] Post Processing Add File Header 88,24%%
+2025-06-14 21:06:18.476 +03:00 [VRB] Post Processing Clean Target Directory 91,18%%
+2025-06-14 21:06:18.542 +03:00 [VRB] Post Processing Convert Line Endings 94,12%%
+2025-06-14 21:06:18.545 +03:00 [VRB] Post Processing Merge files 97,06%%
+2025-06-14 21:06:18.546 +03:00 [VRB] Post Processing Write Code Gen Files to Disk 100,00%%

@@ -7,18 +7,15 @@
 //		the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Ecs.Common.Components;
-
 public partial class GameEntity
 {
-	public ResourcePrefabComponent ResourcePrefab { get { return (ResourcePrefabComponent)GetComponent(GameComponentsLookup.ResourcePrefab); } }
+	public Ecs.Common.Components.ResourcePrefabComponent ResourcePrefab { get { return (Ecs.Common.Components.ResourcePrefabComponent)GetComponent(GameComponentsLookup.ResourcePrefab); } }
 	public bool HasResourcePrefab { get { return HasComponent(GameComponentsLookup.ResourcePrefab); } }
 
 	public void AddResourcePrefab(Db.GameObjectsBase.Impl.EGameResourceType newValue)
 	{
 		var index = GameComponentsLookup.ResourcePrefab;
-		var component = (ResourcePrefabComponent)CreateComponent(index, typeof(ResourcePrefabComponent));
+		var component = (Ecs.Common.Components.ResourcePrefabComponent)CreateComponent(index, typeof(Ecs.Common.Components.ResourcePrefabComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = newValue;
 		#endif
@@ -28,17 +25,17 @@ public partial class GameEntity
 	public void ReplaceResourcePrefab(Db.GameObjectsBase.Impl.EGameResourceType newValue)
 	{
 		var index = GameComponentsLookup.ResourcePrefab;
-		var component = (ResourcePrefabComponent)CreateComponent(index, typeof(ResourcePrefabComponent));
+		var component = (Ecs.Common.Components.ResourcePrefabComponent)CreateComponent(index, typeof(Ecs.Common.Components.ResourcePrefabComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = newValue;
 		#endif
 		ReplaceComponent(index, component);
 	}
 
-	public void CopyResourcePrefabTo(ResourcePrefabComponent copyComponent)
+	public void CopyResourcePrefabTo(Ecs.Common.Components.ResourcePrefabComponent copyComponent)
 	{
 		var index = GameComponentsLookup.ResourcePrefab;
-		var component = (ResourcePrefabComponent)CreateComponent(index, typeof(ResourcePrefabComponent));
+		var component = (Ecs.Common.Components.ResourcePrefabComponent)CreateComponent(index, typeof(Ecs.Common.Components.ResourcePrefabComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = copyComponent.Value;
 		#endif

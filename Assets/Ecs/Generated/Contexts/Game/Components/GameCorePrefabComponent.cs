@@ -7,18 +7,15 @@
 //		the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Ecs.Common.Components;
-
 public partial class GameEntity
 {
-	public CorePrefabComponent CorePrefab { get { return (CorePrefabComponent)GetComponent(GameComponentsLookup.CorePrefab); } }
+	public Ecs.Common.Components.CorePrefabComponent CorePrefab { get { return (Ecs.Common.Components.CorePrefabComponent)GetComponent(GameComponentsLookup.CorePrefab); } }
 	public bool HasCorePrefab { get { return HasComponent(GameComponentsLookup.CorePrefab); } }
 
 	public void AddCorePrefab(Db.EObjectType newValue)
 	{
 		var index = GameComponentsLookup.CorePrefab;
-		var component = (CorePrefabComponent)CreateComponent(index, typeof(CorePrefabComponent));
+		var component = (Ecs.Common.Components.CorePrefabComponent)CreateComponent(index, typeof(Ecs.Common.Components.CorePrefabComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = newValue;
 		#endif
@@ -28,17 +25,17 @@ public partial class GameEntity
 	public void ReplaceCorePrefab(Db.EObjectType newValue)
 	{
 		var index = GameComponentsLookup.CorePrefab;
-		var component = (CorePrefabComponent)CreateComponent(index, typeof(CorePrefabComponent));
+		var component = (Ecs.Common.Components.CorePrefabComponent)CreateComponent(index, typeof(Ecs.Common.Components.CorePrefabComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = newValue;
 		#endif
 		ReplaceComponent(index, component);
 	}
 
-	public void CopyCorePrefabTo(CorePrefabComponent copyComponent)
+	public void CopyCorePrefabTo(Ecs.Common.Components.CorePrefabComponent copyComponent)
 	{
 		var index = GameComponentsLookup.CorePrefab;
-		var component = (CorePrefabComponent)CreateComponent(index, typeof(CorePrefabComponent));
+		var component = (Ecs.Common.Components.CorePrefabComponent)CreateComponent(index, typeof(Ecs.Common.Components.CorePrefabComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = copyComponent.Value;
 		#endif

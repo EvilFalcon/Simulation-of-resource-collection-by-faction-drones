@@ -8,7 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using Ecs.Common.Components;
 using JCMG.EntitasRedux;
 
 public partial class GameEntity
@@ -19,21 +18,37 @@ public partial class GameEntity
 	public void CopyComponentTo(IComponent component)
 	{
 		#if !ENTITAS_REDUX_NO_IMPL
-		if (component is Ecs.Common.Components.DestroyedComponent Destroyed)
+		if (component is Ecs.Scheduler.Components.LocalTimeScaleComponent LocalTimeScale)
+		{
+			CopyLocalTimeScaleTo(LocalTimeScale);
+		}
+		else if (component is Ecs.Common.Components.DestroyedComponent Destroyed)
 		{
 			IsDestroyed = true;
 		}
-		else if (component is Ecs.Scheduler.Components.LocalTimeScaleComponent LocalTimeScale)
+		else if (component is Ecs.Common.Components.LinkComponent Link)
 		{
-			CopyLocalTimeScaleTo(LocalTimeScale);
+			CopyLinkTo(Link);
+		}
+		else if (component is Ecs.Common.Components.CorePrefabComponent CorePrefab)
+		{
+			CopyCorePrefabTo(CorePrefab);
+		}
+		else if (component is Ecs.Common.Components.ResourcePrefabComponent ResourcePrefab)
+		{
+			CopyResourcePrefabTo(ResourcePrefab);
+		}
+		else if (component is Ecs.Common.Components.InstantiateComponent Instantiate)
+		{
+			IsInstantiate = true;
+		}
+		else if (component is Ecs.Common.Components.UnitPrefabComponent UnitPrefab)
+		{
+			CopyUnitPrefabTo(UnitPrefab);
 		}
 		else if (component is Ecs.Game.Components.AttackComponent Attack)
 		{
 			CopyAttackTo(Attack);
-		}
-		else if (component is LinkComponent Link)
-		{
-			CopyLinkTo(Link);
 		}
 		else if (component is Ecs.Game.Components.LookDirectionComponent LookDirection)
 		{
@@ -51,41 +66,21 @@ public partial class GameEntity
 		{
 			IsDead = true;
 		}
-		else if (component is CorePrefabComponent CorePrefab)
-		{
-			CopyCorePrefabTo(CorePrefab);
-		}
 		else if (component is Ecs.Game.Components.LookPointComponent LookPoint)
 		{
 			CopyLookPointTo(LookPoint);
-		}
-		else if (component is ResourcePrefabComponent ResourcePrefab)
-		{
-			CopyResourcePrefabTo(ResourcePrefab);
 		}
 		else if (component is Ecs.Game.Components.SpeedComponent Speed)
 		{
 			CopySpeedTo(Speed);
 		}
-		else if (component is InstantiateComponent Instantiate)
-		{
-			IsInstantiate = true;
-		}
-		else if (component is UnitPrefabComponent UnitPrefab)
-		{
-			CopyUnitPrefabTo(UnitPrefab);
-		}
-		else if (component is Ecs.Game.Components.PlayerComponents.PlayerComponent Player)
-		{
-			IsPlayer = true;
-		}
 		else if (component is Ecs.Game.Components.SpawnersComponents.SpawnHistoryComponent SpawnHistory)
 		{
 			CopySpawnHistoryTo(SpawnHistory);
 		}
-		else if (component is Ecs.Game.Components.SpawnersComponents.ResourceComponent ResourceSpawner)
+		else if (component is Ecs.Game.Components.PlayerComponents.PlayerComponent Player)
 		{
-			IsResource = true;
+			IsPlayer = true;
 		}
 		else if (component is Ecs.Game.Components.CameraComponents.CameraComponent Camera)
 		{
@@ -102,14 +97,6 @@ public partial class GameEntity
 		else if (component is Ecs.Game.Components.TerrainComponents.TerrainComponent Terrain)
 		{
 			CopyTerrainTo(Terrain);
-		}
-		else if (component is Ecs.Game.Components.ResourceComponents.ResourceTypeComponent ResourceType)
-		{
-			CopyResourceTypeTo(ResourceType);
-		}
-		else if (component is Ecs.Game.Components.ResourceComponents.ResourceComponent Resource)
-		{
-			CopyResourceTo(Resource);
 		}
 		else if (component is Ecs.Game.Components.GlobalComponents.RotationComponent Rotation)
 		{
@@ -138,6 +125,22 @@ public partial class GameEntity
 		else if (component is Ecs.Game.Components.GlobalComponents.LocalPositionComponent LocalPosition)
 		{
 			CopyLocalPositionTo(LocalPosition);
+		}
+		else if (component is Ecs.Game.Components.Units.MovementTargetComponent MovementTarget)
+		{
+			CopyMovementTargetTo(MovementTarget);
+		}
+		else if (component is Ecs.Game.Components.Units.UnitFractionComponent UnitFraction)
+		{
+			CopyUnitFractionTo(UnitFraction);
+		}
+		else if (component is Ecs.Game.Components.ResourceComponents.ResourceTypeComponent ResourceType)
+		{
+			CopyResourceTypeTo(ResourceType);
+		}
+		else if (component is Ecs.Game.Components.ResourceComponents.ResourceComponent Resource)
+		{
+			IsResource = true;
 		}
 
 		#endif

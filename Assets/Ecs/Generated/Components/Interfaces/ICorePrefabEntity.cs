@@ -7,12 +7,9 @@
 //		the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Ecs.Common.Components;
-
 public partial interface ICorePrefabEntity
 {
-	CorePrefabComponent CorePrefab { get; }
+	Ecs.Common.Components.CorePrefabComponent CorePrefab { get; }
 	bool HasCorePrefab { get; }
 
 	void AddCorePrefab(Db.EObjectType newValue);

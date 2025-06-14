@@ -7,18 +7,15 @@
 //		the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Ecs.Common.Components;
-
 public partial class GameEntity
 {
-	public UnitPrefabComponent UnitPrefab { get { return (UnitPrefabComponent)GetComponent(GameComponentsLookup.UnitPrefab); } }
+	public Ecs.Common.Components.UnitPrefabComponent UnitPrefab { get { return (Ecs.Common.Components.UnitPrefabComponent)GetComponent(GameComponentsLookup.UnitPrefab); } }
 	public bool HasUnitPrefab { get { return HasComponent(GameComponentsLookup.UnitPrefab); } }
 
 	public void AddUnitPrefab(Db.GameObjectsBase.Impl.EFractionType newValue)
 	{
 		var index = GameComponentsLookup.UnitPrefab;
-		var component = (UnitPrefabComponent)CreateComponent(index, typeof(UnitPrefabComponent));
+		var component = (Ecs.Common.Components.UnitPrefabComponent)CreateComponent(index, typeof(Ecs.Common.Components.UnitPrefabComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = newValue;
 		#endif
@@ -28,17 +25,17 @@ public partial class GameEntity
 	public void ReplaceUnitPrefab(Db.GameObjectsBase.Impl.EFractionType newValue)
 	{
 		var index = GameComponentsLookup.UnitPrefab;
-		var component = (UnitPrefabComponent)CreateComponent(index, typeof(UnitPrefabComponent));
+		var component = (Ecs.Common.Components.UnitPrefabComponent)CreateComponent(index, typeof(Ecs.Common.Components.UnitPrefabComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = newValue;
 		#endif
 		ReplaceComponent(index, component);
 	}
 
-	public void CopyUnitPrefabTo(UnitPrefabComponent copyComponent)
+	public void CopyUnitPrefabTo(Ecs.Common.Components.UnitPrefabComponent copyComponent)
 	{
 		var index = GameComponentsLookup.UnitPrefab;
-		var component = (UnitPrefabComponent)CreateComponent(index, typeof(UnitPrefabComponent));
+		var component = (Ecs.Common.Components.UnitPrefabComponent)CreateComponent(index, typeof(Ecs.Common.Components.UnitPrefabComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Value = copyComponent.Value;
 		#endif

@@ -7,12 +7,12 @@
 //		the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-public partial interface IUnitPrefabEntity
+public partial interface IUnitFractionEntity
 {
-	Ecs.Common.Components.UnitPrefabComponent UnitPrefab { get; }
-	bool HasUnitPrefab { get; }
+	Ecs.Game.Components.Units.UnitFractionComponent UnitFraction { get; }
+	bool HasUnitFraction { get; }
 
-	void AddUnitPrefab(Db.GameObjectsBase.Impl.EFractionType newValue);
-	void ReplaceUnitPrefab(Db.GameObjectsBase.Impl.EFractionType newValue);
-	void RemoveUnitPrefab();
+	void AddUnitFraction(Db.GameObjectsBase.Impl.EFractionType newValue);
+	void ReplaceUnitFraction(Db.GameObjectsBase.Impl.EFractionType newValue);
+	void RemoveUnitFraction();
 }

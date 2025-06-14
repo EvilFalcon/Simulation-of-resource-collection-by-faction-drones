@@ -7,7 +7,12 @@
 //		the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-public partial interface IResourceSpawnerEntity
+public partial interface IMovementTargetEntity
 {
-	bool IsResource { get; set; }
+	Ecs.Game.Components.Units.MovementTargetComponent MovementTarget { get; }
+	bool HasMovementTarget { get; }
+
+	void AddMovementTarget(System.Numerics.Vector3 newPosition);
+	void ReplaceMovementTarget(System.Numerics.Vector3 newPosition);
+	void RemoveMovementTarget();
 }
