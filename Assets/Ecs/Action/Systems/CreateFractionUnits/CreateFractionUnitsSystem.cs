@@ -37,9 +37,10 @@ namespace Ecs.Action.Systems.CreateFractionUnits
                     command.FractionType,
                     command.FractionBasePosition,
                     EUnitState.Searching,
-                     -1,
+                    -1,
                     0f);
                 unitView.Link(unitEntity);
+                unitEntity.ReplacePosition(command.FractionBasePosition);
                 _linkedEntityRepository.Add(unitView.transform.GetHashCode(), unitEntity);
             }
         }

@@ -32,7 +32,7 @@ namespace Ecs.Game.Systems.InitializeSystems
         {
             InitializeMap();
 
-          //  CreateMapResources();
+            CreateMapResources();
         }
 
         private void CreateMapResources()
@@ -52,7 +52,7 @@ namespace Ecs.Game.Systems.InitializeSystems
             var terrainPosition = _gameSceneProvider.Terrain.transform.position;
             var minBounds = terrainPosition;
             var maxBounds = terrainPosition + terrainSize;
-            gameMap.ReplaceTerrainBounds(minBounds, maxBounds);
+            gameMap.ReplaceTerrainBounds(maxBounds, minBounds);
             gameMap.ReplaceTerrainData(_gameSceneProvider.Terrain.terrainData);
         }
     }

@@ -27,7 +27,8 @@ namespace Ecs.Game.Systems.InitializeSystems
         
         private void InitializeCamera()
         {
-            var camera = _game.CreateCamera();
+            _game.CreateCamera();
+            var camera = _game.CreateVirtualCamera();
             
             var newCameraRotation = Quaternion.Euler(90, 0, 0);
             camera.ReplaceRotation(newCameraRotation);
