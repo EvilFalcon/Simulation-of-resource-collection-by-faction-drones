@@ -56,8 +56,8 @@ namespace Ecs.Game.Systems.ReactiveSystems
                 }
 
                 var resource = _linkedEntityRepository.Get(unit.UnitFraction.TargetResourceId);
-                unit.ReplaceResourceData(resource.ResourceData.Amount, resource.ResourceData.Value);
-                _resourcesPool.Despawn(resource.ResourceData.Value, resource, resource.Resource.PoolIndex);
+                unit.ReplaceResourceData(resource.ResourceData.Amount, resource.ResourceData.ResourceType);
+                _resourcesPool.Despawn(resource.ResourceData.ResourceType, resource, resource.Resource.PoolIndex);
 
                 unit.ReplaceUnitFraction(
                     unit.UnitFraction.FractionType,

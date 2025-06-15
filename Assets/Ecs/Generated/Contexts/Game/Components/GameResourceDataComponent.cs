@@ -18,7 +18,7 @@ public partial class GameEntity
 		var component = (Ecs.Game.Components.ResourceComponents.ResourceDataComponent)CreateComponent(index, typeof(Ecs.Game.Components.ResourceComponents.ResourceDataComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Amount = newAmount;
-		component.Value = newValue;
+		component.ResourceType = newValue;
 		#endif
 		AddComponent(index, component);
 	}
@@ -29,7 +29,7 @@ public partial class GameEntity
 		var component = (Ecs.Game.Components.ResourceComponents.ResourceDataComponent)CreateComponent(index, typeof(Ecs.Game.Components.ResourceComponents.ResourceDataComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Amount = newAmount;
-		component.Value = newValue;
+		component.ResourceType = newValue;
 		#endif
 		ReplaceComponent(index, component);
 	}
@@ -40,7 +40,7 @@ public partial class GameEntity
 		var component = (Ecs.Game.Components.ResourceComponents.ResourceDataComponent)CreateComponent(index, typeof(Ecs.Game.Components.ResourceComponents.ResourceDataComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
 		component.Amount = copyComponent.Amount;
-		component.Value = copyComponent.Value;
+		component.ResourceType = copyComponent.ResourceType;
 		#endif
 		ReplaceComponent(index, component);
 	}
