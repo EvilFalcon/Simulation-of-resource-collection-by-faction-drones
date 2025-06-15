@@ -14,12 +14,9 @@ namespace Game.Services.InputService.Impl
         {
             _cameraHolder = cameraHolder;
         }
-        
-        public void Initialize()
-        {
-            _camera = _cameraHolder.GetCamera();
-        }
-        
+
+        #region IInputService Members
+
         public Ray GetRayOfTouch(ref PointerDownCommand command)
         {
             var touchPosition = command.Position;
@@ -34,5 +31,16 @@ namespace Game.Services.InputService.Impl
             
             return _camera.ScreenToWorldPoint(touchPosition);
         }
+
+        #endregion
+
+        #region IUiInitializable Members
+
+        public void Initialize()
+        {
+            _camera = _cameraHolder.GetCamera();
+        }
+
+        #endregion
     }
 }

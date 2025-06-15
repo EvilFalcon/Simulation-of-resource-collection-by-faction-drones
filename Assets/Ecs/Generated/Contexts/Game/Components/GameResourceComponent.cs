@@ -9,31 +9,42 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity
 {
-	static readonly Ecs.Game.Components.ResourceComponents.ResourceComponent ResourceComponent = new Ecs.Game.Components.ResourceComponents.ResourceComponent();
+	public Ecs.Game.Components.ResourceComponents.ResourceComponent Resource { get { return (Ecs.Game.Components.ResourceComponents.ResourceComponent)GetComponent(GameComponentsLookup.Resource); } }
+	public bool HasResource { get { return HasComponent(GameComponentsLookup.Resource); } }
 
-	public bool IsResource
+	public void AddResource(int newPoolIndex)
 	{
-		get { return HasComponent(GameComponentsLookup.Resource); }
-		set
-		{
-			if (value != IsResource)
-			{
-				var index = GameComponentsLookup.Resource;
-				if (value)
-				{
-					var componentPool = GetComponentPool(index);
-					var component = componentPool.Count > 0
-							? componentPool.Pop()
-							: ResourceComponent;
+		var index = GameComponentsLookup.Resource;
+		var component = (Ecs.Game.Components.ResourceComponents.ResourceComponent)CreateComponent(index, typeof(Ecs.Game.Components.ResourceComponents.ResourceComponent));
+		#if !ENTITAS_REDUX_NO_IMPL
+		component.PoolIndex = newPoolIndex;
+		#endif
+		AddComponent(index, component);
+	}
 
-					AddComponent(index, component);
-				}
-				else
-				{
-					RemoveComponent(index);
-				}
-			}
-		}
+	public void ReplaceResource(int newPoolIndex)
+	{
+		var index = GameComponentsLookup.Resource;
+		var component = (Ecs.Game.Components.ResourceComponents.ResourceComponent)CreateComponent(index, typeof(Ecs.Game.Components.ResourceComponents.ResourceComponent));
+		#if !ENTITAS_REDUX_NO_IMPL
+		component.PoolIndex = newPoolIndex;
+		#endif
+		ReplaceComponent(index, component);
+	}
+
+	public void CopyResourceTo(Ecs.Game.Components.ResourceComponents.ResourceComponent copyComponent)
+	{
+		var index = GameComponentsLookup.Resource;
+		var component = (Ecs.Game.Components.ResourceComponents.ResourceComponent)CreateComponent(index, typeof(Ecs.Game.Components.ResourceComponents.ResourceComponent));
+		#if !ENTITAS_REDUX_NO_IMPL
+		component.PoolIndex = copyComponent.PoolIndex;
+		#endif
+		ReplaceComponent(index, component);
+	}
+
+	public void RemoveResource()
+	{
+		RemoveComponent(GameComponentsLookup.Resource);
 	}
 }
 

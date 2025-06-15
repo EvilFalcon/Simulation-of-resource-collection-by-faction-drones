@@ -3,7 +3,7 @@
     public enum EGameResourceType
     {
         None = 0,
-        Wood = 1,
-        Stone = 2
+        Mithril = 1,
+        Сrystal = 2
     }
 }

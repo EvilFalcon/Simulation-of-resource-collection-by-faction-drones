@@ -1,4 +1,4 @@
-namespace Core
+namespace Core.Impl
 {
     public readonly struct GameResult
     {

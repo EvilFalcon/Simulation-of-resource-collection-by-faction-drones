@@ -25,14 +25,21 @@ namespace Ecs.Game.Extensions
             return entity;
         }
 
+        public static GameEntity CreateFraction(this GameContext context, EFractionType fractionType)
+        {
+            var entity = context.CreateEntity();
+            entity.AddUid(UidGenerator.Next());
+            entity.AddFractionType(fractionType);
+            return entity;
+        }
+
         public static GameEntity CreateResource(this GameContext context)
         {
             var entity = context.CreateEntity();
             entity.AddUid(UidGenerator.Next());
-            entity.IsResource = true;
             return entity;
         }
-        
+
         public static GameEntity CreatePlayer(
             this GameContext context
         )
@@ -40,17 +47,6 @@ namespace Ecs.Game.Extensions
             var entity = context.CreateEntity();
             entity.AddUid(UidGenerator.Next());
             return entity;
-        }
-
-        private static void InitUnit(GameEntity entity, EFractionType fractionType)
-        {
-            entity.AddUnitPrefab(fractionType);
-            entity.AddVelocity(Vector3.zero);
-            entity.AddPosition(Vector3.zero);
-            entity.AddRotation(Quaternion.identity);
-            entity.AddLookDirection(Vector3.forward);
-            entity.AddSpeed(0);
-            entity.IsInstantiate = true;
         }
 
         public static GameEntity CreateCamera(this GameContext context)
@@ -64,7 +60,7 @@ namespace Ecs.Game.Extensions
             entity.IsInstantiate = true;
             return entity;
         }
-        
+
         public static GameEntity CreateVirtualCamera(this GameContext context)
         {
             var entity = context.CreateEntity();
@@ -74,6 +70,12 @@ namespace Ecs.Game.Extensions
             entity.AddRotation(Quaternion.identity);
             entity.IsInstantiate = true;
             return entity;
+        }
+
+        private static void InitUnit(GameEntity entity, EFractionType fractionType)
+        {
+            entity.AddUnitPrefab(fractionType);
+            entity.AddFractionType(fractionType);
         }
     }
 }

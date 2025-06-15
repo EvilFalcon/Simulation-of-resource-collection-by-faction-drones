@@ -10,8 +10,6 @@ namespace Game.Services.Pools.Impls
 
         protected Transform OriginalParent;
 
-        public string Name { get; }
-
         public PrefabMemoryPool(string name)
         {
             Name = name;
@@ -19,6 +17,12 @@ namespace Game.Services.Pools.Impls
             var container = new GameObject("Pool: " + name);
             OriginalParent = container.transform;
         }
+
+        #region IPrefabMemoryPool Members
+
+        public string Name { get; }
+
+        #endregion
 
         protected override void OnCreated(IObjectLinkable item)
         {

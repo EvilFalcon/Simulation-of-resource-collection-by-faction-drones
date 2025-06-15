@@ -10,16 +10,18 @@ namespace Ecs.Commands.Generator.Editor.Utils.ScriptHandler
 {
     public class CommandsScriptsHandler : IScriptHandler
     {
+        private readonly StringBuilder _extensionsBuilder = new();
         private readonly string _namespace;
 
         private readonly HashSet<string> _rawUsings = new();
         private readonly StringBuilder _usingsBuilder = new();
-        private readonly StringBuilder _extensionsBuilder = new();
 
         public CommandsScriptsHandler(string ns)
         {
             _namespace = ns;
         }
+
+        #region IScriptHandler Members
 
         public void HandleSyntaxRoot(SyntaxNode root)
         {
@@ -53,6 +55,8 @@ namespace Ecs.Commands.Generator.Editor.Utils.ScriptHandler
                 _extensionsBuilder.AppendLine(newExtension);
             }
         }
+
+        #endregion
 
         public void GetCommandsExtensionsCode(out string fileCode)
         {

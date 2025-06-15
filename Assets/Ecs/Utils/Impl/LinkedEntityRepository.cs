@@ -6,8 +6,8 @@ namespace Ecs.Utils.Impl
 {
 	public class LinkedEntityRepository : ILinkedEntityRepository
 	{
-		private readonly Dictionary<int, EntityDecorator> _links = new Dictionary<int, EntityDecorator>();
 		private readonly Queue<EntityDecorator> _decoratorsPool = new Queue<EntityDecorator>();
+		private readonly Dictionary<int, EntityDecorator> _links = new Dictionary<int, EntityDecorator>();
 
 		public IEnumerable<GameEntity> GetAllItems()
 		{
@@ -61,7 +61,7 @@ namespace Ecs.Utils.Impl
 			_decoratorsPool.Enqueue(entityDecorator);
 			_links.Remove(id);
 		}
-
+		
 		private struct EntityDecorator
 		{
 			private readonly Action<int> _destroy;
@@ -97,5 +97,6 @@ namespace Ecs.Utils.Impl
 				_entity = null;
 			}
 		}
+
 	}
 }

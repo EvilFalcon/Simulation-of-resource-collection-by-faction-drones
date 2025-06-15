@@ -18,3 +18,5 @@ MonoBehaviour:
   _resourcePrefabsCollection: {fileID: 11400000, guid: 32343d0e08e360d43b57add0af0a94ea,
     type: 2}
   _unitBase: {fileID: 11400000, guid: 4452bff6ca5ed0646b17254fcbb28294, type: 2}
+  _fractionParameters: {fileID: 11400000, guid: d3ad523678b90364d84ac1a39c2d9af2,
+    type: 2}

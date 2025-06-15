@@ -13,6 +13,7 @@ namespace Game.Utils
 		private static readonly Mask DefaultAndFloorMask = new Mask(Layers.Default, Layers.Floor);
 		private static readonly Mask UnitMask = new Mask(Layers.Unit);
 		private static readonly Mask ResourceMask = new Mask(Layers.Unit, Layers.Resources,Layers.Building);
+
 		private static readonly Mask AttackableMask =
 			new Mask(Layers.Player, Layers.Default, Layers.Ground, Layers.Floor, Layers.Interactable);
 
@@ -46,6 +47,8 @@ namespace Game.Utils
 			}
 		}
 
+		#region Nested type: Mask
+
 		private class Mask
 		{
 			private readonly string[] _layerNames;
@@ -67,5 +70,7 @@ namespace Game.Utils
 				}
 			}
 		}
+
+		#endregion
 	}
 }

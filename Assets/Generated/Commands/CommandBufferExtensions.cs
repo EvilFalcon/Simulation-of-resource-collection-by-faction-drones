@@ -8,8 +8,10 @@
 //------------------------------------------------------------------------------
 using Ecs.Commands.Generator;
 using Ecs.Signal.Commands;
-using Ecs.Action.Commands.Generation;
+using Db.GameObjectsBase.Impl;
 using UnityEngine;
+using Ecs.Action.Commands.CreateUnitsFraction;
+using Ecs.Action.Commands.Fraction;
 using Ecs.Action.Commands.Input;
 using JCMG.EntitasRedux.Commands;
 
@@ -24,9 +26,20 @@ namespace Generated.Commands
             ref var command = ref commandBuffer.Create<SignalStartCommand>();
         }
 
-        public static void GenerateRandomResource(this ICommandBuffer commandBuffer)
+        public static void CreateUnitsFraction(this ICommandBuffer commandBuffer, int unitsCount, EFractionType fractionType, Vector3 fractionBasePosition)
         {
-            ref var command = ref commandBuffer.Create<GenerateRandomResourceCommand>();
+            ref var command = ref commandBuffer.Create<CreateUnitsFractionCommand>();
+            command.UnitsCount = unitsCount;
+            command.FractionType = fractionType;
+            command.FractionBasePosition = fractionBasePosition;
+        }
+
+        public static void CreditFactionResources(this ICommandBuffer commandBuffer, GameEntity fraction, EGameResourceType resourceType, int amaunt)
+        {
+            ref var command = ref commandBuffer.Create<CreditFactionResourcesCommand>();
+            command.Fraction = fraction;
+            command.ResourceType = resourceType;
+            command.Amaunt = amaunt;
         }
 
         public static void PointerDown(this ICommandBuffer commandBuffer, Vector3 position)

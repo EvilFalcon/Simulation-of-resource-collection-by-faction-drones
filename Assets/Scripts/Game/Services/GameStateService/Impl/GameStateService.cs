@@ -8,8 +8,8 @@ namespace Game.Services.GameStateService.Impl
 {
     public class GameStateService : IGameStateService
     {
-        private readonly ISceneLoader _sceneLoader;
         private readonly GameContext _game;
+        private readonly ISceneLoader _sceneLoader;
         private readonly SignalBus _signalBus;
 
         public GameStateService(
@@ -23,21 +23,14 @@ namespace Game.Services.GameStateService.Impl
             _signalBus = signalBus;
         }
 
+        #region IGameStateService Members
+
         public void StartGame()
         {
             _game.ReplaceGameState(EGameState.Game);
             _signalBus.OpenWindow<GameplayWindow>();
         }
 
-        public void LoseGame()
-        {
-            _game.ReplaceGameState(EGameState.Lose);
-            _signalBus.OpenWindow<LoseWindow>();
-        }
-
-        public void RestartGame()
-        {
-            _sceneLoader.ReloadGame();
-        }
+        #endregion
     }
 }

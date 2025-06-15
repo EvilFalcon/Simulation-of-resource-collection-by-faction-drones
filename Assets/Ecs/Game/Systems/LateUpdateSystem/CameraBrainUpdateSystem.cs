@@ -4,7 +4,7 @@ using Game.Models.Camera;
 using InstallerGenerator.Attributes;
 using InstallerGenerator.Enums;
 
-namespace Ecs.Game.Systems.Camera
+namespace Ecs.Game.Systems.LateUpdateSystem
 {
 	[Install(ExecutionType.Game, ExecutionPriority.Urgent, 0, nameof(EFeatures.Camera))]
 	public class CameraBrainUpdateSystem : ILateSystem

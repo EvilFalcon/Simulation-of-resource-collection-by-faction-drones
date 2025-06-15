@@ -12,24 +12,24 @@ public partial class GameEntity
 	public Ecs.Game.Components.TerrainComponents.TerrainBoundsComponent TerrainBounds { get { return (Ecs.Game.Components.TerrainComponents.TerrainBoundsComponent)GetComponent(GameComponentsLookup.TerrainBounds); } }
 	public bool HasTerrainBounds { get { return HasComponent(GameComponentsLookup.TerrainBounds); } }
 
-	public void AddTerrainBounds(UnityEngine.Vector3 newMin, UnityEngine.Vector3 newMax)
+	public void AddTerrainBounds(UnityEngine.Vector3 newMax, UnityEngine.Vector3 newMin)
 	{
 		var index = GameComponentsLookup.TerrainBounds;
 		var component = (Ecs.Game.Components.TerrainComponents.TerrainBoundsComponent)CreateComponent(index, typeof(Ecs.Game.Components.TerrainComponents.TerrainBoundsComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
-		component.Min = newMin;
 		component.Max = newMax;
+		component.Min = newMin;
 		#endif
 		AddComponent(index, component);
 	}
 
-	public void ReplaceTerrainBounds(UnityEngine.Vector3 newMin, UnityEngine.Vector3 newMax)
+	public void ReplaceTerrainBounds(UnityEngine.Vector3 newMax, UnityEngine.Vector3 newMin)
 	{
 		var index = GameComponentsLookup.TerrainBounds;
 		var component = (Ecs.Game.Components.TerrainComponents.TerrainBoundsComponent)CreateComponent(index, typeof(Ecs.Game.Components.TerrainComponents.TerrainBoundsComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
-		component.Min = newMin;
 		component.Max = newMax;
+		component.Min = newMin;
 		#endif
 		ReplaceComponent(index, component);
 	}
@@ -39,8 +39,8 @@ public partial class GameEntity
 		var index = GameComponentsLookup.TerrainBounds;
 		var component = (Ecs.Game.Components.TerrainComponents.TerrainBoundsComponent)CreateComponent(index, typeof(Ecs.Game.Components.TerrainComponents.TerrainBoundsComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
-		component.Min = copyComponent.Min;
 		component.Max = copyComponent.Max;
+		component.Min = copyComponent.Min;
 		#endif
 		ReplaceComponent(index, component);
 	}

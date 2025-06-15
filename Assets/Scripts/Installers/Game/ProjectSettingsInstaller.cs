@@ -10,7 +10,7 @@ namespace Installers.Game
     public class ProjectSettingsInstaller : ScriptableObjectInstaller
     {
         [SerializeField] private BuildSetting _buildSettings;
-        
+
         public override void InstallBindings()
         {
             Container.Bind<IBuildSetting>().FromSubstitute(_buildSettings).AsSingle();

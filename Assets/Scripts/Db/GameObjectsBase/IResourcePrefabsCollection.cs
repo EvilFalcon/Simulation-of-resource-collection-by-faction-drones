@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Db.GameObjectsBase.Impl;
-using Ecs.Views.Linkable.Impl.ResourcesView;
+using Ecs.Views.Linkable.Views.ResourcesView;
 
 namespace Db.GameObjectsBase
 {

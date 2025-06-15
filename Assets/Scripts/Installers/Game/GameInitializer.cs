@@ -1,5 +1,5 @@
 ﻿using Core;
-using Ecs.Views.Linkable.Impl.Faction;
+using Ecs.Views.Linkable.Views.Fractions;
 using UnityEngine;
 using Zenject;
 
@@ -7,11 +7,12 @@ namespace Installers.Game
 {
     public class GameInitializer : MonoBehaviour, IInitializable
     {
-        [SerializeField] private Terrain _terrain;
-        [SerializeField] private FractionBase _playerFractionBase;
         [SerializeField] private FractionBase _computerFractionBase;
         private IGameSceneProvider _gameSceneProvider;
-        
+
+        [SerializeField] private FractionBase _playerFractionBase;
+        [SerializeField] private Terrain _terrain;
+
         [Inject]
         private void Construct(IGameSceneProvider gameSceneProvider)
         {

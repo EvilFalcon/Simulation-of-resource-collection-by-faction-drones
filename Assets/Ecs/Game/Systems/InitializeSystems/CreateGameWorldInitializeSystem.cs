@@ -1,11 +1,11 @@
 ﻿using Core;
+using Db.Generation.ResourcesParameters;
 using Ecs.Game.Extensions;
 using Ecs.Utils;
-using Generated.Commands;
+using Game.Services.Spawners;
 using InstallerGenerator.Attributes;
 using InstallerGenerator.Enums;
 using JCMG.EntitasRedux;
-using JCMG.EntitasRedux.Commands;
 
 namespace Ecs.Game.Systems.InitializeSystems
 {
@@ -13,19 +13,37 @@ namespace Ecs.Game.Systems.InitializeSystems
     public class CreateGameWorldInitializeSystem : IInitializeSystem
     {
         private readonly GameContext _gameContext;
-        private readonly ICommandBuffer _commandBuffer;
         private readonly IGameSceneProvider _gameSceneProvider;
+        private readonly IResourcesParameters _resourcesParameters;
+        private readonly IResourcesSpawner _resourcesSpawner;
 
         public CreateGameWorldInitializeSystem(GameContext gameContext,
-            ICommandBuffer commandBuffer,
+            IResourcesParameters resourcesParameters,
+            IResourcesSpawner resourcesSpawner,
             IGameSceneProvider gameSceneProvider)
         {
             _gameContext = gameContext;
-            _commandBuffer = commandBuffer;
+            _resourcesParameters = resourcesParameters;
+            _resourcesSpawner = resourcesSpawner;
             _gameSceneProvider = gameSceneProvider;
         }
 
         public void Initialize()
+        {
+            InitializeMap();
+
+          //  CreateMapResources();
+        }
+
+        private void CreateMapResources()
+        {
+            for (var i = 0; i < _resourcesParameters.TotalResourcesToSpawn; i++)
+            {
+                _resourcesSpawner.Create();
+            }
+        }
+
+        private void InitializeMap()
         {
             var gameMap = _gameContext.CreateGameMap();
             gameMap.AddTerrain(_gameSceneProvider.Terrain);
@@ -36,7 +54,6 @@ namespace Ecs.Game.Systems.InitializeSystems
             var maxBounds = terrainPosition + terrainSize;
             gameMap.ReplaceTerrainBounds(minBounds, maxBounds);
             gameMap.ReplaceTerrainData(_gameSceneProvider.Terrain.terrainData);
-            _commandBuffer.GenerateRandomResource();
         }
     }
 }

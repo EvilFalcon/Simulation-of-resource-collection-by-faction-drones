@@ -16,8 +16,8 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 3607849202111969797, guid: f5d803e94683474439dfe58ff9964fe9, type: 3}
+    - {fileID: 7346813793344806470, guid: 2ca33a0f102305349b99fbb986d73244, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -26,7 +26,8 @@ MonoBehaviour:
     - Name: _prefabs
       Entry: 7
       Data: 0|System.Collections.Generic.Dictionary`2[[Db.GameObjectsBase.Impl.EFractionType,
-        Assembly-CSharp],[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib
+        Assembly-CSharp],[Ecs.Views.Linkable.Views.Units.UnitView, Assembly-CSharp]],
+        mscorlib
     - Name: comparer
       Entry: 7
       Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Db.GameObjectsBase.Impl.EFractionType,

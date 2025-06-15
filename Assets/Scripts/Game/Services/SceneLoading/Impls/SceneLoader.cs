@@ -17,6 +17,8 @@ namespace Game.Services.SceneLoading.Impls
             _signalBus = signalBus;
         }
 
+        #region ISceneLoader Members
+
         public void LoadGameScene()
         {
             _processor = new LoadingProcessor();
@@ -43,5 +45,7 @@ namespace Game.Services.SceneLoading.Impls
         }
 
         public float GetProgress() => _processor?.Progress ?? 0f;
+
+        #endregion
     }
 }

@@ -12,13 +12,13 @@ namespace Game.Utils.Raycast.Impl
 		private const string SAND_TAG = "Sand";
 
 		private readonly GameContext _game;
+
+		private readonly int _groundLayer;
 		private readonly IPlayerCameraHolder _playerCameraHolder;
+		private RaycastHit _hit;
 
 		private Vector3 _position = new Vector3(0, START_RAY_CAST_Y, 0);
 		private Ray _ray = new Ray(Vector3.zero, Vector3.down);
-
-		private readonly int _groundLayer;
-		private RaycastHit _hit;
 
 		public RayCastProvider(GameContext game, IPlayerCameraHolder playerCameraHolder)
 		{
@@ -26,6 +26,8 @@ namespace Game.Utils.Raycast.Impl
 			_playerCameraHolder = playerCameraHolder;
 			_groundLayer = LayerMask.NameToLayer(Layers.Ground);
 		}
+
+		#region IRayCastProvider Members
 
 		public Vector3 GetMapPositionByRayCast(float x, float z)
 		{
@@ -57,7 +59,6 @@ namespace Game.Utils.Raycast.Impl
 
 			return new Vector3(x, y, z);
 		}
-
 
 		public bool IsPlayerStayOnFloorLayer()
 		{
@@ -167,5 +168,7 @@ namespace Game.Utils.Raycast.Impl
 			QueryTriggerInteraction queryTriggerInteraction
 		)
 			=> Physics.OverlapBoxNonAlloc(center, halfExtents, results, orientation, mask, queryTriggerInteraction);
+
+		#endregion
 	}
 }

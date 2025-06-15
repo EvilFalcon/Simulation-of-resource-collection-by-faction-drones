@@ -12,16 +12,16 @@ namespace Ecs.Scheduler.Systems
         public FramesElapsedSystem(SchedulerContext scheduler) : base(scheduler)
         {
         }
- 
+
         protected override ICollector<SchedulerEntity> GetTrigger(IContext<SchedulerEntity> context) =>
             context.CreateCollector(SchedulerMatcher.Frames);
- 
+
         protected override bool Filter(SchedulerEntity entity) =>
             entity.HasFramesToElapse
             && entity.HasFrames
             && !entity.IsPaused
             && !entity.IsDestroyed;
- 
+
         protected override void Execute(IEnumerable<SchedulerEntity> entities)
         {
             foreach (var action in entities)

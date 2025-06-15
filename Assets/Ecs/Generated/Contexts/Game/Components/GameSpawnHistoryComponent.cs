@@ -12,24 +12,24 @@ public partial class GameEntity
 	public Ecs.Game.Components.SpawnersComponents.SpawnHistoryComponent SpawnHistory { get { return (Ecs.Game.Components.SpawnersComponents.SpawnHistoryComponent)GetComponent(GameComponentsLookup.SpawnHistory); } }
 	public bool HasSpawnHistory { get { return HasComponent(GameComponentsLookup.SpawnHistory); } }
 
-	public void AddSpawnHistory(int newTotalSpawned, System.Collections.Generic.List<Ecs.Managers.Uid> newSpawned)
+	public void AddSpawnHistory(System.Collections.Generic.List<Ecs.Managers.Uid> newSpawned, int newTotalSpawned)
 	{
 		var index = GameComponentsLookup.SpawnHistory;
 		var component = (Ecs.Game.Components.SpawnersComponents.SpawnHistoryComponent)CreateComponent(index, typeof(Ecs.Game.Components.SpawnersComponents.SpawnHistoryComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
-		component.TotalSpawned = newTotalSpawned;
 		component.Spawned = newSpawned;
+		component.TotalSpawned = newTotalSpawned;
 		#endif
 		AddComponent(index, component);
 	}
 
-	public void ReplaceSpawnHistory(int newTotalSpawned, System.Collections.Generic.List<Ecs.Managers.Uid> newSpawned)
+	public void ReplaceSpawnHistory(System.Collections.Generic.List<Ecs.Managers.Uid> newSpawned, int newTotalSpawned)
 	{
 		var index = GameComponentsLookup.SpawnHistory;
 		var component = (Ecs.Game.Components.SpawnersComponents.SpawnHistoryComponent)CreateComponent(index, typeof(Ecs.Game.Components.SpawnersComponents.SpawnHistoryComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
-		component.TotalSpawned = newTotalSpawned;
 		component.Spawned = newSpawned;
+		component.TotalSpawned = newTotalSpawned;
 		#endif
 		ReplaceComponent(index, component);
 	}
@@ -39,8 +39,8 @@ public partial class GameEntity
 		var index = GameComponentsLookup.SpawnHistory;
 		var component = (Ecs.Game.Components.SpawnersComponents.SpawnHistoryComponent)CreateComponent(index, typeof(Ecs.Game.Components.SpawnersComponents.SpawnHistoryComponent));
 		#if !ENTITAS_REDUX_NO_IMPL
-		component.TotalSpawned = copyComponent.TotalSpawned;
 		component.Spawned = (System.Collections.Generic.List<Ecs.Managers.Uid>)JCMG.EntitasRedux.ListTools.ShallowCopy(copyComponent.Spawned);
+		component.TotalSpawned = copyComponent.TotalSpawned;
 		#endif
 		ReplaceComponent(index, component);
 	}

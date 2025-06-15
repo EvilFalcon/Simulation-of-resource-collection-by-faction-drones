@@ -13,9 +13,13 @@ namespace Project
 			_signalBus = signalBus;
 		}
 
+		#region IInitializable Members
+
 		public void Initialize()
 		{ 
 			_signalBus.OpenWindow<EmptyWindow>(EWindowLayer.Project);
 		}
+
+		#endregion
 	}
 }

@@ -9,10 +9,10 @@ namespace Game.Utils
         {
             return index >= 0 && index < list.Count;
         }
- 
+
         public static void RemoveAtLast<T>(this IList<T> list)
             => list.RemoveAt(list.Count - 1);
- 
+
         public static T RemoveWithSwapAtIndex<T>(this IList<T> list, int index)
         {
             var lastIndex = list.Count - 1;
@@ -21,7 +21,7 @@ namespace Game.Utils
             list.RemoveAt(lastIndex);
             return value;
         }
- 
+
         public static int RemoveAllWithSwap<T>(this IList<T> list, Func<T, bool> condition)
         {
             var count = 0;
@@ -43,7 +43,7 @@ namespace Game.Utils
  
             return count;
         }
- 
+
         public static bool RemoveWithSwapFirst<T>(this IList<T> list, Func<T, bool> condition)
         {
             var index = 0;
@@ -64,7 +64,7 @@ namespace Game.Utils
  
             return false;
         }
- 
+
         public static void CopyTo<T>(this IEnumerable<T> fromList, IList<T> toList)
         {
             toList.Clear();

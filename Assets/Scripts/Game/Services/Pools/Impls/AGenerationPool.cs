@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Ecs.Managers;
-using Ecs.Views.Linkable.Impl;
+using Ecs.Views.Linkable.Views;
 using Game.Utils;
 using PdUtils.RandomProvider;
 using UniRx;
@@ -17,13 +17,9 @@ namespace Game.Services.Pools.Impls
         private readonly IInstantiator _container;
         private readonly IRandomProvider _randomProvider;
 
-        private Dictionary<TType, RandomObjectPool<TObject>> _pools;
-
         private readonly ReactiveCommand<Uid> _viewOfEntityDestroyedCommand = new();
-        public IObservable<Uid> OnViewOfEntityDestroyed => _viewOfEntityDestroyedCommand;
 
-        protected abstract IReadOnlyDictionary<TType, IReadOnlyList<TObject>> PoolObjectVariants { get; }
-        protected virtual int MaxPoolSize => 10;
+        private Dictionary<TType, RandomObjectPool<TObject>> _pools;
 
         protected AGenerationPool(
             IInstantiator container,
@@ -33,6 +29,9 @@ namespace Game.Services.Pools.Impls
             _container = container;
             _randomProvider = randomProvider;
         }
+
+        protected abstract IReadOnlyDictionary<TType, IReadOnlyList<TObject>> PoolObjectVariants { get; }
+        protected virtual int MaxPoolSize => 10;
 
         public void CreateSubPools()
         {
@@ -47,7 +46,10 @@ namespace Game.Services.Pools.Impls
                         view.gameObject.SetActive(true);
                         view.transform.SetFarAwayPosition();
                     },
-                    view => { view.gameObject.SetActive(false); },
+                    view =>
+                    {
+                        view.gameObject.SetActive(false);
+                    },
                     view =>
                     {
                         if (view.EntityId != null)
@@ -59,6 +61,18 @@ namespace Game.Services.Pools.Impls
             }
         }
 
+        public void Clear()
+        {
+            foreach (var pool in _pools.Values)
+            {
+                pool.Clear();
+            }
+
+            _pools.Clear();
+        }
+        
+        public IObservable<Uid> OnViewOfEntityDestroyed => _viewOfEntityDestroyedCommand;
+
         public (TObject objectView, int randomIndex) SpawnObject(TType type)
         {
             return _pools[type].Get();
@@ -68,16 +82,6 @@ namespace Game.Services.Pools.Impls
         {
             var pool = _pools[type];
             pool.Release(objectView, randomIndex);
-        }
-
-        public void Clear()
-        {
-            foreach (var pool in _pools.Values)
-            {
-                pool.Clear();
-            }
-
-            _pools.Clear();
         }
     }
 }

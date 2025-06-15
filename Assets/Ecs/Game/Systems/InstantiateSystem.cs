@@ -38,7 +38,7 @@ namespace Ecs.Game.Systems
                     continue;
 				            
                 linkable.Link(entity);
-                _linkedEntityRepository.Add(linkable.Hash, entity);
+                _linkedEntityRepository.Add(linkable.Transform.transform.GetHashCode(), entity);
             }
         }
     }

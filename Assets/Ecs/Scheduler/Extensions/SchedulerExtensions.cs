@@ -25,7 +25,7 @@ namespace Ecs.Scheduler.Extensions
 
 			return entity;
 		}
-		
+
 		public static SchedulerEntity CreateSkipFramesAction(
 			this SchedulerContext context,
 			System.Action action,

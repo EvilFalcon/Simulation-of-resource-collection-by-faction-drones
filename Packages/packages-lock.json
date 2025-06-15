@@ -61,6 +61,12 @@
       "dependencies": {},
       "hash": "c602d02d721783b0ff36bf16b2951c7549f70d33"
     },
+    "com.unity.2d.sprite": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
     "com.unity.ai.navigation": {
       "version": "1.1.6",
       "depth": 0,

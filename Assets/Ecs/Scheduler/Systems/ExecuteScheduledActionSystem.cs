@@ -11,8 +11,8 @@ namespace Ecs.Scheduler.Systems
     public class ExecuteScheduledActionSystem : IUpdateSystem
     {
         private readonly IGroup<SchedulerEntity> _actionGroup;
-        private readonly ITimeProvider _timeProvider;
         private readonly GameContext _game;
+        private readonly ITimeProvider _timeProvider;
 
         public ExecuteScheduledActionSystem(
             SchedulerContext scheduler,

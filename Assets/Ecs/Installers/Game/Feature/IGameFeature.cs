@@ -3,6 +3,5 @@
 namespace Ecs.Installers.Game.Feature
 {
 	public interface IGameFeature : ICustomFeature
-	{
-	}
+	{}
 }

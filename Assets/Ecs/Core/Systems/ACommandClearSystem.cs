@@ -11,10 +11,14 @@ namespace Ecs.Core.Systems
         {
             _commandBuffer = commandBuffer;
         }
-        
+
+        #region IUpdateSystem Members
+
         public void Update()
         {
             _commandBuffer.Clear<TCommand>();
         }
+
+        #endregion
     }
 }

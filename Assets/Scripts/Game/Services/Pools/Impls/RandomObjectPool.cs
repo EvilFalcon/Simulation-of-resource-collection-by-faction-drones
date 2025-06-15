@@ -7,8 +7,8 @@ namespace Game.Services.Pools.Impls
 {
     public sealed class RandomObjectPool<T> where T : UnityEngine.Object
     {
-        private readonly IRandomProvider _randomProvider;
         private readonly ObjectPool<T>[] _pools;
+        private readonly IRandomProvider _randomProvider;
 
         public RandomObjectPool(
             Func<T, T> createFunc,

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Core.Utils
+namespace Core.Impl.Utils
 {
 	public static class AnimationKeys
 	{

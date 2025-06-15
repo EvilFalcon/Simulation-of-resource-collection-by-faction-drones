@@ -10,9 +10,9 @@ namespace Ecs.Utils.Impl
     public class SpawnService : ISpawnService<GameEntity, IObjectLinkable>
     {
         private readonly DiContainer _container;
-        private readonly IPrefabsBase _unitBase;
         private readonly IPrefabPoolService _prefabPoolService;
-        
+        private readonly IPrefabsBase _unitBase;
+
         public SpawnService(
             DiContainer container,
             IPrefabsBase unitBase,
@@ -23,7 +23,9 @@ namespace Ecs.Utils.Impl
             _unitBase = unitBase;
             _prefabPoolService = prefabPoolService;
         }
-        
+
+        #region ISpawnService<GameEntity,IObjectLinkable> Members
+
         public IObjectLinkable Spawn(GameEntity entity)
         {
             var position = entity.HasPosition ? entity.Position.Value : Vector3.zero;
@@ -36,7 +38,9 @@ namespace Ecs.Utils.Impl
                 ? linkable
                 : InstantiateLinkableView(position, _unitBase.Get(prefabName));
         }
-        
+
+        #endregion
+
         private IObjectLinkable InstantiateLinkableView(Vector3 position, GameObject prefab)
         {
             var gameObject = _container.InstantiatePrefab(prefab, position, Quaternion.identity, null);

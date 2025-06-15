@@ -18,18 +18,17 @@ namespace Ecs.Game.Systems.InitializeSystems
         {
             _game = game;
         }
-
+        
         public void Initialize()
         {
             _game.CreatePlayer();
             InitializeCamera();
         }
-
+        
         private void InitializeCamera()
         {
-            var camera = _game.CreateVirtualCamera();
-            _game.CreateCamera();
-
+            var camera = _game.CreateCamera();
+            
             var newCameraRotation = Quaternion.Euler(90, 0, 0);
             camera.ReplaceRotation(newCameraRotation);
             camera.ReplacePosition(new Vector3(22.7f, 22.7f, 12.8f));

@@ -12,7 +12,7 @@ public partial interface ISpawnHistoryEntity
 	Ecs.Game.Components.SpawnersComponents.SpawnHistoryComponent SpawnHistory { get; }
 	bool HasSpawnHistory { get; }
 
-	void AddSpawnHistory(int newTotalSpawned, System.Collections.Generic.List<Ecs.Managers.Uid> newSpawned);
-	void ReplaceSpawnHistory(int newTotalSpawned, System.Collections.Generic.List<Ecs.Managers.Uid> newSpawned);
+	void AddSpawnHistory(System.Collections.Generic.List<Ecs.Managers.Uid> newSpawned, int newTotalSpawned);
+	void ReplaceSpawnHistory(System.Collections.Generic.List<Ecs.Managers.Uid> newSpawned, int newTotalSpawned);
 	void RemoveSpawnHistory();
 }

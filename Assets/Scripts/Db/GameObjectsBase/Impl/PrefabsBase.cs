@@ -14,6 +14,8 @@ namespace Db.GameObjectsBase.Impl
         [OdinSerialize]
         private Dictionary<EObjectType, Prefab> _prefabs;
 
+        #region IPrefabsBase Members
+
         public GameObject Get(string prefabName)
         {
             if (_prefabs.TryGetValue((EObjectType)Enum.Parse(typeof(EObjectType), prefabName), out var prefab))
@@ -22,10 +24,16 @@ namespace Db.GameObjectsBase.Impl
             throw new Exception($"[PrefabsBase] Can't find prefab with name: {name}");
         }
 
+        #endregion
+
+        #region Nested type: Prefab
+
         [Serializable]
         public class Prefab
-        { 
+        {
             public GameObject _gameObject;
         }
+
+        #endregion
     }
 }

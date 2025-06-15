@@ -9,6 +9,5 @@ namespace Ecs.Common.Components
 	[Scheduler]
 	[Event(EventTarget.Self)]
 	public class DestroyedComponent : IComponent
-	{
-	}
+	{}
 }

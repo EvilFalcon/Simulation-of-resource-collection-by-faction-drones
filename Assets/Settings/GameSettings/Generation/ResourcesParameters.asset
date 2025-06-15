@@ -23,32 +23,38 @@ MonoBehaviour:
     SerializationNodes:
     - Name: _resources
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Db.Generation.ResourcesParameters.ResourceConfig,
+      Data: 0|System.Collections.Generic.List`1[[Db.Generation.ResourcesParameters.Impl.ResourceConfig,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: Db.Generation.ResourcesParameters.ResourceConfig, Assembly-CSharp
+      Data: Db.Generation.ResourcesParameters.Impl.ResourceConfig, Assembly-CSharp
     - Name: SpawnWeight
       Entry: 4
-      Data: 2.01
+      Data: 3.23
     - Name: ResourceType
       Entry: 3
       Data: 1
+    - Name: Amount
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: Db.Generation.ResourcesParameters.ResourceConfig, Assembly-CSharp
+      Data: Db.Generation.ResourcesParameters.Impl.ResourceConfig, Assembly-CSharp
     - Name: SpawnWeight
       Entry: 4
-      Data: 4.5
+      Data: 1.43
     - Name: ResourceType
       Entry: 3
       Data: 2
+    - Name: Amount
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 8
       Data: 

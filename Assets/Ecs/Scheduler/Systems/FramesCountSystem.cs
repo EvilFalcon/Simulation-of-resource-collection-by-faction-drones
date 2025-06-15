@@ -10,13 +10,13 @@ namespace Ecs.Scheduler.Systems
     public class FramesCountSystem : IUpdateSystem
     {
         private readonly IGroup<SchedulerEntity> _actionGroup;
- 
+
         public FramesCountSystem(SchedulerContext scheduler)
         {
             _actionGroup = scheduler.GetGroup(SchedulerMatcher.AllOf(SchedulerMatcher.ScheduledAction, SchedulerMatcher.Frames)
                 .NoneOf(SchedulerMatcher.Paused, SchedulerMatcher.Destroyed));
         }
- 
+        
         public void Update()
         {
             using var _ = ListPool<SchedulerEntity>.Get(out var buffer);

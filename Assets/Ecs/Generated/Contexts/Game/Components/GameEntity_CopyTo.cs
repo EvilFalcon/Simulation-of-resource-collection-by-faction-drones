@@ -98,6 +98,18 @@ public partial class GameEntity
 		{
 			CopyTerrainTo(Terrain);
 		}
+		else if (component is Ecs.Game.Components.ResourceComponents.ResourceDataComponent ResourceData)
+		{
+			CopyResourceDataTo(ResourceData);
+		}
+		else if (component is Ecs.Game.Components.ResourceComponents.ResourceComponent Resource)
+		{
+			CopyResourceTo(Resource);
+		}
+		else if (component is Ecs.Game.Components.GlobalComponents.NavMeshAgentComponent NavMeshAgent)
+		{
+			CopyNavMeshAgentTo(NavMeshAgent);
+		}
 		else if (component is Ecs.Game.Components.GlobalComponents.RotationComponent Rotation)
 		{
 			CopyRotationTo(Rotation);
@@ -126,21 +138,21 @@ public partial class GameEntity
 		{
 			CopyLocalPositionTo(LocalPosition);
 		}
-		else if (component is Ecs.Game.Components.Units.MovementTargetComponent MovementTarget)
+		else if (component is Ecs.Game.Components.Fraction.FractionResourcesComponent FractionResources)
 		{
-			CopyMovementTargetTo(MovementTarget);
+			CopyFractionResourcesTo(FractionResources);
+		}
+		else if (component is Ecs.Game.Components.Fraction.FractionTypeComponent FractionType)
+		{
+			CopyFractionTypeTo(FractionType);
+		}
+		else if (component is Ecs.Game.Components.Units.RayComponent Ray)
+		{
+			IsRay = true;
 		}
 		else if (component is Ecs.Game.Components.Units.UnitFractionComponent UnitFraction)
 		{
 			CopyUnitFractionTo(UnitFraction);
-		}
-		else if (component is Ecs.Game.Components.ResourceComponents.ResourceTypeComponent ResourceType)
-		{
-			CopyResourceTypeTo(ResourceType);
-		}
-		else if (component is Ecs.Game.Components.ResourceComponents.ResourceComponent Resource)
-		{
-			IsResource = true;
 		}
 
 		#endif

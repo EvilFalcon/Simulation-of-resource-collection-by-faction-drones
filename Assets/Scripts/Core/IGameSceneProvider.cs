@@ -1,4 +1,4 @@
-﻿using Ecs.Views.Linkable.Impl.Faction;
+﻿using Ecs.Views.Linkable.Views.Fractions;
 using UnityEngine;
 
 namespace Core

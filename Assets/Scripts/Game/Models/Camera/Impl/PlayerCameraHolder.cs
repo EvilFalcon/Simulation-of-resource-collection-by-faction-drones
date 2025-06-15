@@ -13,6 +13,8 @@ namespace Game.Models.Camera.Impl
         private UnityEngine.Camera _camera;
         private IReadOnlyDictionary<EVirtualCameraType, CinemachineVirtualCamera> _cameras;
 
+        #region IPlayerCameraHolder Members
+
         public void Init(IReadOnlyDictionary<EVirtualCameraType, CinemachineVirtualCamera> cameras)
         {
             _cameras = cameras;
@@ -54,5 +56,7 @@ namespace Game.Models.Camera.Impl
 
             _brain.ManualUpdate();
         }
+
+        #endregion
     }
 }

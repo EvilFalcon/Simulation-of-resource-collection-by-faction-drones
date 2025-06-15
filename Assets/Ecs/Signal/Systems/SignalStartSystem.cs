@@ -21,7 +21,6 @@ namespace Ecs.Signal.Systems
 			_uiInitializables = uiInitializables;
 		}
 
-
 		protected override void Execute(ref SignalStartCommand command)
 		{
 			foreach (var uiInitializable in _uiInitializables)

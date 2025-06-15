@@ -29,7 +29,6 @@ namespace Ecs.Utils
 			Chain.Reset();
 		}
 
-
 		private static IProcessorChain<Request, Response> CreateChain()
 		{
 			var processorChain = new ProcessorChain<Request, Response>();
@@ -37,8 +36,7 @@ namespace Ecs.Utils
 			return processorChain;
 		}
 	}
-
-
+	
 	public struct Request : IRequest
 	{
 		public Type SystemType;

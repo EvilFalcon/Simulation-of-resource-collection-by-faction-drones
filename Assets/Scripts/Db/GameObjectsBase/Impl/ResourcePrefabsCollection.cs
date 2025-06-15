@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Ecs.Views.Linkable.Impl.ResourcesView;
+using Ecs.Views.Linkable.Views.ResourcesView;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
@@ -10,15 +10,17 @@ namespace Db.GameObjectsBase.Impl
     public class ResourcePrefabsCollection : SerializedScriptableObject, IResourcePrefabsCollection
     {
         [OdinSerialize]
-        private Dictionary<EGameResourceType, List<ResourceView>> _resourcePrefabsCollection;
-
-        
-        [OdinSerialize]
         [HideInInspector]
         private Dictionary<EGameResourceType, IReadOnlyList<ResourceView>> _prefabs;
-        
+
+        [OdinSerialize]
+        private Dictionary<EGameResourceType, List<ResourceView>> _resourcePrefabsCollection;
+
+        #region IResourcePrefabsCollection Members
+
         public IReadOnlyDictionary<EGameResourceType, IReadOnlyList<ResourceView>> Prefabs => _prefabs;
 
+        #endregion
 
 #if UNITY_EDITOR
         private void OnValidate()

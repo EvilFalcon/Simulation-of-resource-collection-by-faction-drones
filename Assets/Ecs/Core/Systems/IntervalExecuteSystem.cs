@@ -17,6 +17,7 @@ namespace Ecs.Core.Systems
 
 		protected float Interval { get; }
 
+		#region IUpdateSystem Members
 
 		public void Update()
 		{
@@ -28,6 +29,8 @@ namespace Ecs.Core.Systems
 				UpdateInterval();
 			}
 		}
+
+		#endregion
 
 		protected abstract void UpdateInterval();
 	}

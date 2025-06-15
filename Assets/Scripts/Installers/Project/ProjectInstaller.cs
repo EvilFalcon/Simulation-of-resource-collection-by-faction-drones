@@ -1,5 +1,4 @@
-﻿using Core;
-using Core.Impl;
+﻿using Core.Impl;
 using Game.Services.SceneLoading;
 using Game.Services.SceneLoading.Impls;
 using PdUtils.DateTimeService;
@@ -65,21 +64,12 @@ namespace Installers.Project
 			Container.BindInterfacesAndSelfTo<WebRequester<string>>().AsTransient();
 			Container.Bind<GeoLocationService.Settings>().FromInstance(new GeoLocationService.Settings(24L))
 				.AsSingle().WhenInjectedInto<GeoLocationService>();
-
-
+			
 			Container.BindInterfacesAndSelfTo<MailService>().AsSingle();
 			Container.BindInterfacesTo<ProjectWindowManager>().AsSingle().NonLazy();
 			
-			
-			//BindSignals();
 		}
-		
-		// private void BindSignals()
-		// {
-		// 	Container.DeclareSignal<SignalProxyBefore>().OptionalSubscriber();
-		// 	Container.DeclareSignal<SignalProxyAfter>().OptionalSubscriber();
-		// }
-		
+
 		public override void Start()
 		{
 			Debug.Log("device ID = " + SystemInfo.deviceUniqueIdentifier);

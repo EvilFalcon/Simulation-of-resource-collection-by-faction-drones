@@ -26,11 +26,11 @@ namespace Ecs.Scheduler.Systems
         {
             using var _ = ListPool<SchedulerEntity>.Get(out var buffer);
             _actionGroup.GetEntities(buffer);
+           
             foreach (var action in buffer)
             {
                 action.ReplaceIntervalAccumulator(action.IntervalAccumulator.Value + _timeProvider.DeltaTime);   
             }
-
         }
     }
 }

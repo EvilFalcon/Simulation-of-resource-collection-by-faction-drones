@@ -25,40 +25,44 @@ public static class GameComponentsLookup
 	public const int Attack = 9;
 	public const int Camera = 10;
 	public const int Dead = 11;
-	public const int GameState = 12;
-	public const int Active = 13;
-	public const int LocalPosition = 14;
-	public const int Position = 15;
-	public const int Rotation = 16;
-	public const int Scale = 17;
-	public const int Transform = 18;
-	public const int Uid = 19;
-	public const int LookDirection = 20;
-	public const int LookPoint = 21;
-	public const int Player = 22;
-	public const int Resource = 23;
-	public const int ResourceType = 24;
-	public const int SpawnHistory = 25;
-	public const int Speed = 26;
-	public const int TerrainBounds = 27;
-	public const int Terrain = 28;
-	public const int TerrainData = 29;
-	public const int MovementTarget = 30;
-	public const int UnitFraction = 31;
-	public const int Velocity = 32;
-	public const int LocalTimeScale = 33;
-	public const int GameDestroyedListener = 34;
-	public const int GameStateListener = 35;
-	public const int LocalPositionListener = 36;
-	public const int LocalTimeScaleListener = 37;
-	public const int LookDirectionListener = 38;
-	public const int PositionListener = 39;
-	public const int RotationListener = 40;
-	public const int ScaleListener = 41;
-	public const int SpeedListener = 42;
-	public const int VelocityListener = 43;
+	public const int FractionResources = 12;
+	public const int FractionType = 13;
+	public const int GameState = 14;
+	public const int Active = 15;
+	public const int LocalPosition = 16;
+	public const int NavMeshAgent = 17;
+	public const int Position = 18;
+	public const int Rotation = 19;
+	public const int Scale = 20;
+	public const int Transform = 21;
+	public const int Uid = 22;
+	public const int LookDirection = 23;
+	public const int LookPoint = 24;
+	public const int Player = 25;
+	public const int Resource = 26;
+	public const int ResourceData = 27;
+	public const int SpawnHistory = 28;
+	public const int Speed = 29;
+	public const int TerrainBounds = 30;
+	public const int Terrain = 31;
+	public const int TerrainData = 32;
+	public const int Ray = 33;
+	public const int UnitFraction = 34;
+	public const int Velocity = 35;
+	public const int LocalTimeScale = 36;
+	public const int FractionResourcesListener = 37;
+	public const int GameDestroyedListener = 38;
+	public const int GameStateListener = 39;
+	public const int LocalPositionListener = 40;
+	public const int LocalTimeScaleListener = 41;
+	public const int LookDirectionListener = 42;
+	public const int PositionListener = 43;
+	public const int RotationListener = 44;
+	public const int ScaleListener = 45;
+	public const int SpeedListener = 46;
+	public const int VelocityListener = 47;
 
-	public const int TotalComponents = 44;
+	public const int TotalComponents = 48;
 
 	public static readonly string[] ComponentNames =
 	{
@@ -74,9 +78,12 @@ public static class GameComponentsLookup
 		"Attack",
 		"Camera",
 		"Dead",
+		"FractionResources",
+		"FractionType",
 		"GameState",
 		"Active",
 		"LocalPosition",
+		"NavMeshAgent",
 		"Position",
 		"Rotation",
 		"Scale",
@@ -86,16 +93,17 @@ public static class GameComponentsLookup
 		"LookPoint",
 		"Player",
 		"Resource",
-		"ResourceType",
+		"ResourceData",
 		"SpawnHistory",
 		"Speed",
 		"TerrainBounds",
 		"Terrain",
 		"TerrainData",
-		"MovementTarget",
+		"Ray",
 		"UnitFraction",
 		"Velocity",
 		"LocalTimeScale",
+		"FractionResourcesListener",
 		"GameDestroyedListener",
 		"GameStateListener",
 		"LocalPositionListener",
@@ -122,9 +130,12 @@ public static class GameComponentsLookup
 		typeof(Ecs.Game.Components.AttackComponent),
 		typeof(Ecs.Game.Components.CameraComponents.CameraComponent),
 		typeof(Ecs.Game.Components.DeadComponent),
+		typeof(Ecs.Game.Components.Fraction.FractionResourcesComponent),
+		typeof(Ecs.Game.Components.Fraction.FractionTypeComponent),
 		typeof(Ecs.Game.Components.GameStateComponent),
 		typeof(Ecs.Game.Components.GlobalComponents.ActiveComponent),
 		typeof(Ecs.Game.Components.GlobalComponents.LocalPositionComponent),
+		typeof(Ecs.Game.Components.GlobalComponents.NavMeshAgentComponent),
 		typeof(Ecs.Game.Components.GlobalComponents.PositionComponent),
 		typeof(Ecs.Game.Components.GlobalComponents.RotationComponent),
 		typeof(Ecs.Game.Components.GlobalComponents.ScaleComponent),
@@ -134,16 +145,17 @@ public static class GameComponentsLookup
 		typeof(Ecs.Game.Components.LookPointComponent),
 		typeof(Ecs.Game.Components.PlayerComponents.PlayerComponent),
 		typeof(Ecs.Game.Components.ResourceComponents.ResourceComponent),
-		typeof(Ecs.Game.Components.ResourceComponents.ResourceTypeComponent),
+		typeof(Ecs.Game.Components.ResourceComponents.ResourceDataComponent),
 		typeof(Ecs.Game.Components.SpawnersComponents.SpawnHistoryComponent),
 		typeof(Ecs.Game.Components.SpeedComponent),
 		typeof(Ecs.Game.Components.TerrainComponents.TerrainBoundsComponent),
 		typeof(Ecs.Game.Components.TerrainComponents.TerrainComponent),
 		typeof(Ecs.Game.Components.TerrainComponents.TerrainDataComponent),
-		typeof(Ecs.Game.Components.Units.MovementTargetComponent),
+		typeof(Ecs.Game.Components.Units.RayComponent),
 		typeof(Ecs.Game.Components.Units.UnitFractionComponent),
 		typeof(Ecs.Game.Components.VelocityComponent),
 		typeof(Ecs.Scheduler.Components.LocalTimeScaleComponent),
+		typeof(FractionResourcesListenerComponent),
 		typeof(GameDestroyedListenerComponent),
 		typeof(GameStateListenerComponent),
 		typeof(LocalPositionListenerComponent),
@@ -170,38 +182,42 @@ public static class GameComponentsLookup
 		{ typeof(Ecs.Game.Components.AttackComponent), 9 },
 		{ typeof(Ecs.Game.Components.CameraComponents.CameraComponent), 10 },
 		{ typeof(Ecs.Game.Components.DeadComponent), 11 },
-		{ typeof(Ecs.Game.Components.GameStateComponent), 12 },
-		{ typeof(Ecs.Game.Components.GlobalComponents.ActiveComponent), 13 },
-		{ typeof(Ecs.Game.Components.GlobalComponents.LocalPositionComponent), 14 },
-		{ typeof(Ecs.Game.Components.GlobalComponents.PositionComponent), 15 },
-		{ typeof(Ecs.Game.Components.GlobalComponents.RotationComponent), 16 },
-		{ typeof(Ecs.Game.Components.GlobalComponents.ScaleComponent), 17 },
-		{ typeof(Ecs.Game.Components.GlobalComponents.TransformComponent), 18 },
-		{ typeof(Ecs.Game.Components.GlobalComponents.UidComponent), 19 },
-		{ typeof(Ecs.Game.Components.LookDirectionComponent), 20 },
-		{ typeof(Ecs.Game.Components.LookPointComponent), 21 },
-		{ typeof(Ecs.Game.Components.PlayerComponents.PlayerComponent), 22 },
-		{ typeof(Ecs.Game.Components.ResourceComponents.ResourceComponent), 23 },
-		{ typeof(Ecs.Game.Components.ResourceComponents.ResourceTypeComponent), 24 },
-		{ typeof(Ecs.Game.Components.SpawnersComponents.SpawnHistoryComponent), 25 },
-		{ typeof(Ecs.Game.Components.SpeedComponent), 26 },
-		{ typeof(Ecs.Game.Components.TerrainComponents.TerrainBoundsComponent), 27 },
-		{ typeof(Ecs.Game.Components.TerrainComponents.TerrainComponent), 28 },
-		{ typeof(Ecs.Game.Components.TerrainComponents.TerrainDataComponent), 29 },
-		{ typeof(Ecs.Game.Components.Units.MovementTargetComponent), 30 },
-		{ typeof(Ecs.Game.Components.Units.UnitFractionComponent), 31 },
-		{ typeof(Ecs.Game.Components.VelocityComponent), 32 },
-		{ typeof(Ecs.Scheduler.Components.LocalTimeScaleComponent), 33 },
-		{ typeof(GameDestroyedListenerComponent), 34 },
-		{ typeof(GameStateListenerComponent), 35 },
-		{ typeof(LocalPositionListenerComponent), 36 },
-		{ typeof(LocalTimeScaleListenerComponent), 37 },
-		{ typeof(LookDirectionListenerComponent), 38 },
-		{ typeof(PositionListenerComponent), 39 },
-		{ typeof(RotationListenerComponent), 40 },
-		{ typeof(ScaleListenerComponent), 41 },
-		{ typeof(SpeedListenerComponent), 42 },
-		{ typeof(VelocityListenerComponent), 43 }
+		{ typeof(Ecs.Game.Components.Fraction.FractionResourcesComponent), 12 },
+		{ typeof(Ecs.Game.Components.Fraction.FractionTypeComponent), 13 },
+		{ typeof(Ecs.Game.Components.GameStateComponent), 14 },
+		{ typeof(Ecs.Game.Components.GlobalComponents.ActiveComponent), 15 },
+		{ typeof(Ecs.Game.Components.GlobalComponents.LocalPositionComponent), 16 },
+		{ typeof(Ecs.Game.Components.GlobalComponents.NavMeshAgentComponent), 17 },
+		{ typeof(Ecs.Game.Components.GlobalComponents.PositionComponent), 18 },
+		{ typeof(Ecs.Game.Components.GlobalComponents.RotationComponent), 19 },
+		{ typeof(Ecs.Game.Components.GlobalComponents.ScaleComponent), 20 },
+		{ typeof(Ecs.Game.Components.GlobalComponents.TransformComponent), 21 },
+		{ typeof(Ecs.Game.Components.GlobalComponents.UidComponent), 22 },
+		{ typeof(Ecs.Game.Components.LookDirectionComponent), 23 },
+		{ typeof(Ecs.Game.Components.LookPointComponent), 24 },
+		{ typeof(Ecs.Game.Components.PlayerComponents.PlayerComponent), 25 },
+		{ typeof(Ecs.Game.Components.ResourceComponents.ResourceComponent), 26 },
+		{ typeof(Ecs.Game.Components.ResourceComponents.ResourceDataComponent), 27 },
+		{ typeof(Ecs.Game.Components.SpawnersComponents.SpawnHistoryComponent), 28 },
+		{ typeof(Ecs.Game.Components.SpeedComponent), 29 },
+		{ typeof(Ecs.Game.Components.TerrainComponents.TerrainBoundsComponent), 30 },
+		{ typeof(Ecs.Game.Components.TerrainComponents.TerrainComponent), 31 },
+		{ typeof(Ecs.Game.Components.TerrainComponents.TerrainDataComponent), 32 },
+		{ typeof(Ecs.Game.Components.Units.RayComponent), 33 },
+		{ typeof(Ecs.Game.Components.Units.UnitFractionComponent), 34 },
+		{ typeof(Ecs.Game.Components.VelocityComponent), 35 },
+		{ typeof(Ecs.Scheduler.Components.LocalTimeScaleComponent), 36 },
+		{ typeof(FractionResourcesListenerComponent), 37 },
+		{ typeof(GameDestroyedListenerComponent), 38 },
+		{ typeof(GameStateListenerComponent), 39 },
+		{ typeof(LocalPositionListenerComponent), 40 },
+		{ typeof(LocalTimeScaleListenerComponent), 41 },
+		{ typeof(LookDirectionListenerComponent), 42 },
+		{ typeof(PositionListenerComponent), 43 },
+		{ typeof(RotationListenerComponent), 44 },
+		{ typeof(ScaleListenerComponent), 45 },
+		{ typeof(SpeedListenerComponent), 46 },
+		{ typeof(VelocityListenerComponent), 47 }
 	};
 
 	/// <summary>

@@ -13,13 +13,17 @@ namespace Game.Services.SceneLoading.Processors
 		private int _current;
 		private IDisposable _disposable;
 
-		public float Progress => _current / (float)_count;
-
 		public WaitUpdateProcess(int count, FrameCountType type = FrameCountType.Update)
 		{
 			_count = count;
 			_type = type;
 		}
+
+		#region IProgressable Members
+
+		public float Progress => _current / (float)_count;
+
+		#endregion
 
 		public override void Do(Action onComplete)
 		{

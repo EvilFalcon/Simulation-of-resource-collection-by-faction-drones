@@ -6,7 +6,7 @@ namespace Project.Ui.Loading.Views
 {
 	public class LoadingView : UiView
 	{
-		public TextMeshProUGUI TextLoading;
 		public Slider LoadingProgressSlider;
+		public TextMeshProUGUI TextLoading;
 	}
 }

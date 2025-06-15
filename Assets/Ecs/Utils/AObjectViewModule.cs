@@ -1,4 +1,4 @@
-using Ecs.Views.Linkable.Impl;
+using Ecs.Views.Linkable.Views;
 using JCMG.EntitasRedux;
 using JCMG.EntitasRedux.Core.Utils;
 using UnityEngine;
@@ -13,8 +13,14 @@ namespace Ecs.Utils
             Subscribe(self, objectView, unsubscribe);
         }
 
-        public abstract void Activate();
-        public abstract void Deactivate();
+        public virtual void Activate()
+        {
+        }
+
+        public virtual void Deactivate()
+        {
+        }
+
         protected abstract void Subscribe(GameEntity entity, ObjectView objectView, IUnsubscribeEvent unsubscribe);
     }
 }

@@ -12,7 +12,7 @@ public partial interface ITerrainBoundsEntity
 	Ecs.Game.Components.TerrainComponents.TerrainBoundsComponent TerrainBounds { get; }
 	bool HasTerrainBounds { get; }
 
-	void AddTerrainBounds(UnityEngine.Vector3 newMin, UnityEngine.Vector3 newMax);
-	void ReplaceTerrainBounds(UnityEngine.Vector3 newMin, UnityEngine.Vector3 newMax);
+	void AddTerrainBounds(UnityEngine.Vector3 newMax, UnityEngine.Vector3 newMin);
+	void ReplaceTerrainBounds(UnityEngine.Vector3 newMax, UnityEngine.Vector3 newMin);
 	void RemoveTerrainBounds();
 }

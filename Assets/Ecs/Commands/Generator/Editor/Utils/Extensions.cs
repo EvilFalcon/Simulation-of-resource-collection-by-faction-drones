@@ -8,10 +8,10 @@ namespace Ecs.Commands.Generator.Editor.Utils
         public static bool HasAttribute<T>(this MemberInfo type)
             where T : Attribute
             => type.GetCustomAttribute<T>() != null;
-        
+
         public static string FirstCharToLower(this string source) =>
             source.Substring(0, 1).ToLower() + source.Substring(1);
-        
+
         public static string FromDotNetTypeToCSharpType(this string dotNetTypeName, bool isNull = false)
         {
             var cstype = "";

@@ -9,15 +9,15 @@ using JCMG.EntitasRedux.Commands;
 using SimpleUi.Signals;
 using Zenject;
 
-namespace Ecs.Game.Systems.Initialize
+namespace Ecs.Game.Systems.InitializeSystems
 {
 	[Install(ExecutionType.Game, ExecutionPriority.High, 10, nameof(EFeatures.Initialization))]
 	public class GameInitializeSystem : IInitializeSystem
 	{
-		private readonly GameContext _game;
-		private readonly SignalBus _signalBus;
 		private readonly ICommandBuffer _commandBuffer;
+		private readonly GameContext _game;
 		private readonly IGameStateService _gameStateService;
+		private readonly SignalBus _signalBus;
 
 		protected GameInitializeSystem(
 			GameContext game,

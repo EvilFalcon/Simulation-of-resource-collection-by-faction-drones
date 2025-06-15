@@ -12,13 +12,13 @@ namespace Ecs.Core.Bootstrap
 	{
 		private readonly Contexts _contexts;
 		private readonly CustomFeature _feature;
-		private readonly List<IStartable> _startables;
-		private readonly List<IResetable> _resetables;
-		private readonly List<ILateSystem> _late = new();
 		private readonly List<IFixedSystem> _fixed = new();
-		private readonly List<ILateFixedSystem> _lateFixed = new();
-		private readonly List<IGuiSystem> _gui = new();
 		private readonly List<IGizmoSystem> _gizmo = new();
+		private readonly List<IGuiSystem> _gui = new();
+		private readonly List<ILateSystem> _late = new();
+		private readonly List<ILateFixedSystem> _lateFixed = new();
+		private readonly List<IResetable> _resetables;
+		private readonly List<IStartable> _startables;
 		private bool _isInitialized;
 		private bool _isPaused;
 
@@ -51,6 +51,8 @@ namespace Ecs.Core.Bootstrap
 			}
 		}
 
+		#region IBootstrap Members
+
 		public void Initialize()
 		{
 			if (_isInitialized)
@@ -61,60 +63,6 @@ namespace Ecs.Core.Bootstrap
 					pool.Start();
 			_feature.Initialize();
 			_isInitialized = true;
-		}
-
-		public void Tick()
-		{
-			if (_isPaused)
-				return;
-
-			_feature.Update();
-		}
-
-		public void FixedTick()
-		{
-			if (_isPaused)
-				return;
-
-			for (var i = 0; i < _fixed.Count; i++)
-				_fixed[i].Fixed();
-		}
-
-		public void LateFixed()
-		{
-			if (_isPaused)
-				return;
-			for (var i = 0; i < _lateFixed.Count; i++)
-				_lateFixed[i].LateFixed();
-		}
-
-		public void LateTick()
-		{
-			if (_isPaused)
-				return;
-
-			for (var i = 0; i < _late.Count; i++)
-				_late[i].Late();
-
-			_feature.Cleanup();
-		}
-
-		public void GuiRender()
-		{
-			if (_isPaused)
-				return;
-
-			for (var i = 0; i < _gui.Count; i++)
-				_gui[i].Gui();
-		}
-
-		public void GizmoRender()
-		{
-			if (_isPaused)
-				return;
-
-			for (var i = 0; i < _gizmo.Count; i++)
-				_gizmo[i].Gizmo();
 		}
 
 		public void Pause(bool isPaused)
@@ -148,5 +96,85 @@ namespace Ecs.Core.Bootstrap
 			_feature.Deactivate();
 			_contexts.Reset();
 		}
+
+		#endregion
+
+		#region IFixedTickable Members
+
+		public void FixedTick()
+		{
+			if (_isPaused)
+				return;
+
+			for (var i = 0; i < _fixed.Count; i++)
+				_fixed[i].Fixed();
+		}
+
+		#endregion
+
+		#region IGizmoRenderable Members
+
+		public void GizmoRender()
+		{
+			if (_isPaused)
+				return;
+
+			for (var i = 0; i < _gizmo.Count; i++)
+				_gizmo[i].Gizmo();
+		}
+
+		#endregion
+
+		#region IGuiRenderable Members
+
+		public void GuiRender()
+		{
+			if (_isPaused)
+				return;
+
+			for (var i = 0; i < _gui.Count; i++)
+				_gui[i].Gui();
+		}
+
+		#endregion
+
+		#region ILateFixed Members
+
+		public void LateFixed()
+		{
+			if (_isPaused)
+				return;
+			for (var i = 0; i < _lateFixed.Count; i++)
+				_lateFixed[i].LateFixed();
+		}
+
+		#endregion
+
+		#region ILateTickable Members
+
+		public void LateTick()
+		{
+			if (_isPaused)
+				return;
+
+			for (var i = 0; i < _late.Count; i++)
+				_late[i].Late();
+
+			_feature.Cleanup();
+		}
+
+		#endregion
+
+		#region ITickable Members
+
+		public void Tick()
+		{
+			if (_isPaused)
+				return;
+
+			_feature.Update();
+		}
+
+		#endregion
 	}
 }

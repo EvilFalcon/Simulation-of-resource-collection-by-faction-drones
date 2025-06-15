@@ -3,9 +3,11 @@ using JCMG.EntitasRedux;
 
 namespace Ecs.Game.Components.Fraction
 {
-    // [Game]
-    // public class FractionTypeComponent : IComponent
-    // {
-    //     public EFractionType Value;
-    // }
+    [Game]
+    public class FractionTypeComponent : IComponent
+    {
+        public EFractionType Value;
+    }
+    
+    
 }

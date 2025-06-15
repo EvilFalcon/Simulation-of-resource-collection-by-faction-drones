@@ -12,6 +12,14 @@ namespace Ecs.Installers
 
         private Contexts _contexts;
 
+        #region IDisposable Members
+
+        public void Dispose()
+        {
+        }
+
+        #endregion
+
         public override void InstallBindings()
         {
             Container.Bind<IDisposable>().FromInstance(this).AsTransient();
@@ -26,7 +34,7 @@ namespace Ecs.Installers
         }
 
         protected abstract void InstallSystems(Contexts contexts, bool isDebug);
-        
+
         protected void BindContext<TContext>()
             where TContext : IContext
         {
@@ -47,10 +55,6 @@ namespace Ecs.Installers
             var mainFeature = new TConcrete();
             Container.Bind<TContract>().FromInstance(mainFeature);
             Container.Bind<CustomFeature>().FromInstance(mainFeature).WhenInjectedInto<Bootstrap>();
-        }
-
-        public void Dispose()
-        {
         }
     }
 }

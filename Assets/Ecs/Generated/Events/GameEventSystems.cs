@@ -17,6 +17,7 @@ public sealed class GameEventSystems : Feature
 		Add(new DeadEventSystem(context)); // priority: 0
 		Add(new DeadRemovedEventSystem(context)); // priority: 0
 		Add(new GameDestroyedEventSystem(context)); // priority: 0
+		Add(new FractionResourcesEventSystem(context)); // priority: 0
 		Add(new GameStateEventSystem(context)); // priority: 0
 		Add(new LocalPositionEventSystem(context)); // priority: 0
 		Add(new LocalTimeScaleEventSystem(context)); // priority: 0

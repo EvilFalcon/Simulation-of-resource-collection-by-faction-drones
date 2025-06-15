@@ -1,5 +1,5 @@
+using Ecs.Views.Linkable.Views.ResourcesView;
 using Game.UI.Input;
-using Game.UI.LoseGame;
 using Game.UI.Score;
 using SimpleUi;
 using UnityEngine;
@@ -12,17 +12,15 @@ namespace Installers.Game
     {
         [SerializeField] private Canvas _canvas;
         [SerializeField] private InputView _inputView;
-        [SerializeField] private ScoreView _scoreView;
-        [SerializeField] private LoseGameView _loseGameView;
-        
+        [SerializeField] private ResourcesView _resourceView;
+
         public override void InstallBindings()
         {
             var canvasView = Container.InstantiatePrefabForComponent<Canvas>(_canvas);
             var canvasTransform = canvasView.transform;
             
             Container.BindUiView<InputController, InputView>(_inputView, canvasTransform);
-            Container.BindUiView<ScoreController, ScoreView>(_scoreView, canvasTransform);
-            Container.BindUiView<LoseGameController, LoseGameView>(_loseGameView, canvasTransform);
+            Container.BindUiView<ResourcesController, ResourcesView>(_resourceView, canvasTransform);
         }
     }
 }

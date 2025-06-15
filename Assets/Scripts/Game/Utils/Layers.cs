@@ -23,11 +23,18 @@ namespace Game.Utils
 		public static int AiLayer => _aiLayer.Id;
 		public static int IgnoreRaycastLayer => _ignoreRaycast.Id;
 
+		#region Nested type: Layer
+
 		private class Layer
 		{
 			private readonly string _name;
 
 			private int? _id;
+
+			public Layer(string name)
+			{
+				_name = name;
+			}
 
 			public int Id
 			{
@@ -38,11 +45,8 @@ namespace Game.Utils
 					return _id.Value;
 				}
 			}
-
-			public Layer(string name)
-			{
-				_name = name;
-			}
 		}
+
+		#endregion
 	}
 }

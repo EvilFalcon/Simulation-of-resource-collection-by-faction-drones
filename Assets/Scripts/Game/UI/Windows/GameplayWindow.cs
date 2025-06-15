@@ -11,7 +11,7 @@ namespace Game.UI.Windows
         protected override void AddControllers()
         {
             AddController<InputController>();
-            AddController<ScoreController>();
+            AddController<ResourcesController>();
         }
     }
 }

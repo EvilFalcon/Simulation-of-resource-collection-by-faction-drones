@@ -15,9 +15,13 @@ namespace Project.Ui.Loading.Controllers
 			_sceneLoader = sceneLoader;
 		}
 
+		#region ITickable Members
+
 		public void Tick()
 		{
 			View.TextLoading.text = Mathf.RoundToInt(_sceneLoader.GetProgress() * 100) + "% loaded";
 		}
+
+		#endregion
 	}
 }

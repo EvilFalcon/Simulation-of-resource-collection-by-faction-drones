@@ -16,6 +16,8 @@ namespace Game.Services.Pools.Impls
             }
         }
 
+        #region IPrefabPoolService Members
+
         public bool Spawn(string prefab, Vector3 position, Quaternion rotation, out IObjectLinkable linkable)
         {
             linkable = null;
@@ -27,9 +29,6 @@ namespace Game.Services.Pools.Impls
             return true;
         }
 
-        private void CreatePool(string prefab)
-        {
-            _prefabPools.Add(prefab, new PrefabMemoryPool(prefab));
-        }
+        #endregion
     }
 }

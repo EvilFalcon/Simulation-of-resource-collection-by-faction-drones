@@ -12,6 +12,8 @@ namespace Ecs.Core.Bootstrap
 
 	public class CustomFeature : JCMG.EntitasRedux.Systems, ICustomFeature
 	{
+		#region ICustomFeature Members
+
 		public void AddBefore<TSystem>(ISystem system) where TSystem : ISystem
 		{
 			if (system is IInitializeSystem initializeSystem)
@@ -97,6 +99,8 @@ namespace Ecs.Core.Bootstrap
 
 			if (system is ITearDownSystem tearDownSystem) _tearDownSystems.Remove(tearDownSystem);
 		}
+
+		#endregion
 
 		private int GetInitializeSystemIndex<TSystem>() where TSystem : ISystem
 		{

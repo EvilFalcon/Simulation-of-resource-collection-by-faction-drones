@@ -5,6 +5,5 @@ namespace Ecs.Input.Components
 	[Input]
 	[Unique]
 	public class JumpComponent : IComponent
-	{
-	}
+	{}
 }

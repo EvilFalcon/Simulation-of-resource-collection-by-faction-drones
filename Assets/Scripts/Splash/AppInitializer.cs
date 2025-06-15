@@ -14,10 +14,14 @@ namespace Splash
             _sceneLoader = sceneLoader;
         }
 
+        #region IInitializable Members
+
         public void Initialize()
         {
             LoadGame();
         }
+
+        #endregion
 
         private void LoadGame()
         {

@@ -1,12 +1,14 @@
 using Ecs.Signal.Systems;
 using Ecs.Scheduler.Systems;
-using Ecs.Core;
 using Ecs.Game.Systems;
-using Ecs.Game.Systems.Initialize;
+using Ecs.Game.Systems.UpdateSystems;
+using Ecs.Game.Systems.ReactiveSystems;
+using Ecs.Game.Systems.LateUpdateSystem;
 using Ecs.Game.Systems.InitializeSystems;
 using Ecs.Game.Systems.Camera;
-using Ecs.Action.Systems.ResourcesGenerationSystem;
+using Ecs.Core;
 using Ecs.Action.Systems.Input;
+using Ecs.Action.Systems.CreateFractionUnits;
 
 using Zenject; 
 using Ecs.Utils; 
@@ -34,39 +36,45 @@ namespace Ecs.Installers {
 			SystemInstallHelper.Install<UnityTimeProvider>(container);	// -10000 Common
 
 			// Camera 0000
-			SystemInstallHelper.Install<CameraBrainUpdateSystem>(container);	// 0000 Camera
+			//SystemInstallHelper.Install<CameraBrainUpdateSystem>(container);	// 0000 Camera
 		 }
 
 		private static void High(DiContainer container, bool isDebug) {
  
 			// Initialization 0001
 			SystemInstallHelper.Install<InstantiateSystem>(container);	// 0001 Initialization
-			SystemInstallHelper.Install<GameInitializeSystem>(container);	// 0010 Initialization
+			//SystemInstallHelper.Install<GameInitializeSystem>(container);	// 0010 Initialization
 			SystemInstallHelper.Install<CreateGameWorldInitializeSystem>(container);	// 0020 Initialization
 			SystemInstallHelper.Install<CreatePlayerInitializeSystem>(container);	// 0020 Initialization
-
-			// Generation 0100
-			SystemInstallHelper.Install<AdvancedResourceSpawnerSystem>(container);	// 0100 Generation
+			//SystemInstallHelper.Install<InitializeFractionSystem>(container);	// 0030 Initialization
 		 }
 
 		private static void Normal(DiContainer container, bool isDebug) {
  
+			// // Generation 0100
+			// SystemInstallHelper.Install<SpawnerUpdateSystem>(container);	// 0100 Generation
+			// SystemInstallHelper.Install<UnitSearchUpdateSystem>(container);	// 0100 Common
+			//
+			// // Common 0200
+			// SystemInstallHelper.Install<CreateFractionUnitsSystem>(container);	// 0200 Common
+
 			// Camera 0800
 			SystemInstallHelper.Install<CameraMovementUpdateSystem>(container);	// 0800 Camera
 
-			// Common 1000
-			SystemInstallHelper.Install<PointerDownSystem>(container);	// 1000 Common
-			SystemInstallHelper.Install<PointerMoveSystem>(container);	// 1000 Common
-			SystemInstallHelper.Install<PointerUpSystem>(container);	// 1000 Common
-
-			// Scheduler 1970
-			SystemInstallHelper.Install<ExecuteScheduledActionSystem>(container);	// 1970 Scheduler
-			SystemInstallHelper.Install<IntervalAccumulatorSystem>(container);	// 1970 Scheduler
-			SystemInstallHelper.Install<TimerSystem>(container);	// 1974 Scheduler
-			SystemInstallHelper.Install<ElapsedSystem>(container);	// 1980 Scheduler
-			SystemInstallHelper.Install<FramesCountSystem>(container);	// 1980 Scheduler
-			SystemInstallHelper.Install<IntervalSystem>(container);	// 1984 Scheduler
-			SystemInstallHelper.Install<FramesElapsedSystem>(container);	// 1990 Scheduler
+			// // Common 1000
+			// SystemInstallHelper.Install<PointerDownSystem>(container);	// 1000 Common
+			//
+			// // Common 1100
+			// SystemInstallHelper.Install<UnitCollectReactiveSystem>(container);	// 1100 Common
+			//
+			// // Scheduler 1970
+			// SystemInstallHelper.Install<ExecuteScheduledActionSystem>(container);	// 1970 Scheduler
+			// SystemInstallHelper.Install<IntervalAccumulatorSystem>(container);	// 1970 Scheduler
+			// SystemInstallHelper.Install<TimerSystem>(container);	// 1974 Scheduler
+			// SystemInstallHelper.Install<ElapsedSystem>(container);	// 1980 Scheduler
+			// SystemInstallHelper.Install<FramesCountSystem>(container);	// 1980 Scheduler
+			// SystemInstallHelper.Install<IntervalSystem>(container);	// 1984 Scheduler
+			// SystemInstallHelper.Install<FramesElapsedSystem>(container);	// 1990 Scheduler
 		 }
 
 		private static void Low(DiContainer container, bool isDebug) {

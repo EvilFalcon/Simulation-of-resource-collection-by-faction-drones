@@ -13,23 +13,20 @@ namespace Ecs.Action.Systems.Input
     public class PointerDownSystem : ForEachCommandUpdateSystem<PointerDownCommand>
     {
         private const int RayCastLength = 100;
-        
-        private readonly ILinkedEntityRepository _linkedEntityRepository;
-        private readonly IInputService _inputService;
         private readonly GameContext _game;
-        
+
+        private readonly IInputService _inputService;
+
         public PointerDownSystem(
             ICommandBuffer commandBuffer,
-            ILinkedEntityRepository linkedEntityRepository,
             IInputService inputService,
             GameContext game
         ) : base(commandBuffer)
         {
-            _linkedEntityRepository = linkedEntityRepository;
             _inputService = inputService;
             _game = game;
         }
-        
+
         protected override void Execute(ref PointerDownCommand command)
         {
             if (_game.GameState.Value != EGameState.Game)

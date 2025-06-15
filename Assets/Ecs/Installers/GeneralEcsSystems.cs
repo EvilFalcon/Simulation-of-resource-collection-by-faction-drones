@@ -14,6 +14,5 @@ namespace Ecs.Installers {
 	public static class GeneralEcsSystems {
 		public static void Install(DiContainer container, bool isDebug = true){
 		}
-
 	}
 }
