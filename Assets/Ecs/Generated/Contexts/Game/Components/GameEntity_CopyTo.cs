@@ -150,9 +150,17 @@ public partial class GameEntity
 		{
 			IsRay = true;
 		}
+		else if (component is Ecs.Game.Components.Units.UnitComponent Unit)
+		{
+			IsUnit = true;
+		}
 		else if (component is Ecs.Game.Components.Units.UnitFractionComponent UnitFraction)
 		{
 			CopyUnitFractionTo(UnitFraction);
+		}
+		else if (component is Ecs.Game.Components.Units.TargetResourceIdComponent TargetResourceId)
+		{
+			CopyTargetResourceIdTo(TargetResourceId);
 		}
 
 		#endif

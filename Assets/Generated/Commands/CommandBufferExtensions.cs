@@ -8,11 +8,11 @@
 //------------------------------------------------------------------------------
 using Ecs.Commands.Generator;
 using Ecs.Signal.Commands;
-using Db.GameObjectsBase.Impl;
-using UnityEngine;
-using Ecs.Action.Commands.CreateUnitsFraction;
 using Ecs.Action.Commands.Fraction;
+using UnityEngine;
 using Ecs.Action.Commands.Input;
+using Db.GameObjectsBase.Impl;
+using Ecs.Action.Commands.UnitsFraction;
 using JCMG.EntitasRedux.Commands;
 
 
@@ -26,20 +26,11 @@ namespace Generated.Commands
             ref var command = ref commandBuffer.Create<SignalStartCommand>();
         }
 
-        public static void CreateUnitsFraction(this ICommandBuffer commandBuffer, int unitsCount, EFractionType fractionType, Vector3 fractionBasePosition)
-        {
-            ref var command = ref commandBuffer.Create<CreateUnitsFractionCommand>();
-            command.UnitsCount = unitsCount;
-            command.FractionType = fractionType;
-            command.FractionBasePosition = fractionBasePosition;
-        }
-
-        public static void CreditFactionResources(this ICommandBuffer commandBuffer, GameEntity fraction, EGameResourceType resourceType, int amaunt)
+        public static void CreditFactionResources(this ICommandBuffer commandBuffer, GameEntity fractionBase, GameEntity unit)
         {
             ref var command = ref commandBuffer.Create<CreditFactionResourcesCommand>();
-            command.Fraction = fraction;
-            command.ResourceType = resourceType;
-            command.Amaunt = amaunt;
+            command.FractionBase = fractionBase;
+            command.Unit = unit;
         }
 
         public static void PointerDown(this ICommandBuffer commandBuffer, Vector3 position)
@@ -57,6 +48,20 @@ namespace Generated.Commands
         public static void PointerUp(this ICommandBuffer commandBuffer)
         {
             ref var command = ref commandBuffer.Create<PointerUpCommand>();
+        }
+
+        public static void CreateUnitsFraction(this ICommandBuffer commandBuffer, EFractionType fractionType, Vector3 fractionBasePosition, Vector3 unitSpawnPosition)
+        {
+            ref var command = ref commandBuffer.Create<CreateUnitsFractionCommand>();
+            command.FractionType = fractionType;
+            command.FractionBasePosition = fractionBasePosition;
+            command.UnitSpawnPosition = unitSpawnPosition;
+        }
+
+        public static void RemoveUnitsFraction(this ICommandBuffer commandBuffer, EFractionType fractionType)
+        {
+            ref var command = ref commandBuffer.Create<RemoveUnitsFractionCommand>();
+            command.FractionType = fractionType;
         }
 
     }

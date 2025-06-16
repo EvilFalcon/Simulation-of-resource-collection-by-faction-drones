@@ -52,7 +52,16 @@ namespace Ecs.Game.Systems.InitializeSystems
             var fractionEntity = _gameContext.CreateFraction(fraction);
             fractionBase.Link(fractionEntity);
             fractionEntity.AddPosition(fractionBase.transform.position);
-            _commandBuffer.CreateUnitsFraction(_fractionParameters.UnitsCount, fraction, fractionEntity.Position.Value);
+
+            for (var i = 0; i < _fractionParameters.UnitsCount; i++)
+            {
+                _commandBuffer.CreateUnitsFraction(
+                    fraction,
+                    _fractionParameters.UnitFractionBasePosition[fraction],
+                    _fractionParameters.UnitSpawnPositions[fraction]
+                );
+            }
+
             _linkedEntityRepository.Add(fractionBase.transform.GetHashCode(), fractionEntity);
         }
     }

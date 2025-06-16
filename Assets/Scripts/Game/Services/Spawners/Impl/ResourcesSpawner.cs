@@ -32,6 +32,9 @@ namespace Game.Services.Spawners.Impl
 
         private List<SpawnerProcess> _processes = new List<SpawnerProcess>();
         private List<SpawnerProcess> _disposableProcesses = new List<SpawnerProcess>();
+        private float _spawnDelay;
+
+        public float SpawnDelay => _spawnDelay;
 
         public ResourcesSpawner(
             ITimeProvider timeProvider,
@@ -64,6 +67,11 @@ namespace Game.Services.Spawners.Impl
         #endregion
 
         #region IInitializable Members
+
+        public void SetSpawnDelay(float delay)
+        {
+            _spawnDelay = delay;
+        }
 
         public void Initialize()
         {
@@ -168,7 +176,7 @@ namespace Game.Services.Spawners.Impl
         {
             _processes.Add(new SpawnerProcess
             {
-                Timer = 1,
+                Timer = _spawnDelay,
                 Action = () => Create()
             });
         }

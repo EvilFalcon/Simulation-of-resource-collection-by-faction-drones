@@ -17,3 +17,5 @@ MonoBehaviour:
     type: 3}
   _resourceView: {fileID: 500130740515764871, guid: 01c8cbabc83d32140b4bfa817626b380,
     type: 3}
+  _debugView: {fileID: 3492956731348000780, guid: 3741c3a83b478ca4286bf371b932c689,
+    type: 3}

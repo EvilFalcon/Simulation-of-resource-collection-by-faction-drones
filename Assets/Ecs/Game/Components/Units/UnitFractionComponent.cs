@@ -10,7 +10,6 @@ namespace Ecs.Game.Components.Units
         public EFractionType FractionType;
         public Vector3 HomePosition;
         public EUnitState State;
-        public int TargetResourceId;
         public float Timer;
     }
 

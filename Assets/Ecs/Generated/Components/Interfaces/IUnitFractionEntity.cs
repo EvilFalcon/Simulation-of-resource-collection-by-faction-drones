@@ -12,7 +12,7 @@ public partial interface IUnitFractionEntity
 	Ecs.Game.Components.Units.UnitFractionComponent UnitFraction { get; }
 	bool HasUnitFraction { get; }
 
-	void AddUnitFraction(Db.GameObjectsBase.Impl.EFractionType newFractionType, UnityEngine.Vector3 newHomePosition, Ecs.Game.Components.Units.EUnitState newState, int newTargetResourceId, float newTimer);
-	void ReplaceUnitFraction(Db.GameObjectsBase.Impl.EFractionType newFractionType, UnityEngine.Vector3 newHomePosition, Ecs.Game.Components.Units.EUnitState newState, int newTargetResourceId, float newTimer);
+	void AddUnitFraction(Db.GameObjectsBase.Impl.EFractionType newFractionType, UnityEngine.Vector3 newHomePosition, Ecs.Game.Components.Units.EUnitState newState, float newTimer);
+	void ReplaceUnitFraction(Db.GameObjectsBase.Impl.EFractionType newFractionType, UnityEngine.Vector3 newHomePosition, Ecs.Game.Components.Units.EUnitState newState, float newTimer);
 	void RemoveUnitFraction();
 }

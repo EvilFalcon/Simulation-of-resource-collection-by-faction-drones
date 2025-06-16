@@ -15,7 +15,6 @@ namespace Ecs.Game.Systems.InitializeSystems
 	public class GameInitializeSystem : IInitializeSystem
 	{
 		private readonly ICommandBuffer _commandBuffer;
-		private readonly GameContext _game;
 		private readonly IGameStateService _gameStateService;
 		private readonly SignalBus _signalBus;
 
@@ -26,8 +25,6 @@ namespace Ecs.Game.Systems.InitializeSystems
 			IGameStateService gameStateService
 		)
 		{
-			_game = game;
-
 			_signalBus = signalBus;
 			_commandBuffer = commandBuffer;
 			_gameStateService = gameStateService;
@@ -37,7 +34,6 @@ namespace Ecs.Game.Systems.InitializeSystems
 		{
 			_gameStateService.StartGame();
 			_commandBuffer.SignalStart();
-			_signalBus.OpenWindow<GameplayWindow>();
 		}
 	}
 }

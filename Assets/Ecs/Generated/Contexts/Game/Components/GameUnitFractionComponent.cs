@@ -12,7 +12,7 @@ public partial class GameEntity
 	public Ecs.Game.Components.Units.UnitFractionComponent UnitFraction { get { return (Ecs.Game.Components.Units.UnitFractionComponent)GetComponent(GameComponentsLookup.UnitFraction); } }
 	public bool HasUnitFraction { get { return HasComponent(GameComponentsLookup.UnitFraction); } }
 
-	public void AddUnitFraction(Db.GameObjectsBase.Impl.EFractionType newFractionType, UnityEngine.Vector3 newHomePosition, Ecs.Game.Components.Units.EUnitState newState, int newTargetResourceId, float newTimer)
+	public void AddUnitFraction(Db.GameObjectsBase.Impl.EFractionType newFractionType, UnityEngine.Vector3 newHomePosition, Ecs.Game.Components.Units.EUnitState newState, float newTimer)
 	{
 		var index = GameComponentsLookup.UnitFraction;
 		var component = (Ecs.Game.Components.Units.UnitFractionComponent)CreateComponent(index, typeof(Ecs.Game.Components.Units.UnitFractionComponent));
@@ -20,13 +20,12 @@ public partial class GameEntity
 		component.FractionType = newFractionType;
 		component.HomePosition = newHomePosition;
 		component.State = newState;
-		component.TargetResourceId = newTargetResourceId;
 		component.Timer = newTimer;
 		#endif
 		AddComponent(index, component);
 	}
 
-	public void ReplaceUnitFraction(Db.GameObjectsBase.Impl.EFractionType newFractionType, UnityEngine.Vector3 newHomePosition, Ecs.Game.Components.Units.EUnitState newState, int newTargetResourceId, float newTimer)
+	public void ReplaceUnitFraction(Db.GameObjectsBase.Impl.EFractionType newFractionType, UnityEngine.Vector3 newHomePosition, Ecs.Game.Components.Units.EUnitState newState, float newTimer)
 	{
 		var index = GameComponentsLookup.UnitFraction;
 		var component = (Ecs.Game.Components.Units.UnitFractionComponent)CreateComponent(index, typeof(Ecs.Game.Components.Units.UnitFractionComponent));
@@ -34,7 +33,6 @@ public partial class GameEntity
 		component.FractionType = newFractionType;
 		component.HomePosition = newHomePosition;
 		component.State = newState;
-		component.TargetResourceId = newTargetResourceId;
 		component.Timer = newTimer;
 		#endif
 		ReplaceComponent(index, component);
@@ -48,7 +46,6 @@ public partial class GameEntity
 		component.FractionType = copyComponent.FractionType;
 		component.HomePosition = copyComponent.HomePosition;
 		component.State = copyComponent.State;
-		component.TargetResourceId = copyComponent.TargetResourceId;
 		component.Timer = copyComponent.Timer;
 		#endif
 		ReplaceComponent(index, component);

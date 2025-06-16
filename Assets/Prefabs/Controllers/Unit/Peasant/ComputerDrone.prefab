@@ -52,7 +52,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.38
+  m_Radius: 1.98
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 1.01, z: 0}
@@ -94,11 +94,11 @@ GameObject:
   - component: {fileID: 24991004375134239}
   - component: {fileID: 2108835772994870533}
   - component: {fileID: 7346813793344806470}
-  - component: {fileID: 8243369037240199634}
   - component: {fileID: 6277458965670239434}
-  - component: {fileID: 4342653165415489491}
   - component: {fileID: 4050257114349194802}
   - component: {fileID: -3074699812108803336}
+  - component: {fileID: 2449670341553565267}
+  - component: {fileID: 220366757899663233}
   m_Layer: 8
   m_Name: ComputerDrone
   m_TagString: Untagged
@@ -149,10 +149,68 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityLink: {fileID: 2108835772994870533}
   modules:
-  - {fileID: 8243369037240199634}
   - {fileID: 4050257114349194802}
+  - {fileID: 2449670341553565267}
   _navMeshAgent: {fileID: 6277458965670239434}
---- !u!114 &8243369037240199634
+--- !u!195 &6277458965670239434
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7570124072016277032}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1.44
+  m_Speed: 3.5
+  m_Acceleration: 2
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 1
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &4050257114349194802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7570124072016277032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5a84c7c62044708b9954551b312387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _collectTrigger: {fileID: 4229006267778161072}
+--- !u!136 &-3074699812108803336
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7570124072016277032}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.4
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.99, z: -0.01}
+--- !u!114 &2449670341553565267
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,36 +222,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f1b82f7dda4bdd8fd58260226c0e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animatePath: 1
-  _animationSpeed: 1
-  _heightOffset: 0.1
-  _line: {fileID: 4342653165415489491}
-  _lineMaterial: {fileID: 2100000, guid: 087984e369cc8f74aa76dc4e222e567e, type: 2}
+  _line: {fileID: 220366757899663233}
   _lineWidth: 0.2
-  _pathColor: {r: 0, g: 1, b: 1, a: 1}
---- !u!195 &6277458965670239434
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7570124072016277032}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 1.2
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 1
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!120 &4342653165415489491
+--- !u!120 &220366757899663233
 LineRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
@@ -296,42 +327,6 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!114 &4050257114349194802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7570124072016277032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5a84c7c62044708b9954551b312387, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collectTrigger: {fileID: 4229006267778161072}
---- !u!136 &-3074699812108803336
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7570124072016277032}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.4
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.99, z: 0.5}
 --- !u!1001 &6712277275665109352
 PrefabInstance:
   m_ObjectHideFlags: 0

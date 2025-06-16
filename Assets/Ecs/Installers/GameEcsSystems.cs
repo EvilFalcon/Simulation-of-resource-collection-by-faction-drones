@@ -8,7 +8,8 @@ using Ecs.Game.Systems.InitializeSystems;
 using Ecs.Game.Systems.Camera;
 using Ecs.Core;
 using Ecs.Action.Systems.Input;
-using Ecs.Action.Systems.CreateFractionUnits;
+using Ecs.Action.Systems.FractionUnits;
+using Ecs.Action.Systems.Fraction;
 
 using Zenject; 
 using Ecs.Utils; 
@@ -54,19 +55,21 @@ namespace Ecs.Installers {
 			// Generation 0100
 			SystemInstallHelper.Install<SpawnerUpdateSystem>(container);	// 0100 Generation
 			SystemInstallHelper.Install<UnitSearchUpdateSystem>(container);	// 0100 Common
-			
+
 			// Common 0200
 			SystemInstallHelper.Install<CreateFractionUnitsSystem>(container);	// 0200 Common
+			SystemInstallHelper.Install<RemoveFractionUnitsSystem>(container);	// 0200 Common
+			SystemInstallHelper.Install<CreditFactionResourcesSystem>(container);	// 0200 Common
 
 			// Camera 0800
 			SystemInstallHelper.Install<CameraMovementUpdateSystem>(container);	// 0800 Camera
 
 			// Common 1000
 			SystemInstallHelper.Install<PointerDownSystem>(container);	// 1000 Common
-			
+
 			// Common 1100
 			SystemInstallHelper.Install<UnitCollectReactiveSystem>(container);	// 1100 Common
-			
+
 			// Scheduler 1970
 			SystemInstallHelper.Install<ExecuteScheduledActionSystem>(container);	// 1970 Scheduler
 			SystemInstallHelper.Install<IntervalAccumulatorSystem>(container);	// 1970 Scheduler

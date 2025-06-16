@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dc09305c4e54f60b9bb217a9867d631, type: 3}
   m_Name: GameSettingsInstaller
   m_EditorClassIdentifier: 
-  _prefabsBase: {fileID: 11400000, guid: e382f64f3249b35438448080230df28d, type: 2}
-  _resourcesParametersBase: {fileID: 11400000, guid: a2634e476dada714b8385179181ae705,
+  _fractionParameters: {fileID: 11400000, guid: d3ad523678b90364d84ac1a39c2d9af2,
     type: 2}
+  _prefabsBase: {fileID: 11400000, guid: e382f64f3249b35438448080230df28d, type: 2}
   _resourcePrefabsCollection: {fileID: 11400000, guid: 32343d0e08e360d43b57add0af0a94ea,
     type: 2}
-  _unitBase: {fileID: 11400000, guid: 4452bff6ca5ed0646b17254fcbb28294, type: 2}
-  _fractionParameters: {fileID: 11400000, guid: d3ad523678b90364d84ac1a39c2d9af2,
+  _resourcesParametersBase: {fileID: 11400000, guid: a2634e476dada714b8385179181ae705,
+    type: 2}
+  _unitPrefabsCollection: {fileID: 11400000, guid: 4452bff6ca5ed0646b17254fcbb28294,
+    type: 2}
+  _unitParametersBase: {fileID: 11400000, guid: 87c94b9c87e48e04b828d1e746cd1033,
     type: 2}

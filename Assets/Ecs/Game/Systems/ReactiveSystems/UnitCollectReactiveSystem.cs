@@ -45,7 +45,6 @@ namespace Ecs.Game.Systems.ReactiveSystems
                     unit.UnitFraction.FractionType,
                     unit.UnitFraction.HomePosition,
                     unit.UnitFraction.State,
-                    unit.UnitFraction.TargetResourceId,
                     timer
                 );
 
@@ -55,7 +54,7 @@ namespace Ecs.Game.Systems.ReactiveSystems
                     continue;
                 }
 
-                var resource = _linkedEntityRepository.Get(unit.UnitFraction.TargetResourceId);
+                var resource = _linkedEntityRepository.Get(unit.TargetResourceId.Value);
                 unit.ReplaceResourceData(resource.ResourceData.Amount, resource.ResourceData.ResourceType);
                 _resourcesPool.Despawn(resource.ResourceData.ResourceType, resource, resource.Resource.PoolIndex);
 
@@ -63,7 +62,6 @@ namespace Ecs.Game.Systems.ReactiveSystems
                     unit.UnitFraction.FractionType,
                     unit.UnitFraction.HomePosition,
                     EUnitState.ReturningToBase,
-                    -1,
                     0f
                 );
                 unit.NavMeshAgent.Value.SetDestination(unit.UnitFraction.HomePosition);

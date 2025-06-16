@@ -1,4 +1,4 @@
-using Ecs.Views.Linkable.Views.ResourcesView;
+using Game.UI.DebugView;
 using Game.UI.Input;
 using Game.UI.Score;
 using SimpleUi;
@@ -13,6 +13,7 @@ namespace Installers.Game
         [SerializeField] private Canvas _canvas;
         [SerializeField] private InputView _inputView;
         [SerializeField] private ResourcesView _resourceView;
+        [SerializeField] private DebugView _debugView;
 
         public override void InstallBindings()
         {
@@ -21,6 +22,7 @@ namespace Installers.Game
             
             Container.BindUiView<InputController, InputView>(_inputView, canvasTransform);
             Container.BindUiView<ResourcesController, ResourcesView>(_resourceView, canvasTransform);
+            Container.BindUiView<DebugController, DebugView>(_debugView, canvasTransform);
         }
     }
 }

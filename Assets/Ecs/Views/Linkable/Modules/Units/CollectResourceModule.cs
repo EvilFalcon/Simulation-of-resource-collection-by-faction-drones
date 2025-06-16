@@ -25,14 +25,13 @@ namespace Ecs.Views.Linkable.Modules.Units
             if (other.TryGetComponent(out ResourceView resourceView) == false)
                 return;
 
-            if (resourceView.transform.GetHashCode() != _entity.UnitFraction.TargetResourceId)
+            if (resourceView.transform.GetHashCode() != _entity.TargetResourceId.Value)
                 return;
             
             _entity.ReplaceUnitFraction(
                 _entity.UnitFraction.FractionType,
                 _entity.UnitFraction.HomePosition,
                 EUnitState.Collecting,
-                _entity.UnitFraction.TargetResourceId,
                 0f
                 );
         }

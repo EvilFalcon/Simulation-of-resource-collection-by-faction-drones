@@ -58,7 +58,9 @@
       "version": "https://gitlab.com/nazgull30/zenjectplaydarium.git",
       "depth": 0,
       "source": "git",
-      "dependencies": {},
+      "dependencies": {
+        "com.playdarium.unirx": "https://gitlab.com/nazgull30/unirxplaydarium.git#upm"
+      },
       "hash": "c602d02d721783b0ff36bf16b2951c7549f70d33"
     },
     "com.unity.2d.sprite": {

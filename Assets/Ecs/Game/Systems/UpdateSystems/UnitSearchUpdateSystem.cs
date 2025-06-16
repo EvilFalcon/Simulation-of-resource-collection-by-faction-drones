@@ -41,11 +41,11 @@ namespace Ecs.Game.Systems.UpdateSystems
                 if (nearestResource == null)
                     continue;
 
+                unit.ReplaceTargetResourceId(nearestResource.Link.View.Transform.GetHashCode());
                 unit.ReplaceUnitFraction(
                     unit.UnitFraction.FractionType,
                     unit.UnitFraction.HomePosition,
                     EUnitState.MovingToResource,
-                    nearestResource.Link.View.Transform.GetHashCode(),
                     0f
                 );
 

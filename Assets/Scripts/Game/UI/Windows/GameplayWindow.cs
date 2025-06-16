@@ -1,4 +1,4 @@
-using Game.UI.Input;
+using Game.UI.DebugView;
 using Game.UI.Score;
 using SimpleUi;
 
@@ -10,8 +10,8 @@ namespace Game.UI.Windows
 
         protected override void AddControllers()
         {
-            AddController<InputController>();
             AddController<ResourcesController>();
+            AddController<DebugController>();
         }
     }
 }

@@ -23,6 +23,8 @@ public sealed class GameEventSystems : Feature
 		Add(new LocalTimeScaleEventSystem(context)); // priority: 0
 		Add(new LookDirectionEventSystem(context)); // priority: 0
 		Add(new PositionEventSystem(context)); // priority: 0
+		Add(new RayEventSystem(context)); // priority: 0
+		Add(new RayRemovedEventSystem(context)); // priority: 0
 		Add(new RotationEventSystem(context)); // priority: 0
 		Add(new ScaleEventSystem(context)); // priority: 0
 		Add(new SpeedEventSystem(context)); // priority: 0

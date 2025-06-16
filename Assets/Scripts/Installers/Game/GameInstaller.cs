@@ -1,3 +1,4 @@
+using Ecs.Utils.Groups.Impl;
 using Ecs.Utils.Impl;
 using Ecs.Utils.Repositories.Impl;
 using Game.Models.Camera.Impl;
@@ -36,6 +37,7 @@ namespace Installers.Game
 
         private void BindServices()
         {
+            Container.BindInterfacesAndSelfTo<GameGroupUtils>().AsSingle();
             Container.BindInterfacesAndSelfTo<ResourcesPool>().AsSingle();
             Container.BindInterfacesAndSelfTo<GameInitializer>().FromInstance(_gameInitializer).AsSingle();
             Container.BindInterfacesAndSelfTo<InputService>().AsSingle();

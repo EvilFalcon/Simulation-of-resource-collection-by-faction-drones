@@ -1,5 +1,6 @@
 using Db;
 using Db.GameObjectsBase.Impl;
+using Ecs.Game.Components.Fraction;
 using Ecs.Managers;
 using UnityEngine;
 
@@ -30,6 +31,7 @@ namespace Ecs.Game.Extensions
             var entity = context.CreateEntity();
             entity.AddUid(UidGenerator.Next());
             entity.AddFractionType(fractionType);
+            entity.AddFractionResources(new FractionResources());
             return entity;
         }
 
@@ -75,6 +77,7 @@ namespace Ecs.Game.Extensions
         private static void InitUnit(GameEntity entity, EFractionType fractionType)
         {
             entity.AddUnitPrefab(fractionType);
+            entity.IsUnit = true;
             entity.AddFractionType(fractionType);
         }
     }

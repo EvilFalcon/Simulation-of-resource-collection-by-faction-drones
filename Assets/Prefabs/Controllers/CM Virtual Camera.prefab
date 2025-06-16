@@ -107,6 +107,8 @@ MonoBehaviour:
   _virtualCameras:
   - VirtualCameraType: 1
     VirtualCamera: {fileID: 3694326237163597119}
+  - VirtualCameraType: 2
+    VirtualCamera: {fileID: 3694326237163597119}
 --- !u!1 &8671138893265129066
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +157,7 @@ MonoBehaviour:
   Priority:
     Enabled: 1
     m_Value: 10
-  OutputChannel: 1
+  OutputChannel: -1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0

@@ -12,7 +12,7 @@ public partial interface IResourceDataEntity
 	Ecs.Game.Components.ResourceComponents.ResourceDataComponent ResourceData { get; }
 	bool HasResourceData { get; }
 
-	void AddResourceData(int newAmount, Db.GameObjectsBase.Impl.EGameResourceType newValue);
-	void ReplaceResourceData(int newAmount, Db.GameObjectsBase.Impl.EGameResourceType newValue);
+	void AddResourceData(int newAmount, Db.GameObjectsBase.Impl.EGameResourceType newResourceType);
+	void ReplaceResourceData(int newAmount, Db.GameObjectsBase.Impl.EGameResourceType newResourceType);
 	void RemoveResourceData();
 }

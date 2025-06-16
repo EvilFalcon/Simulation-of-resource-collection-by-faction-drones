@@ -47,22 +47,26 @@ public static class GameComponentsLookup
 	public const int Terrain = 31;
 	public const int TerrainData = 32;
 	public const int Ray = 33;
-	public const int UnitFraction = 34;
-	public const int Velocity = 35;
-	public const int LocalTimeScale = 36;
-	public const int FractionResourcesListener = 37;
-	public const int GameDestroyedListener = 38;
-	public const int GameStateListener = 39;
-	public const int LocalPositionListener = 40;
-	public const int LocalTimeScaleListener = 41;
-	public const int LookDirectionListener = 42;
-	public const int PositionListener = 43;
-	public const int RotationListener = 44;
-	public const int ScaleListener = 45;
-	public const int SpeedListener = 46;
-	public const int VelocityListener = 47;
+	public const int TargetResourceId = 34;
+	public const int Unit = 35;
+	public const int UnitFraction = 36;
+	public const int Velocity = 37;
+	public const int LocalTimeScale = 38;
+	public const int FractionResourcesListener = 39;
+	public const int GameDestroyedListener = 40;
+	public const int GameStateListener = 41;
+	public const int LocalPositionListener = 42;
+	public const int LocalTimeScaleListener = 43;
+	public const int LookDirectionListener = 44;
+	public const int PositionListener = 45;
+	public const int RayListener = 46;
+	public const int RayRemovedListener = 47;
+	public const int RotationListener = 48;
+	public const int ScaleListener = 49;
+	public const int SpeedListener = 50;
+	public const int VelocityListener = 51;
 
-	public const int TotalComponents = 48;
+	public const int TotalComponents = 52;
 
 	public static readonly string[] ComponentNames =
 	{
@@ -100,6 +104,8 @@ public static class GameComponentsLookup
 		"Terrain",
 		"TerrainData",
 		"Ray",
+		"TargetResourceId",
+		"Unit",
 		"UnitFraction",
 		"Velocity",
 		"LocalTimeScale",
@@ -110,6 +116,8 @@ public static class GameComponentsLookup
 		"LocalTimeScaleListener",
 		"LookDirectionListener",
 		"PositionListener",
+		"RayListener",
+		"RayRemovedListener",
 		"RotationListener",
 		"ScaleListener",
 		"SpeedListener",
@@ -152,6 +160,8 @@ public static class GameComponentsLookup
 		typeof(Ecs.Game.Components.TerrainComponents.TerrainComponent),
 		typeof(Ecs.Game.Components.TerrainComponents.TerrainDataComponent),
 		typeof(Ecs.Game.Components.Units.RayComponent),
+		typeof(Ecs.Game.Components.Units.TargetResourceIdComponent),
+		typeof(Ecs.Game.Components.Units.UnitComponent),
 		typeof(Ecs.Game.Components.Units.UnitFractionComponent),
 		typeof(Ecs.Game.Components.VelocityComponent),
 		typeof(Ecs.Scheduler.Components.LocalTimeScaleComponent),
@@ -162,6 +172,8 @@ public static class GameComponentsLookup
 		typeof(LocalTimeScaleListenerComponent),
 		typeof(LookDirectionListenerComponent),
 		typeof(PositionListenerComponent),
+		typeof(RayListenerComponent),
+		typeof(RayRemovedListenerComponent),
 		typeof(RotationListenerComponent),
 		typeof(ScaleListenerComponent),
 		typeof(SpeedListenerComponent),
@@ -204,20 +216,24 @@ public static class GameComponentsLookup
 		{ typeof(Ecs.Game.Components.TerrainComponents.TerrainComponent), 31 },
 		{ typeof(Ecs.Game.Components.TerrainComponents.TerrainDataComponent), 32 },
 		{ typeof(Ecs.Game.Components.Units.RayComponent), 33 },
-		{ typeof(Ecs.Game.Components.Units.UnitFractionComponent), 34 },
-		{ typeof(Ecs.Game.Components.VelocityComponent), 35 },
-		{ typeof(Ecs.Scheduler.Components.LocalTimeScaleComponent), 36 },
-		{ typeof(FractionResourcesListenerComponent), 37 },
-		{ typeof(GameDestroyedListenerComponent), 38 },
-		{ typeof(GameStateListenerComponent), 39 },
-		{ typeof(LocalPositionListenerComponent), 40 },
-		{ typeof(LocalTimeScaleListenerComponent), 41 },
-		{ typeof(LookDirectionListenerComponent), 42 },
-		{ typeof(PositionListenerComponent), 43 },
-		{ typeof(RotationListenerComponent), 44 },
-		{ typeof(ScaleListenerComponent), 45 },
-		{ typeof(SpeedListenerComponent), 46 },
-		{ typeof(VelocityListenerComponent), 47 }
+		{ typeof(Ecs.Game.Components.Units.TargetResourceIdComponent), 34 },
+		{ typeof(Ecs.Game.Components.Units.UnitComponent), 35 },
+		{ typeof(Ecs.Game.Components.Units.UnitFractionComponent), 36 },
+		{ typeof(Ecs.Game.Components.VelocityComponent), 37 },
+		{ typeof(Ecs.Scheduler.Components.LocalTimeScaleComponent), 38 },
+		{ typeof(FractionResourcesListenerComponent), 39 },
+		{ typeof(GameDestroyedListenerComponent), 40 },
+		{ typeof(GameStateListenerComponent), 41 },
+		{ typeof(LocalPositionListenerComponent), 42 },
+		{ typeof(LocalTimeScaleListenerComponent), 43 },
+		{ typeof(LookDirectionListenerComponent), 44 },
+		{ typeof(PositionListenerComponent), 45 },
+		{ typeof(RayListenerComponent), 46 },
+		{ typeof(RayRemovedListenerComponent), 47 },
+		{ typeof(RotationListenerComponent), 48 },
+		{ typeof(ScaleListenerComponent), 49 },
+		{ typeof(SpeedListenerComponent), 50 },
+		{ typeof(VelocityListenerComponent), 51 }
 	};
 
 	/// <summary>
