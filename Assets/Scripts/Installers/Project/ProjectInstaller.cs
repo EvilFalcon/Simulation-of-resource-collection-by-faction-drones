@@ -15,7 +15,6 @@ using PdUtils.RandomProvider.Impl;
 using PdUtils.SceneLoadingProcessor.Impls;
 using PdUtils.ScheduledExecutorService;
 using PdUtils.ScheduledExecutorService.Impl;
-using PdUtils.Vibration.Impl;
 using PdUtils.Web.Impl;
 using Project;
 using UniRx;
@@ -51,8 +50,7 @@ namespace Installers.Project
 			Container.BindInterfacesAndSelfTo<IntervalTimeManager>().AsTransient();
 
 			Container.BindFromSubstitute<IFirstStartService, FirstStartService>().AsSingle();
-
-			Container.BindInterfacesAndSelfTo<VibrationService>().AsSingle();
+			
 
 			SignalBusInstaller.Install(Container);
 
